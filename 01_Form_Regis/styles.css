@@ -9,7 +9,7 @@ body {
     align-items: center;
     height: 100vh;
     /* background-color: #f5b15f; */
-    background-image: linear-gradient(to right, #a387fa, #faaca8, #a387fa);
+    background-image: linear-gradient(to right, #87f0fa, #faf3a8, #87f0fa);
     margin: 0;
 }
 
@@ -17,9 +17,11 @@ body {
     width: 100%;
     max-width: 600px;
     padding: 20px;
-    padding-top: 1px;
-    background-color: #c1adff;
+    padding-top: 10px;
+    background-color: #71dfe9;
     border-radius: 8px;
+    justify-content: center;
+    align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
 }
 
@@ -59,7 +61,7 @@ h4 {
 .btn-submit {
     width: 100%;
     padding: 12px;
-    background-color: #422689;
+    background-color: #0298ce;
     border: none;
     border-radius: 4px;
     color: #fff;
@@ -69,5 +71,20 @@ h4 {
 }
 
 .btn-submit:hover {
-    background-color: #f5880c;
+    background-color: #006387;
+}
+
+.captcha-container {
+    width: 250px;
+    height: 80px;
+}
+
+.captcha-img {
+    width: 100%;
+    height: 100%;
+    background-image: url('one.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    line-height: 80px;
 }
