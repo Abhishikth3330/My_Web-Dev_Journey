@@ -12,10 +12,13 @@
         <form name="frm">
             <h4>Registration for 2024</h4>
 
+            <!-- Enter Name -->
             <div class="form-group">
                 <input type="text" name="fullName" placeholder="Enter Name *" required>
             </div>
 
+
+            <!-- Gender and Age -->
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
@@ -35,44 +38,43 @@
             </div>
             
             
-            <!--  -->
-
-            <div class="form-group row" id="mobile-section">
-                <div class="col-6">
+            <!-- Mobile Number Section -->
+            
+            <div class="form-group row" id="otp-section">
+                <div class="col-md-5">
                     <input type="text" id="mobile-input" name="mobile" class="form-control" placeholder="Enter Mobile Number *" maxlength="10" required>
                 </div>
-                <div class="col-6 py-1">
-                    <button class="btn btn-primary w-100" type="button" onclick="showOtpSection()">Verify</button>
+                <div class="col-md-4">
+                    <input type="text" id="otp-input" name="otp" class="form-control" placeholder="Enter 4-digit OTP *" maxlength="4" required disabled>
+                </div>
+                <div class="col-md-3 py-1">
+                    <button id="otp-button" class="btn btn-primary w-100" type="button" onclick="sendOrVerifyOtp()">Send OTP</button>
                 </div>
             </div>
             
-            <div class="form-group row" id="otp-section" style="display: none;">
-                <div class="col-3">
-                    <input type="text" id="mobile-display" class="form-control" readonly>
-                </div>
-                <div class="col-3">
-                    <input type="text" name="otp" class="form-control" placeholder="Enter 4-digit OTP *" maxlength="4" required>
-                </div>
-                <div class="col-3 py-1">
-                    <button class="btn btn-primary w-100" type="button" onclick="verifyOtp()">Verify OTP</button>
-                </div>
-            </div>
-            
-            <!--  -->
 
-            <div class="form-group row">
-                <div class="col-6">
-                    <input type="email" name="email" class="form-control" placeholder="Enter Email Id *" required>
+            <!-- Email Section -->
+
+            <div class="form-group row" id="email-section">
+                <div class="col-md-5">
+                    <input type="email" id="email-input" name="email" class="form-control" placeholder="Enter Email Id *" required>
                 </div>
-                <div class="col-6 py-1">
-                    <button class="btn btn-primary w-100" type="button">Verify</button>
+                <div class="col-md-4">
+                    <input type="text" id="email-otp-input" name="otp" class="form-control" placeholder="Enter 4-digit OTP *" maxlength="4" required disabled>
+                </div>
+                <div class="col-md-3 py-1">
+                    <button id="email-otp-button" class="btn btn-primary w-100" type="button" onclick="sendOrVerifyEmailOtp()">Send OTP</button>
                 </div>
             </div>
 
+
+            <!-- Password Section -->
             <div class="form-group">
                 <input type="password" name="password" placeholder="Enter Password *" required>
             </div>
 
+
+            <!-- Category of Interest -->
             <div class="form-group">
                 <select name="category[]" class="form-control">
                     <option value="">Select Category of Interest</option>
@@ -90,10 +92,13 @@
                 </select>
             </div>
 
+
+            <!-- Organization Section -->
             <div class="form-group">
                 <input type="text" name="organization_name" placeholder="Organization">
             </div>
 
+            <!-- Country Section -->
             <div class="form-group">
                 <select name="country" required>
                     <option value="India">India</option>
@@ -101,8 +106,9 @@
                 </select>
             </div>
 
+            <!-- State, City and Pincode Section -->
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-5">
                     <div class="form-group">
                         <select name="state" required class="form-control">
                             <option value="">Select State</option>
@@ -116,13 +122,14 @@
                         <input type="text" name="city" placeholder="Enter City *" required class="form-control">
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="form-group">
-                        <input type="number" name="pincode" id="pincode" placeholder="Enter Pincode *" required class="form-control" maxlength="6">
+                        <input type="number" name="pincode" id="pincode" placeholder="Pincode *" required class="form-control" maxlength="6">
                     </div>                    
                 </div>
             </div>
             
+            <!-- Address Section -->
             <div class="form-group">
                 <input type="text" name="Address" placeholder="Enter Your Address">
             </div>
@@ -135,31 +142,12 @@
             <div>
                 <input type="text" name="captcha" placeholder="Enter the text from the image" required class="form-control">
             </div>
-            
+            <!-- Submit Button -->
             <button type="submit" class="btn-submit">Register</button>
         </form>
     </div>
 
-
-    <script>
-        function showOtpSection() {
-            // Get the mobile number from the input field
-            const mobileNumber = document.getElementById('mobile-input').value;
-        
-            // Display the mobile number in the OTP section
-            document.getElementById('mobile-display').value = mobileNumber;
-        
-            // Hide mobile input section and show OTP input section
-            document.getElementById('mobile-section').style.display = 'none';
-            document.getElementById('otp-section').style.display = 'flex';
-        }
-        
-        function verifyOtp() {
-            // Add OTP verification logic here
-            alert("OTP Verified!");
-        }
-        </script>
-
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
