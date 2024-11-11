@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(to right, #87f0fa, #faf3a8, #87f0fa);
+    margin: 0;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #71dfe9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+}
+
+h4 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 23px;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #270d76;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.captcha-container {
+    width: 250px;
+    height: 80px;
+}
+
+.captcha-img {
+    width: 100%;
+    height: 100%;
+    background-image: url('two.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    line-height: 80px;
+}
