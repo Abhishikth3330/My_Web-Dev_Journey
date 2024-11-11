@@ -1,0 +1,2 @@
+# Ignore the Examples folder and everything inside it
+03_Grid_Responsive/Dashboards/Examples/
