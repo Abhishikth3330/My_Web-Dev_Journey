@@ -1,7 +1,14 @@
+// import Bootstrap from "./Bootstrap";
+
+import Heading from "./Heading";
 function App(){
   return <div>
-    <h1>New Page</h1>
-    <h1>New Page</h1>
+    {/* <Bootstrap/>
+    <Bootstrap/>
+    <Bootstrap/>
+    <Bootstrap/> */}
+
+    <Heading/>
   </div>
 }
 export default App;
