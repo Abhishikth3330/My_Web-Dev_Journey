@@ -1,14 +1,18 @@
 // import Bootstrap from "./Bootstrap";
 
-import Heading from "./Heading";
+// import Heading from "./Heading";
+import Random from "./Random";
+// import Variable from "./Variable";
+
 function App(){
   return <div>
     {/* <Bootstrap/>
     <Bootstrap/>
     <Bootstrap/>
     <Bootstrap/> */}
-
-    <Heading/>
+    {/* <Variable/> */}
+    {/* <Heading/> */}
+    <Random/>
   </div>
 }
 export default App;
