@@ -1,8 +1,11 @@
 // import Bootstrap from "./Bootstrap";
 
 // import Heading from "./Heading";
-import Random from "./Random";
+// import Random from "./Random";
 // import Variable from "./Variable";
+// import Map from "./Map"
+import Food from "./Food"
+
 
 function App(){
   return <div>
@@ -12,7 +15,9 @@ function App(){
     <Bootstrap/> */}
     {/* <Variable/> */}
     {/* <Heading/> */}
-    <Random/>
+    {/* <Random/> */}
+    {/* <Map/> */}
+    <Food/>
   </div>
 }
 export default App;
