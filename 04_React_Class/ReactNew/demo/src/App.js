@@ -4,8 +4,8 @@
 // import Random from "./Random";
 // import Variable from "./Variable";
 // import Map from "./Map"
-// import Food from "./Food"
-import ErrorMsg from "./ErrorMsg";
+import Food from "./Food"
+// import ErrorMsg from "./ErrorMsg";
 
 function App(){
   return <div>
@@ -17,8 +17,8 @@ function App(){
     {/* <Heading/> */}
     {/* <Random/> */}
     {/* <Map/> */}
-    {/* <Food/> */}
-    <ErrorMsg/>  
+    <Food/>
+    {/* <ErrorMsg/>   */}
   </div>
 }
 export default App;
