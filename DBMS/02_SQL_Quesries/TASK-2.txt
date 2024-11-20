@@ -1,0 +1,49 @@
+Sameer Sontakke
+1:25 PM
+EmpId varchar primary Key identity('A1','1')
+
+Varchar    		Nvarchar(MAX)Images
+Nvarchar(100)Email
+
+Nvarchar(12)Mobile
+
+
+Student table1
+1.Name
+2.RollNumber Unique (5)
+3.DOB Datetime
+4.Gender Varchar(10)
+5.Mobile nvarchar(12)
+6.Email nvarchar(100)
+7.Class nvarchar(4)
+8.Division varchar(2)
+9.Address nvarchar(200)
+10.RegistrationDate Datetime
+11.ModificationDate Datetime
+
+School_Employee table2
+
+	Staff_Name
+	DOB
+	DOJ
+	Designation
+	Mobile
+	Email
+	Address
+	Gender
+	Teching_Subject Nullable
+	Salary
+	Sal
+	Salary_Date
+	Pan
+	Aadhar
+ 
+3.Bank Details.
+	1.BankName
+	2.BranchName
+	3.Adreess
+	4.IFSCCODE
+	5.AccountNumber
+	6.AccountHolderName
+	7.Regi_Date
+	8.Mod_Date
