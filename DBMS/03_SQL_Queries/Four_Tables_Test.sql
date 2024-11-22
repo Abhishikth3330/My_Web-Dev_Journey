@@ -208,3 +208,43 @@ order_status = 'Shipped'
 WHERE order_id = 4;
 
 select * from Orders;
+
+-- to get the order details of customer with id = 4
+SELECT 
+    C.customer_id,
+    C.customer_name,
+    O.order_id,
+    O.order_date,
+    OD.order_detail_id,
+    OD.product_id,
+    OD.quantity,
+    OD.unit_price,
+    OD.total_amount
+FROM Customers C
+JOIN Orders O
+    ON C.customer_id = O.customer_id
+JOIN 
+    OrderDetail OD
+    ON O.order_id = OD.order_id
+WHERE 
+    C.customer_id = 6; 
+
+
+
+
+select * from Products;
+select * from OrderDetail;
+select * from Orders;
+SELECT * FROM Customers;
+
+
+
+-- to find customers who have placed order with order status
+
+select * from Orders;
+SELECT * FROM Customers;
+
+select c. customer_id, c.customer_name, c.email, c.phone_number, o.order_date, o.total_amount, o.order_status
+from Customers c, Orders o
+where c.customer_id = o.customer_id and o.order_status = 'Shipped';
+
