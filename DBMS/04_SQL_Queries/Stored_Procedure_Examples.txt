@@ -1,0 +1,40 @@
+select * from custmer;
+select * from orders;
+select * from products;
+select * from orderdetails;
+
+create procedure sp_amazon
+(
+@Cust_id int,
+@Cust_name varchar(50),
+@Cust_email nvarchar(50),
+@Cust_PhNo nvarchar(50),
+@Cust_adhar varchar(15),
+@Ord_id int,
+@Ord_date datetime,
+@Ord_totalamt varchar(50),
+@Pdt_id int,
+@Pdt_Name varchar(50),
+@Pdt_price varchar(50),
+@Orddetail_id int,
+@Orddetail_quantity varchar(50),
+@Orddetail_unitprice nvarchar(50),
+@Orddetail_totalamt varchar(50),
+@Cust_Registration datetime,
+@Cust_Modificationdate datetime,
+@Ord_Registrationdate datetime,
+@Ord_Modificationdate datetime,
+@Pdt_Registrationdate datetime,
+@Pdt_Modificationdate datetime,
+@Orddetail_Registrationdate datetime,
+@Orddetail_Modificationdate datetime,
+@action varchar(20)
+)
+as 
+begin
+if @action='insert'
+begin
+insert into custmer (Cust_name, Cust_email, Cust_adhar, Cust_PhNo, Cust_RegistrationDate)
+values (@Cust_name, @Cust_email,@Cust_adhar, @Cust_PhNo, @Cust_Registrationdate)
+end
+end
