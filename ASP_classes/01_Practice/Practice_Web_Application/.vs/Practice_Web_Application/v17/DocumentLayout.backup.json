@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\IT_Networkz\\ASP_classes\\01_Practice\\Practice_Web_Application\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{78FF2AC9-6FCD-4CA9-A4CE-CBE122EFCC30}|Practice_Web_Application\\Practice_Web_Application.csproj|f:\\it_networkz\\asp_classes\\01_practice\\practice_web_application\\practice_web_application\\htmlpage1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{78FF2AC9-6FCD-4CA9-A4CE-CBE122EFCC30}|Practice_Web_Application\\Practice_Web_Application.csproj|solutionrelative:practice_web_application\\htmlpage1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HtmlPage1.html",
+              "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\01_Practice\\Practice_Web_Application\\Practice_Web_Application\\HtmlPage1.html",
+              "RelativeDocumentMoniker": "Practice_Web_Application\\HtmlPage1.html",
+              "ToolTip": "F:\\IT_Networkz\\ASP_classes\\01_Practice\\Practice_Web_Application\\Practice_Web_Application\\HtmlPage1.html*",
+              "RelativeToolTip": "Practice_Web_Application\\HtmlPage1.html*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-11-27T07:08:30.455Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
