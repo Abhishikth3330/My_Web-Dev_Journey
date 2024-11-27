@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "F:\\IT_Networkz\\ASP_classes\\01_Practice\\Practice_Web_Application\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{78FF2AC9-6FCD-4CA9-A4CE-CBE122EFCC30}|Practice_Web_Application\\Practice_Web_Application.csproj|f:\\it_networkz\\asp_classes\\01_practice\\practice_web_application\\practice_web_application\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{78FF2AC9-6FCD-4CA9-A4CE-CBE122EFCC30}|Practice_Web_Application\\Practice_Web_Application.csproj|solutionrelative:practice_web_application\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{78FF2AC9-6FCD-4CA9-A4CE-CBE122EFCC30}|Practice_Web_Application\\Practice_Web_Application.csproj|f:\\it_networkz\\asp_classes\\01_practice\\practice_web_application\\practice_web_application\\firstform.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{78FF2AC9-6FCD-4CA9-A4CE-CBE122EFCC30}|Practice_Web_Application\\Practice_Web_Application.csproj|solutionrelative:practice_web_application\\firstform.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78FF2AC9-6FCD-4CA9-A4CE-CBE122EFCC30}|Practice_Web_Application\\Practice_Web_Application.csproj|f:\\it_networkz\\asp_classes\\01_practice\\practice_web_application\\practice_web_application\\htmlpage1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{78FF2AC9-6FCD-4CA9-A4CE-CBE122EFCC30}|Practice_Web_Application\\Practice_Web_Application.csproj|solutionrelative:practice_web_application\\htmlpage1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{78FF2AC9-6FCD-4CA9-A4CE-CBE122EFCC30}|Practice_Web_Application\\Practice_Web_Application.csproj|f:\\it_networkz\\asp_classes\\01_practice\\practice_web_application\\practice_web_application\\firstform.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78FF2AC9-6FCD-4CA9-A4CE-CBE122EFCC30}|Practice_Web_Application\\Practice_Web_Application.csproj|solutionrelative:practice_web_application\\firstform.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Default.aspx",
-              "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\01_Practice\\Practice_Web_Application\\Practice_Web_Application\\Default.aspx",
-              "RelativeDocumentMoniker": "Practice_Web_Application\\Default.aspx",
-              "ToolTip": "F:\\IT_Networkz\\ASP_classes\\01_Practice\\Practice_Web_Application\\Practice_Web_Application\\Default.aspx",
-              "RelativeToolTip": "Practice_Web_Application\\Default.aspx",
+              "Title": "FirstForm.aspx",
+              "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\01_Practice\\Practice_Web_Application\\Practice_Web_Application\\FirstForm.aspx",
+              "RelativeDocumentMoniker": "Practice_Web_Application\\FirstForm.aspx",
+              "ToolTip": "F:\\IT_Networkz\\ASP_classes\\01_Practice\\Practice_Web_Application\\Practice_Web_Application\\FirstForm.aspx",
+              "RelativeToolTip": "Practice_Web_Application\\FirstForm.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-11-27T07:12:14.352Z",
+              "WhenOpened": "2024-11-27T13:35:36.9Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "HtmlPage1.html",
-              "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\01_Practice\\Practice_Web_Application\\Practice_Web_Application\\HtmlPage1.html",
-              "RelativeDocumentMoniker": "Practice_Web_Application\\HtmlPage1.html",
-              "ToolTip": "F:\\IT_Networkz\\ASP_classes\\01_Practice\\Practice_Web_Application\\Practice_Web_Application\\HtmlPage1.html",
-              "RelativeToolTip": "Practice_Web_Application\\HtmlPage1.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-11-27T07:08:30.455Z",
+              "Title": "FirstForm.aspx.cs",
+              "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\01_Practice\\Practice_Web_Application\\Practice_Web_Application\\FirstForm.aspx.cs",
+              "RelativeDocumentMoniker": "Practice_Web_Application\\FirstForm.aspx.cs",
+              "ToolTip": "F:\\IT_Networkz\\ASP_classes\\01_Practice\\Practice_Web_Application\\Practice_Web_Application\\FirstForm.aspx.cs",
+              "RelativeToolTip": "Practice_Web_Application\\FirstForm.aspx.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAqwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T14:15:38.227Z",
               "EditorCaption": ""
             }
           ]
