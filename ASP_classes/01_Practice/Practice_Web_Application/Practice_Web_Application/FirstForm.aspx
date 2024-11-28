@@ -12,38 +12,38 @@
         <div class="container mt-5 mb-5">
             <h1 class="py-3">Registration Form</h1>
 
-            <!-- Name Field -->
+            <!-- Name -->
             <div class="form-group">
                 <label for="nameBox">Full Name</label>
                 <asp:TextBox ID="name_box" runat="server" CssClass="form-control" Placeholder="Enter your full name"></asp:TextBox>
             </div>
 
-            <!-- Email Field -->
+            <!-- Email -->
             <div class="form-group mt-3">
                 <label for="emailBox">Email Address</label>
                 <asp:TextBox ID="email_box" runat="server" CssClass="form-control" Placeholder="Enter your email"></asp:TextBox>
             </div>
 
-            <!-- Mobile Number Field -->
+            <!-- Mobile Number -->
             <div class="form-group mt-3">
                 <label for="mobileBox">Mobile Number</label>
                 <asp:TextBox ID="mobile_box" runat="server" CssClass="form-control" Placeholder="Enter your mobile number"></asp:TextBox>
             </div>
 
-            <!-- Password Field -->
+            <!-- Password -->
             <div class="form-group mt-3">
                 <label for="passwordBox">Password</label>
                 <asp:TextBox ID="password_box" runat="server" CssClass="form-control" Placeholder="Enter your password"></asp:TextBox>
             </div>
 
 
-            <!-- Registration Date Field -->
+            <!-- Registration Date -->
             <div class="form-group mt-3">
                 <label for="registrationDate">Registration Date</label>
                 <asp:TextBox ID="registration_date_box" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
             </div>
 
-            <!-- Submit Button -->
+            <!-- Submit -->
             <div class="py-3 text-center">
                 <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary px-4" Text="Submit" OnClick="Button1_Click"/>
             </div>
