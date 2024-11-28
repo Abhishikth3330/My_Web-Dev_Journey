@@ -12,3 +12,23 @@ CREATE TABLE RegistrationTable (
 );
 
 select * from RegistrationTable;
+
+
+ALTER TABLE RegistrationTable
+ADD State NVARCHAR(100) NULL;
+
+
+ALTER TABLE RegistrationTable
+ADD City NVARCHAR(100) NULL;
+
+
+ALTER TABLE RegistrationTable
+ADD Address NVARCHAR(255) NULL;
+
+
+ALTER TABLE RegistrationTable
+ADD Pincode NVARCHAR(10) NULL;
+
+select * from RegistrationTable;
+
+

@@ -9,11 +9,17 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="container mt-5 mb-5">
-            <h1 class="py-3">Registration Form</h1>
+        <div class="container py-2">
+            <h3 class="py-1">Registration Form</h3>
+
+            <!-- ID -->
+            <div class="form-group">
+                <label for="idBox">ID</label>
+                <asp:TextBox ID="id_box" runat="server" CssClass="form-control" Placeholder="Enter ID"></asp:TextBox>
+            </div>
 
             <!-- Name -->
-            <div class="form-group">
+            <div class="form-group mt-3">
                 <label for="nameBox">Full Name</label>
                 <asp:TextBox ID="name_box" runat="server" CssClass="form-control" Placeholder="Enter your full name"></asp:TextBox>
             </div>
@@ -36,16 +42,42 @@
                 <asp:TextBox ID="password_box" runat="server" CssClass="form-control" Placeholder="Enter your password"></asp:TextBox>
             </div>
 
+            <!-- State -->
+            <div class="form-group mt-3">
+                <label for="stateBox">State</label>
+                <asp:TextBox ID="state_box" runat="server" CssClass="form-control" Placeholder="Enter your state"></asp:TextBox>
+            </div>
+
+            <!-- City -->
+            <div class="form-group mt-3">
+                <label for="cityBox">City</label>
+                <asp:TextBox ID="city_box" runat="server" CssClass="form-control" Placeholder="Enter your city"></asp:TextBox>
+            </div>
+
+            <!-- Address -->
+            <div class="form-group mt-3">
+                <label for="addressBox">Address</label>
+                <asp:TextBox ID="address_box" runat="server" CssClass="form-control" Placeholder="Enter your address"></asp:TextBox>
+            </div>
+
+            <!-- Pincode -->
+            <div class="form-group mt-3">
+                <label for="pincodeBox">Pincode</label>
+                <asp:TextBox ID="pincode_box" runat="server" CssClass="form-control" Placeholder="Enter your pincode"></asp:TextBox>
+            </div>
 
             <!-- Registration Date -->
             <div class="form-group mt-3">
                 <label for="registrationDate">Registration Date</label>
                 <asp:TextBox ID="registration_date_box" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
             </div>
-
-            <!-- Submit -->
+            
+            <!-- Submit and Find Details -->
             <div class="py-3 text-center">
                 <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary px-4" Text="Submit" OnClick="Button1_Click"/>
+                <asp:Button ID="FindDetailsButton" runat="server" CssClass="btn btn-warning px-4" Text="Find" OnClick="FindDetailsButton_Click"/>
+                <asp:Button ID="Update" runat="server" CssClass="btn btn-secondary px-4" Text="Update" OnCLick="Update_Click"/>
+                <asp:Button ID="Delete" runat="server" CssClass="btn btn-danger px-4" Text="Delete" Onclick="Delete_Click"/>
             </div>
         </div>
 
