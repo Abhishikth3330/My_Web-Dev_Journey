@@ -27,13 +27,16 @@
             <!-- Email -->
             <div class="form-group mt-3">
                 <label for="emailBox">Email Address</label>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Cannot be empty" ControlToValidate="email_box" Display="Dynamic" ForeColor="Red" ValidationGroup="Submit_Update"></asp:RequiredFieldValidator>
                 <asp:TextBox ID="email_box" runat="server" CssClass="form-control" Placeholder="Enter your email"></asp:TextBox>
             </div>
 
             <!-- Mobile Number -->
             <div class="form-group mt-3">
                 <label for="mobileBox">Mobile Number</label>
-                <asp:TextBox ID="mobile_box" runat="server" CssClass="form-control" Placeholder="Enter your mobile number"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Cannot be empty" ControlToValidate="mobile_box" Display="Dynamic" ForeColor="Red" ValidationGroup="Submit_Update"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Enter a valid mobile number" ControlToValidate="mobile_box" ForeColor="Red" ValidationExpression="\d{10}" ValidationGroup="Submit_Update"></asp:RegularExpressionValidator>
+                <asp:TextBox ID="mobile_box" runat="server" TextMode="Phone" MaxLength="10" CssClass="form-control" Placeholder="Enter your mobile number"></asp:TextBox>
             </div>
 
             <!-- Password -->
@@ -45,12 +48,14 @@
             <!-- State -->
             <div class="form-group mt-3">
                 <label for="stateBox">State</label>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Cannot be empty" ControlToValidate="state_box" Display="Dynamic" ForeColor="Red" ValidationGroup="Submit_Update"></asp:RequiredFieldValidator>
                 <asp:TextBox ID="state_box" runat="server" CssClass="form-control" Placeholder="Enter your state"></asp:TextBox>
             </div>
 
             <!-- City -->
             <div class="form-group mt-3">
                 <label for="cityBox">City</label>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Cannot be empty" ControlToValidate="city_box" Display="Dynamic" ForeColor="Red" ValidationGroup="Submit_Update"></asp:RequiredFieldValidator>
                 <asp:TextBox ID="city_box" runat="server" CssClass="form-control" Placeholder="Enter your city"></asp:TextBox>
             </div>
 
@@ -72,12 +77,13 @@
                 <asp:TextBox ID="registration_date_box" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
             </div>
             
-            <!-- Submit and Find Details -->
+            
+            <!-- Buttons -->
             <div class="py-3 text-center">
-                <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary px-4" Text="Submit" OnClick="Button1_Click"/>
-                <asp:Button ID="FindDetailsButton" runat="server" CssClass="btn btn-warning px-4" Text="Find" OnClick="FindDetailsButton_Click"/>
-                <asp:Button ID="Update" runat="server" CssClass="btn btn-secondary px-4" Text="Update" OnCLick="Update_Click"/>
-                <asp:Button ID="Delete" runat="server" CssClass="btn btn-danger px-4" Text="Delete" Onclick="Delete_Click"/>
+                <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary px-4" Text="Submit" OnClick="Button1_Click" ValidationGroup="Submit_Update" />
+                <asp:Button ID="FindDetailsButton" runat="server" CssClass="btn btn-warning px-4" Text="Find" OnClick="FindDetailsButton_Click" ValidationGroup="Find_Delete" />
+                <asp:Button ID="Update" runat="server" CssClass="btn btn-secondary px-4" Text="Update" OnClick="Update_Click" ValidationGroup="Submit_Update" />
+                <asp:Button ID="Delete" runat="server" CssClass="btn btn-danger px-4" Text="Delete" OnClick="Delete_Click" ValidationGroup="Find_Delete" />
             </div>
         </div>
 
