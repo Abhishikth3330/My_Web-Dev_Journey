@@ -26,17 +26,18 @@ namespace NEW_Form
         {
             try
             {
-                cm = new SqlCommand("insert into ProductDetails(Category, Product) VALUES (@Category, @Product)", cn);
+                cm = new SqlCommand("INSERT INTO ProductDetails(Category, Product, BalanceQuantity, Rate) VALUES (@Category, @Product, @BalanceQuantity, @Rate)", cn);
                 cm.Parameters.AddWithValue("@Category", ddl_category.SelectedItem.Text);
                 cm.Parameters.AddWithValue("@Product", product_box.Text);
+                cm.Parameters.AddWithValue("@BalanceQuantity", balance_quantity_box.Text);
+                cm.Parameters.AddWithValue("@Rate", rate_box.Text);
                 cn.Open();
                 cm.ExecuteNonQuery();
-                Response.Write("<script>alert('Success')</script>");
-   
+                Response.Write("<script>alert('Product added successfully')</script>");
             }
             catch (Exception ex)
             {
-                ex.Message.ToString();
+                Response.Write("<script>alert('Error: " + ex.Message + "')</script>");
             }
             finally
             {
@@ -52,9 +53,11 @@ namespace NEW_Form
             try
             {
                 string productId = id_box.Text;
-                cm = new SqlCommand("UPDATE ProductDetails SET Category = @Category, Product = @Product WHERE Id = @Id", cn);
+                cm = new SqlCommand("UPDATE ProductDetails SET Category = @Category, Product = @Product, BalanceQuantity = @BalanceQuantity, Rate = @Rate WHERE Id = @Id", cn);
                 cm.Parameters.AddWithValue("@Category", ddl_category.SelectedItem.Text);
                 cm.Parameters.AddWithValue("@Product", product_box.Text);
+                cm.Parameters.AddWithValue("@BalanceQuantity", balance_quantity_box.Text);
+                cm.Parameters.AddWithValue("@Rate", rate_box.Text);
                 cm.Parameters.AddWithValue("@Id", productId);
                 cn.Open();
                 int rowsAffected = cm.ExecuteNonQuery();
@@ -117,7 +120,7 @@ namespace NEW_Form
             try
             {
                 string productID = id_box.Text;
-                cm = new SqlCommand("SELECT Category, Product from ProductDetails where Id = @Id", cn);
+                cm = new SqlCommand("SELECT Category, Product, BalanceQuantity, Rate FROM ProductDetails WHERE Id = @Id", cn);
                 cm.Parameters.AddWithValue("@Id", productID);
                 cn.Open();
                 dr = cm.ExecuteReader();
@@ -126,6 +129,8 @@ namespace NEW_Form
                     dr.Read();
                     ddl_category.SelectedItem.Text = dr["Category"].ToString();
                     product_box.Text = dr["Product"].ToString();
+                    balance_quantity_box.Text = dr["BalanceQuantity"].ToString();
+                    rate_box.Text = dr["Rate"].ToString();
                 }
                 else
                 {
@@ -145,12 +150,11 @@ namespace NEW_Form
 
         protected void viewData()
         {
-            cm = new SqlCommand("Select Id, Category, Product from ProductDetails", cn);
+            cm = new SqlCommand("SELECT Id, Category, Product, BalanceQuantity, Rate FROM ProductDetails", cn);
             cn.Open();
             dr = cm.ExecuteReader();
             productRepeater.DataSource = dr;
             productRepeater.DataBind();
-            
             dr.Close();
             cn.Close();
         }

@@ -51,6 +51,24 @@ namespace NEW_Form
         protected global::System.Web.UI.WebControls.TextBox product_box;
 
         /// <summary>
+        /// balance_quantity_box control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox balance_quantity_box;
+
+        /// <summary>
+        /// rate_box control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox rate_box;
+
+        /// <summary>
         /// submit_btn control.
         /// </summary>
         /// <remarks>
