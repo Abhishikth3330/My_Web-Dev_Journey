@@ -36,12 +36,10 @@
         <!-- End Navbar -->
 
         <div class="container mt-5">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-
+            <div class="row">
+                <!-- Form Section -->
+                <div class="col-md-6">
                     <h3 class="text-center mb-4">Product Category Selection</h3>
-
-                    <!-- Form for Item Entry -->
                     <div class="card p-4">
                         <div class="mb-3">
                             <label for="id_box" class="form-label">Product ID</label>
@@ -87,9 +85,12 @@
                             <asp:Button ID="delete_btn" runat="server" Text="Delete" CssClass="btn btn-danger" OnClick="delete_btn_Click" />
                         </div>
                     </div>
+                </div>
 
-                    <!-- Product List -->
-                    <div class="mt-4">
+                <!-- Repeater Section -->
+                <div class="col-md-6">
+                    <h3 class="text-center mb-4">Product List</h3>
+                    <div>
                         <asp:Repeater ID="productRepeater" runat="server">
                             <HeaderTemplate>
                                 <table class="table table-striped">
@@ -119,10 +120,10 @@
                             </FooterTemplate>
                         </asp:Repeater>
                     </div>
-
                 </div>
             </div>
         </div>
+
     </form>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
