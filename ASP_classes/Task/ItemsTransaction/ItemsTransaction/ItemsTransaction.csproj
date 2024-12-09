@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Transactions.aspx" />
     <Content Include="Web.config" />
     <Content Include="Items.aspx" />
     <Content Include="Vendors.aspx" />
@@ -80,6 +81,13 @@
     </Compile>
     <Compile Include="Items.aspx.designer.cs">
       <DependentUpon>Items.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Transactions.aspx.cs">
+      <DependentUpon>Transactions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Transactions.aspx.designer.cs">
+      <DependentUpon>Transactions.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vendors.aspx.cs">
       <DependentUpon>Vendors.aspx</DependentUpon>

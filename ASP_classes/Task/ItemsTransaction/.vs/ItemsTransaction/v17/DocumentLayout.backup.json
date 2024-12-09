@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "F:\\IT_Networkz\\ASP_classes\\Task\\ItemsTransaction\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DF017953-D1B9-4B96-B6E6-F35046A99903}|ItemsTransaction\\ItemsTransaction.csproj|F:\\IT_Networkz\\ASP_classes\\Task\\ItemsTransaction\\itemstransaction\\vendors.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{DF017953-D1B9-4B96-B6E6-F35046A99903}|ItemsTransaction\\ItemsTransaction.csproj|solutionrelative:itemstransaction\\vendors.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{DF017953-D1B9-4B96-B6E6-F35046A99903}|ItemsTransaction\\ItemsTransaction.csproj|f:\\it_networkz\\asp_classes\\task\\itemstransaction\\itemstransaction\\transactions.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF017953-D1B9-4B96-B6E6-F35046A99903}|ItemsTransaction\\ItemsTransaction.csproj|solutionrelative:itemstransaction\\transactions.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF017953-D1B9-4B96-B6E6-F35046A99903}|ItemsTransaction\\ItemsTransaction.csproj|f:\\it_networkz\\asp_classes\\task\\itemstransaction\\itemstransaction\\items.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{DF017953-D1B9-4B96-B6E6-F35046A99903}|ItemsTransaction\\ItemsTransaction.csproj|solutionrelative:itemstransaction\\items.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{DF017953-D1B9-4B96-B6E6-F35046A99903}|ItemsTransaction\\ItemsTransaction.csproj|f:\\it_networkz\\asp_classes\\task\\itemstransaction\\itemstransaction\\transactions.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DF017953-D1B9-4B96-B6E6-F35046A99903}|ItemsTransaction\\ItemsTransaction.csproj|solutionrelative:itemstransaction\\transactions.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF017953-D1B9-4B96-B6E6-F35046A99903}|ItemsTransaction\\ItemsTransaction.csproj|F:\\IT_Networkz\\ASP_classes\\Task\\ItemsTransaction\\itemstransaction\\items.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF017953-D1B9-4B96-B6E6-F35046A99903}|ItemsTransaction\\ItemsTransaction.csproj|solutionrelative:itemstransaction\\items.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF017953-D1B9-4B96-B6E6-F35046A99903}|ItemsTransaction\\ItemsTransaction.csproj|f:\\it_networkz\\asp_classes\\task\\itemstransaction\\itemstransaction\\departments.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DF017953-D1B9-4B96-B6E6-F35046A99903}|ItemsTransaction\\ItemsTransaction.csproj|F:\\IT_Networkz\\ASP_classes\\Task\\ItemsTransaction\\itemstransaction\\departments.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF017953-D1B9-4B96-B6E6-F35046A99903}|ItemsTransaction\\ItemsTransaction.csproj|solutionrelative:itemstransaction\\departments.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DF017953-D1B9-4B96-B6E6-F35046A99903}|ItemsTransaction\\ItemsTransaction.csproj|f:\\it_networkz\\asp_classes\\task\\itemstransaction\\itemstransaction\\departments.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{DF017953-D1B9-4B96-B6E6-F35046A99903}|ItemsTransaction\\ItemsTransaction.csproj|solutionrelative:itemstransaction\\departments.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF017953-D1B9-4B96-B6E6-F35046A99903}|ItemsTransaction\\ItemsTransaction.csproj|F:\\IT_Networkz\\ASP_classes\\Task\\ItemsTransaction\\itemstransaction\\vendors.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DF017953-D1B9-4B96-B6E6-F35046A99903}|ItemsTransaction\\ItemsTransaction.csproj|solutionrelative:itemstransaction\\vendors.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF017953-D1B9-4B96-B6E6-F35046A99903}|ItemsTransaction\\ItemsTransaction.csproj|F:\\IT_Networkz\\ASP_classes\\Task\\ItemsTransaction\\itemstransaction\\items.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{DF017953-D1B9-4B96-B6E6-F35046A99903}|ItemsTransaction\\ItemsTransaction.csproj|solutionrelative:itemstransaction\\items.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF017953-D1B9-4B96-B6E6-F35046A99903}|ItemsTransaction\\ItemsTransaction.csproj|F:\\IT_Networkz\\ASP_classes\\Task\\ItemsTransaction\\itemstransaction\\items.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF017953-D1B9-4B96-B6E6-F35046A99903}|ItemsTransaction\\ItemsTransaction.csproj|solutionrelative:itemstransaction\\items.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DF017953-D1B9-4B96-B6E6-F35046A99903}|ItemsTransaction\\ItemsTransaction.csproj|F:\\IT_Networkz\\ASP_classes\\Task\\ItemsTransaction\\itemstransaction\\vendors.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,11 +42,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Items.aspx",
               "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\Task\\ItemsTransaction\\ItemsTransaction\\Items.aspx",
               "RelativeDocumentMoniker": "ItemsTransaction\\Items.aspx",
@@ -47,12 +55,11 @@
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2024-12-08T09:33:36.273Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Items.aspx.cs",
               "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\Task\\ItemsTransaction\\ItemsTransaction\\Items.aspx.cs",
               "RelativeDocumentMoniker": "ItemsTransaction\\Items.aspx.cs",
@@ -60,12 +67,11 @@
               "RelativeToolTip": "ItemsTransaction\\Items.aspx.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T09:36:55.697Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-08T09:36:55.697Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Vendors.aspx",
               "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\Task\\ItemsTransaction\\ItemsTransaction\\Vendors.aspx",
               "RelativeDocumentMoniker": "ItemsTransaction\\Vendors.aspx",
@@ -73,12 +79,11 @@
               "RelativeToolTip": "ItemsTransaction\\Vendors.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-12-08T10:13:14.041Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-08T10:13:14.041Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Vendors.aspx.cs",
               "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\Task\\ItemsTransaction\\ItemsTransaction\\Vendors.aspx.cs",
               "RelativeDocumentMoniker": "ItemsTransaction\\Vendors.aspx.cs",
@@ -86,12 +91,11 @@
               "RelativeToolTip": "ItemsTransaction\\Vendors.aspx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAIYAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T10:13:50.124Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-08T10:13:50.124Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Departments.aspx",
               "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\Task\\ItemsTransaction\\ItemsTransaction\\Departments.aspx",
               "RelativeDocumentMoniker": "ItemsTransaction\\Departments.aspx",
@@ -104,15 +108,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Departments.aspx.cs",
               "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\Task\\ItemsTransaction\\ItemsTransaction\\Departments.aspx.cs",
               "RelativeDocumentMoniker": "ItemsTransaction\\Departments.aspx.cs",
               "ToolTip": "F:\\IT_Networkz\\ASP_classes\\Task\\ItemsTransaction\\ItemsTransaction\\Departments.aspx.cs",
               "RelativeToolTip": "ItemsTransaction\\Departments.aspx.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAwwIYAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBQAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-08T14:22:35.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Transactions.aspx",
+              "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\Task\\ItemsTransaction\\ItemsTransaction\\Transactions.aspx",
+              "RelativeDocumentMoniker": "ItemsTransaction\\Transactions.aspx",
+              "ToolTip": "F:\\IT_Networkz\\ASP_classes\\Task\\ItemsTransaction\\ItemsTransaction\\Transactions.aspx",
+              "RelativeToolTip": "ItemsTransaction\\Transactions.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-12-09T14:10:31.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Transactions.aspx.cs",
+              "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\Task\\ItemsTransaction\\ItemsTransaction\\Transactions.aspx.cs",
+              "RelativeDocumentMoniker": "ItemsTransaction\\Transactions.aspx.cs",
+              "ToolTip": "F:\\IT_Networkz\\ASP_classes\\Task\\ItemsTransaction\\ItemsTransaction\\Transactions.aspx.cs",
+              "RelativeToolTip": "ItemsTransaction\\Transactions.aspx.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAADwv1wAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T14:18:41.528Z",
               "EditorCaption": ""
             }
           ]

@@ -40,6 +40,24 @@ CREATE TABLE Departments (
     CONSTRAINT FK_Departments_Items FOREIGN KEY (ItemID) REFERENCES Items(ID)
 );
 
+
+
+
+CREATE TABLE Transactions (
+    TransactionID INT IDENTITY(1,1) PRIMARY KEY,
+    TransactionType NVARCHAR(10) NOT NULL CHECK (TransactionType IN ('Purchase', 'Issue')),
+    ItemID INT NOT NULL,
+    Quantity INT NOT NULL,
+    VendorID INT NULL,
+    DepartmentID INT NULL,
+    TransactionDate DATETIME DEFAULT GETDATE(),
+    CONSTRAINT FK_Transactions_Items FOREIGN KEY (ItemID) REFERENCES Items(ID),
+    CONSTRAINT FK_Transactions_Vendors FOREIGN KEY (VendorID) REFERENCES Vendors(Vendor_ID),
+    CONSTRAINT FK_Transactions_Departments FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID)
+);
+
+
 select * from Items;
 select * from Vendors;
 select * from Departments;
+select * from Transactions;
