@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <style>
+        .main {
+            width: 100%;
+            display: flex;
+        }
+        .sub {
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <!-- Registration -->
+        <div class="sub registration" style="background-color: lightyellow;">
+            <h3 style="text-align: center;"><u>Registration Form</u></h3>
+            <marquee behavior="alternate" scrollamount="5" style="color: green;">
+                Register! Hurry up, limited seats available!
+            </marquee><br>
+            <form align="center">
+                <img src="stackbooks.jpg" alt="course image" height="50px" width="250px">
+                <hr>
+                <label>First Name: </label>
+                <input type="text" placeholder="Enter your first name">
+                <br><br>
+                <label>Last Name: </label>
+                <input type="text" placeholder="Enter your last name">
+                <br><br>
+                <label>Mobile No.: </label>
+                <input type="number" placeholder="Enter your Mobile No.">
+                <br><br>
+                <label>Email ID: </label>
+                <input type="email" placeholder="Enter your Email ID">
+                <br><br>
+                <label>Password: </label>
+                <input type="password" placeholder="Enter a new Password">
+                <br><br>
+                <label>State: </label>
+                <select>
+                    <option>Select</option>
+                    <option>Maharashtra</option>
+                    <option>Odisha</option>
+                    <option>Gujarat</option>
+                    <option>Himachal Pradesh</option>
+                </select>
+                <br><br>
+                <label>City: </label>
+                <select>
+                    <option>Select</option>
+                    <option>Nagpur</option>
+                    <option>Chandrapur</option>
+                    <option>Pune</option>
+                    <option>Wardha</option>
+                    <option>Mumbai</option>
+                    <option>Warora</option>
+                </select>
+                <br><br>
+                <label>Address: </label>
+                <textarea placeholder="Enter your address"></textarea>
+                <br><br>
+                <label>Gender: </label>
+                <input type="radio" name="gender"> <label>Male</label>
+                <input type="radio" name="gender"> <label>Female</label>
+                <input type="radio" name="gender"> <label>Neutral</label>
+                <br><br>
+                <button>Register</button>
+                <hr>
+            </form>
+            <div>
+                <marquee behavior="scroll" scrollamount="10" bgcolor="lightyellow" style="color: green;">
+                    Enter valid email and strong password for secure registration.
+                </marquee>
+                <ul>
+                    <li><span style="background-color: pink;">Ensure all fields are filled out.</span></li>
+                    <li><span style="background-color: pink;">Provide correct information to avoid issues.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Login -->
+        <div class="sub login" style="background-color: lightblue;">
+            <h3 style="text-align: center;"><u>Login Form</u></h3>
+            <marquee behavior="alternate" scrollamount="5" bgcolor="lightblue" style="color: green;">
+                Welcome to Login! Access your account now!
+            </marquee>
+            <form align="center">
+                <img src="shelf.jpg" alt="course image" height="50px" width="250px">
+                <hr>
+                <label>Email ID: </label>
+                <input type="email" placeholder="Enter your Email ID">
+                <br><br>
+                <label>Password: </label>
+                <input type="password" placeholder="Enter your Password">
+                <br><br>
+                <button>Login</button><br><br>
+                <a href="#" style="font-size: small;">Forgot Password</a>
+                <hr>
+            </form>
+            <div>
+                <marquee behavior="scroll" scrollamount="10" bgcolor="lightblue" style="color: green;">
+                    Click 'Forgot Password' on the login page.
+                </marquee>
+                <ul>
+                    <li><span style="background-color: lightpink;">Keep your login credentials safe.</span></li>
+                    <li><span style="background-color: lightpink;">Use a secure network while logging in.</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
