@@ -1,0 +1,70 @@
+protected void btnSubmit_Click(object sender, EventArgs e)
+{
+    string transactionType = rbPurchase.Checked ? "Purchase" : "Issue";
+    string itemNameValue = itemName.Text.Trim();
+    int quantityValue = int.Parse(quantity.Text.Trim());
+    int selectedId = ddlVendorDepartment.SelectedIndex > 0 ? int.Parse(ddlVendorDepartment.SelectedValue) : 0;
+
+    if (string.IsNullOrEmpty(balanceQuantity.Text))
+    {
+        Response.Write("<script>alert('Please find the item first');</script>");
+        return;
+    }
+
+    int balanceQuantityValue = int.Parse(balanceQuantity.Text);
+
+    try
+    {
+        cn.Open();
+
+        // Check and calculate new balance quantity
+        int newBalanceQuantity;
+        if (transactionType == "Purchase")
+        {
+            newBalanceQuantity = balanceQuantityValue + quantityValue;
+        }
+        else // Issue
+        {
+            newBalanceQuantity = balanceQuantityValue - quantityValue;
+
+            if (newBalanceQuantity < 0)
+            {
+                Response.Write("<script>alert('Insufficient balance');</script>");
+                return;
+            }
+        }
+
+        // Update Items table
+        string updateQuery = "UPDATE Items SET BalanceQuantity = @NewBalance WHERE ItemName = @ItemName";
+        cm = new SqlCommand(updateQuery, cn);
+        cm.Parameters.AddWithValue("@NewBalance", newBalanceQuantity);
+        cm.Parameters.AddWithValue("@ItemName", itemNameValue);
+        cm.ExecuteNonQuery();
+
+        // Insert into Transactions table
+        string insertQuery;
+        if (transactionType == "Purchase")
+        {
+            insertQuery = "INSERT INTO Transactions (TransactionType, ItemID, Quantity, VendorID, TransactionDate) " +
+                          "SELECT 'Purchase', ID, @Quantity, @VendorOrDeptID, GETDATE() FROM Items WHERE ItemName = @ItemName";
+        }
+        else // Issue
+        {
+            insertQuery = "INSERT INTO Transactions (TransactionType, ItemID, Quantity, DepartmentID, TransactionDate) " +
+                          "SELECT 'Issue', ID, @Quantity, @VendorOrDeptID, GETDATE() FROM Items WHERE ItemName = @ItemName";
+        }
+
+        cm = new SqlCommand(insertQuery, cn);
+        cm.Parameters.AddWithValue("@VendorOrDeptID", selectedId);
+        cm.Parameters.AddWithValue("@Quantity", quantityValue);
+        cm.Parameters.AddWithValue("@ItemName", itemNameValue);
+        cm.ExecuteNonQuery();
+
+        Response.Write("<script>alert('Transaction completed successfully');</script>");
+    }
+    finally
+    {
+        cn.Close();
+    }
+
+}

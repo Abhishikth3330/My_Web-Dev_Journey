@@ -30,7 +30,7 @@
 
         <div class="container mt-5">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-5">
                     <h3 class="text-center mb-4">Manage Transactions</h3>
 
                     <!-- Item Name -->
@@ -75,7 +75,7 @@
                 </div>
 
                 <!-- Repeater Section -->
-                <div class="col-md-6">
+                <div class="col-md-7">
                     <h3 class="text-center mb-4">Transactions</h3>
                     <asp:Repeater ID="transactionRepeater" runat="server">
                         <HeaderTemplate>
@@ -86,7 +86,9 @@
                                         <th>Type</th>
                                         <th>Item</th>
                                         <th>Quantity</th>
-                                        <th>Vendor/Dept</th>
+                                        <th>Vendor</th>
+                                        <th>Department</th>
+                                        <th>Balance Quantity</th>
                                         <th>Date</th>
                                     </tr>
                                 </thead>
@@ -98,7 +100,9 @@
                                 <td><%# Eval("TransactionType") %></td>
                                 <td><%# Eval("ItemName") %></td>
                                 <td><%# Eval("Quantity") %></td>
-                                <td><%# Eval("VendorOrDept") %></td>
+                                <td><%# Eval("VendorName") %></td>
+                                <td><%# Eval("DepartmentName") %></td>
+                                <td><%# Eval("BalanceQuantity") %></td>
                                 <td><%# Eval("TransactionDate") %></td>
                             </tr>
                         </ItemTemplate>
@@ -108,6 +112,7 @@
                         </FooterTemplate>
                     </asp:Repeater>
                 </div>
+
             </div>
         </div>
     </form>

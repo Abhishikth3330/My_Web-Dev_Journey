@@ -18,7 +18,7 @@ namespace ItemsTransaction
         {
             if (!IsPostBack)
             {
-                
+                viewData();
             }
         }
 
@@ -56,6 +56,7 @@ namespace ItemsTransaction
             {
                 dr.Close();
                 cn.Close();
+                viewData();
             }
         }
 
@@ -79,6 +80,7 @@ namespace ItemsTransaction
             {
                 dr.Close();
                 cn.Close();
+                viewData();
             }
         }
 
@@ -102,6 +104,7 @@ namespace ItemsTransaction
             {
                 dr.Close();
                 cn.Close();
+                viewData();
             }
         }
 
@@ -172,8 +175,36 @@ namespace ItemsTransaction
             finally
             {
                 cn.Close();
+                viewData();
             }
-
         }
+
+
+        protected void viewData()
+        {
+            try
+            {
+                cm = new SqlCommand(@"SELECT T.TransactionID, T.TransactionType, I.ItemName, I.BalanceQuantity, T.Quantity, V.Name AS VendorName,
+                                        D.Name AS DepartmentName, T.TransactionDate
+                                        FROM 
+                                        Transactions T, Items I, Vendors V, Departments D
+                                        WHERE T.ItemID = I.ID
+                                        AND (T.VendorID = V.Vendor_ID OR T.DepartmentID = D.DepartmentID)
+                                        AND (T.VendorID IS NOT NULL OR T.DepartmentID IS NOT NULL)", cn);
+
+                cn.Open();
+                dr = cm.ExecuteReader();
+                transactionRepeater.DataSource = dr;
+                transactionRepeater.DataBind();
+            }
+            finally
+            {
+                if (dr != null && !dr.IsClosed) dr.Close();
+                cn.Close();
+            }
+        }
+
+
+
     }
 }
