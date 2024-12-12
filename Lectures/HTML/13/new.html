@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Column Layout</title>
+    <style>
+        .container {
+            height: 300px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .column {
+            width: 48%;
+            margin-bottom: 10px;
+            padding: 10px;
+            color: white;
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="column" style="background-color: green;">
+        <span><u>About Me :</u> <br>
+            My name is Abhishikth Thul. Graduated in the year 2023
+        </span>
+        <br><br>
+        <label><u>Interests : </u></label>
+        <ul>
+            <li>Reading Books</li>
+            <li>Listening to music</li>
+            <li>Playing games</li>
+        </ul>
+    </div>
+
+    <div class="column" style="background-color: lightseagreen;">
+        <span><u>Skills : </u></span>
+        <ul>
+            <li>Python</li>
+            <li>ASP.Net</li>
+            <li>SQL</li>
+            <li>Git</li>
+            <li>Java</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Bootstrap</li>
+            <li>React</li>
+        </ul>
+    </div>
+
+    <div class="column" style="background-color: brown;">
+        <label>Languages I speak</label>
+        <ol>
+            <li>English</li>
+            <li>Hindi</li>
+            <li>Marathi</li>
+        </ol>
+        <label>Languages I am learning</label>
+        <ul>
+            <li>Japanese</li>
+        </ul>
+    </div>
+
+    <div class="column" style="background-color: orange; text-align: justify;">
+        <label><u>Academic Participations</u></label>
+        <p>I have participated in many programs and also seek opportunities to be a part of a committee where I get to learn something. I have been a part of the Entrepreneurship Cell and Student Representative Council of my college, where I learned event management.</p>
+    </div>
+</div>
+
+</body>
+</html>
