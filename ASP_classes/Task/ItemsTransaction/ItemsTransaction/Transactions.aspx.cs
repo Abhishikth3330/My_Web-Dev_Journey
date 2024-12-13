@@ -184,13 +184,23 @@ namespace ItemsTransaction
         {
             try
             {
-                cm = new SqlCommand(@"SELECT T.TransactionID, T.TransactionType, I.ItemName, I.BalanceQuantity, T.Quantity, V.Name AS VendorName,
-                                        D.Name AS DepartmentName, T.TransactionDate
-                                        FROM 
-                                        Transactions T, Items I, Vendors V, Departments D
-                                        WHERE T.ItemID = I.ID
-                                        AND (T.VendorID = V.Vendor_ID OR T.DepartmentID = D.DepartmentID)
-                                        AND (T.VendorID IS NOT NULL OR T.DepartmentID IS NOT NULL)", cn);
+                cm = new SqlCommand(@"SELECT 
+                                        T.TransactionID, 
+                                        T.TransactionType, 
+                                        I.ItemName, 
+                                        I.BalanceQuantity, 
+                                        T.Quantity, 
+                                        V.Name AS VendorName, 
+                                        D.Name AS DepartmentName, 
+                                        T.TransactionDate
+                                    FROM 
+                                        Transactions T
+                                    INNER JOIN 
+                                        Items I ON T.ItemID = I.ID
+                                    LEFT JOIN 
+                                        Vendors V ON T.VendorID = V.Vendor_ID
+                                    LEFT JOIN 
+                                        Departments D ON T.DepartmentID = D.DepartmentID", cn);
 
                 cn.Open();
                 dr = cm.ExecuteReader();
