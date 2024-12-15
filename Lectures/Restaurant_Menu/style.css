@@ -1,28 +1,21 @@
 body {
-    padding: 60px;
-    /* margin: 30px; */
-    margin-left: 25%;
-    margin-top: 40px;
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 700px;
-    width: 700px;
-    
-    border: 1px solid;
-    border-color: black;
+    background-color: white;
 }
 
-.main{
+.main {
     background-color: rgb(245, 245, 148);
+    width: 700px;
+    border: 4px solid black;
 }
 
 .menu-header {
     text-align: center;
-    margin-bottom: 40px;
-    
+    margin-bottom: 10px;
 }
 
 .menu-header h1 {
@@ -32,47 +25,47 @@ body {
 .menu-header h3 {
     font-size: medium;
     color: #666;
-    
 }
 
-/* .divider {
+.horizontal_line {
     width: 90%;
-    height: 1px;
-    background-color: #000;
-    margin: 10px 0;
-} */
-
-.horizontal_line{
-    width: 90%;
+    margin: 0 auto;
 }
 
 .menu-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap;
     width: 90%;
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 10px;
+}
+
+.menu-column-txt {
+    flex: 3;
+    text-align: left;
     padding: 10px;
     box-sizing: border-box;
-    
 }
 
-.menu-column {
-    flex: 1;
+.menu-column-img {
+    flex: 2;
     text-align: center;
-    max-width: 45%;
-    
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-.menu-column img {
-    width: 100px;
+.menu-column-img img {
+    width: 100%;
+    max-width: 150px;
     height: auto;
     border-radius: 5px;
 }
 
 .menu-column h2 {
     font-size: medium;
-    margin: 10px;
+    margin: 10px 0;
     text-decoration: underline;
 }
 
@@ -80,12 +73,17 @@ body {
     display: flex;
     justify-content: space-between;
     font-size: medium;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
 }
 
 .menu-item p {
     margin: 0;
 }
+
+.pastries-row {
+    margin-left: 40px;
+}
+
 
 .footer {
     text-align: center;
