@@ -32,7 +32,7 @@
                      <div class="option_container">
                         <div class="options">
                            <a href="" class="option1">
-                           Men's Shirt
+                           Add To Cart
                            </a>
                            <a href="" class="option2">
                            Buy Now
@@ -52,6 +52,7 @@
                      </div>
                   </div>
                </div>
+
                <div class="col-sm-6 col-md-4 col-lg-3">
                   <div class="box">
                      <div class="option_container">
@@ -77,6 +78,7 @@
                      </div>
                   </div>
                </div>
+
                <div class="col-sm-6 col-md-4 col-lg-3">
                   <div class="box">
                      <div class="option_container">
@@ -102,6 +104,7 @@
                      </div>
                   </div>
                </div>
+
                <div class="col-sm-6 col-md-4 col-lg-3">
                   <div class="box">
                      <div class="option_container">
@@ -127,6 +130,7 @@
                      </div>
                   </div>
                </div>
+
                <div class="col-sm-6 col-md-4 col-lg-3">
                   <div class="box">
                      <div class="option_container">
@@ -152,6 +156,7 @@
                      </div>
                   </div>
                </div>
+
                <div class="col-sm-6 col-md-4 col-lg-3">
                   <div class="box">
                      <div class="option_container">
@@ -177,6 +182,7 @@
                      </div>
                   </div>
                </div>
+
                <div class="col-sm-6 col-md-4 col-lg-3">
                   <div class="box">
                      <div class="option_container">
@@ -202,6 +208,7 @@
                      </div>
                   </div>
                </div>
+
                <div class="col-sm-6 col-md-4 col-lg-3">
                   <div class="box">
                      <div class="option_container">
@@ -227,6 +234,7 @@
                      </div>
                   </div>
                </div>
+
                <div class="col-sm-6 col-md-4 col-lg-3">
                   <div class="box">
                      <div class="option_container">
@@ -252,6 +260,7 @@
                      </div>
                   </div>
                </div>
+
                <div class="col-sm-6 col-md-4 col-lg-3">
                   <div class="box">
                      <div class="option_container">
@@ -277,6 +286,7 @@
                      </div>
                   </div>
                </div>
+
                <div class="col-sm-6 col-md-4 col-lg-3">
                   <div class="box">
                      <div class="option_container">
@@ -302,6 +312,7 @@
                      </div>
                   </div>
                </div>
+
                <div class="col-sm-6 col-md-4 col-lg-3">
                   <div class="box">
                      <div class="option_container">
@@ -327,6 +338,7 @@
                      </div>
                   </div>
                </div>
+
             </div>
             <div class="btn-box">
                <a href="">

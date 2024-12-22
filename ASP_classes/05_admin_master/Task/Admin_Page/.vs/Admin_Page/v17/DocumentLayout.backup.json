@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{7D85622D-4A82-4BFC-8FE8-06134AF2BA12}|Admin_Page\\Admin_Page.csproj|solutionrelative:admin_page\\pages\\admin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D85622D-4A82-4BFC-8FE8-06134AF2BA12}|Admin_Page\\Admin_Page.csproj|f:\\it_networkz\\asp_classes\\05_admin_master\\task\\admin_page\\admin_page\\mainpage\\admin.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "AbsoluteMoniker": "D:0:0:{7D85622D-4A82-4BFC-8FE8-06134AF2BA12}|Admin_Page\\Admin_Page.csproj|F:\\IT_Networkz\\ASP_classes\\05_admin_master\\Task\\Admin_Page\\admin_page\\mainpage\\admin.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
       "RelativeMoniker": "D:0:0:{7D85622D-4A82-4BFC-8FE8-06134AF2BA12}|Admin_Page\\Admin_Page.csproj|solutionrelative:admin_page\\mainpage\\admin.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     }
   ],
@@ -43,12 +43,11 @@
               "Title": "admin.aspx",
               "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\05_admin_master\\Task\\Admin_Page\\Admin_Page\\pages\\admin.aspx",
               "RelativeDocumentMoniker": "Admin_Page\\pages\\admin.aspx",
-              "ToolTip": "F:\\IT_Networkz\\ASP_classes\\05_admin_master\\Task\\Admin_Page\\Admin_Page\\pages\\admin.aspx*",
-              "RelativeToolTip": "Admin_Page\\pages\\admin.aspx*",
+              "ToolTip": "F:\\IT_Networkz\\ASP_classes\\05_admin_master\\Task\\Admin_Page\\Admin_Page\\pages\\admin.aspx",
+              "RelativeToolTip": "Admin_Page\\pages\\admin.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-12-16T15:09:33.413Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T15:09:33.413Z"
             },
             {
               "$type": "Document",

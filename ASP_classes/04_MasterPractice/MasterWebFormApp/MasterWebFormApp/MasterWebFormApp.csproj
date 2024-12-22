@@ -69,7 +69,8 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Blog_list.aspx" />
-    <Content Include="Contact.aspx" />
+    <Content Include="Cart.aspx" />
+    <Content Include="Register.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Products.aspx" />
     <Content Include="Testimonials.aspx" />
@@ -90,12 +91,19 @@
     <Compile Include="Blog_list.aspx.designer.cs">
       <DependentUpon>Blog_list.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
