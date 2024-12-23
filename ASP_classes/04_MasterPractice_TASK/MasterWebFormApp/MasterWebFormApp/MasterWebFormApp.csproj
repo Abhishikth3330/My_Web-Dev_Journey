@@ -114,6 +114,7 @@
     </Compile>
     <Compile Include="Home.Master.cs">
       <DependentUpon>Home.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Home.Master.designer.cs">
       <DependentUpon>Home.Master</DependentUpon>

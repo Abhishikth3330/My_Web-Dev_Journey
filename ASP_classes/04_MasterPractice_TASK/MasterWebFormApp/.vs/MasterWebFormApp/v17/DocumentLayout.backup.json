@@ -1,37 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice\\MasterWebFormApp\\",
+  "WorkspaceRootPath": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|f:\\it_networkz\\asp_classes\\04_masterpractice\\masterwebformapp\\masterwebformapp\\register.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|f:\\it_networkz\\asp_classes\\04_masterpractice_task\\masterwebformapp\\masterwebformapp\\register.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|solutionrelative:masterwebformapp\\register.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|f:\\it_networkz\\asp_classes\\04_masterpractice\\masterwebformapp\\masterwebformapp\\home.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "AbsoluteMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|f:\\it_networkz\\asp_classes\\04_masterpractice_task\\masterwebformapp\\masterwebformapp\\register.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|solutionrelative:masterwebformapp\\register.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\masterwebformapp\\home.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
       "RelativeMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|solutionrelative:masterwebformapp\\home.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|f:\\it_networkz\\asp_classes\\04_masterpractice\\masterwebformapp\\masterwebformapp\\cart.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\masterwebformapp\\cart.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|solutionrelative:masterwebformapp\\cart.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|F:\\IT_Networkz\\ASP_classes\\04_MasterPractice\\MasterWebFormApp\\masterwebformapp\\products.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\masterwebformapp\\products.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|solutionrelative:masterwebformapp\\products.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|F:\\IT_Networkz\\ASP_classes\\04_MasterPractice\\MasterWebFormApp\\masterwebformapp\\about.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\masterwebformapp\\about.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|solutionrelative:masterwebformapp\\about.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|F:\\IT_Networkz\\ASP_classes\\04_MasterPractice\\MasterWebFormApp\\masterwebformapp\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\masterwebformapp\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|solutionrelative:masterwebformapp\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|F:\\IT_Networkz\\ASP_classes\\04_MasterPractice\\MasterWebFormApp\\masterwebformapp\\testimonials.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|solutionrelative:masterwebformapp\\testimonials.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|F:\\IT_Networkz\\ASP_classes\\04_MasterPractice\\MasterWebFormApp\\masterwebformapp\\blog_list.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\masterwebformapp\\blog_list.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|solutionrelative:masterwebformapp\\blog_list.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
@@ -46,11 +46,11 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Home.Master",
-              "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice\\MasterWebFormApp\\MasterWebFormApp\\Home.Master",
+              "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\MasterWebFormApp\\Home.Master",
               "RelativeDocumentMoniker": "MasterWebFormApp\\Home.Master",
-              "ToolTip": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice\\MasterWebFormApp\\MasterWebFormApp\\Home.Master",
+              "ToolTip": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\MasterWebFormApp\\Home.Master",
               "RelativeToolTip": "MasterWebFormApp\\Home.Master",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -59,23 +59,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Default.aspx",
-              "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice\\MasterWebFormApp\\MasterWebFormApp\\Default.aspx",
+              "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\MasterWebFormApp\\Default.aspx",
               "RelativeDocumentMoniker": "MasterWebFormApp\\Default.aspx",
-              "ToolTip": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice\\MasterWebFormApp\\MasterWebFormApp\\Default.aspx",
+              "ToolTip": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\MasterWebFormApp\\Default.aspx",
               "RelativeToolTip": "MasterWebFormApp\\Default.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-12-11T15:40:13.437Z"
+              "WhenOpened": "2024-12-11T15:40:13.437Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Products.aspx",
-              "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice\\MasterWebFormApp\\MasterWebFormApp\\Products.aspx",
+              "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\MasterWebFormApp\\Products.aspx",
               "RelativeDocumentMoniker": "MasterWebFormApp\\Products.aspx",
-              "ToolTip": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice\\MasterWebFormApp\\MasterWebFormApp\\Products.aspx",
+              "ToolTip": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\MasterWebFormApp\\Products.aspx",
               "RelativeToolTip": "MasterWebFormApp\\Products.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -86,9 +87,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Register.aspx",
-              "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice\\MasterWebFormApp\\MasterWebFormApp\\Register.aspx",
+              "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\MasterWebFormApp\\Register.aspx",
               "RelativeDocumentMoniker": "MasterWebFormApp\\Register.aspx",
-              "ToolTip": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice\\MasterWebFormApp\\MasterWebFormApp\\Register.aspx",
+              "ToolTip": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\MasterWebFormApp\\Register.aspx",
               "RelativeToolTip": "MasterWebFormApp\\Register.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -97,23 +98,37 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Blog_list.aspx",
-              "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice\\MasterWebFormApp\\MasterWebFormApp\\Blog_list.aspx",
-              "RelativeDocumentMoniker": "MasterWebFormApp\\Blog_list.aspx",
-              "ToolTip": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice\\MasterWebFormApp\\MasterWebFormApp\\Blog_list.aspx",
-              "RelativeToolTip": "MasterWebFormApp\\Blog_list.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-12-11T16:20:20.268Z"
+              "DocumentIndex": 1,
+              "Title": "Register.aspx.cs",
+              "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\MasterWebFormApp\\Register.aspx.cs",
+              "RelativeDocumentMoniker": "MasterWebFormApp\\Register.aspx.cs",
+              "ToolTip": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\MasterWebFormApp\\Register.aspx.cs",
+              "RelativeToolTip": "MasterWebFormApp\\Register.aspx.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAQwE0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T17:26:14.445Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
+              "Title": "Blog_list.aspx",
+              "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\MasterWebFormApp\\Blog_list.aspx",
+              "RelativeDocumentMoniker": "MasterWebFormApp\\Blog_list.aspx",
+              "ToolTip": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\MasterWebFormApp\\Blog_list.aspx",
+              "RelativeToolTip": "MasterWebFormApp\\Blog_list.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-12-11T16:20:20.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "About.aspx",
-              "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice\\MasterWebFormApp\\MasterWebFormApp\\About.aspx",
+              "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\MasterWebFormApp\\About.aspx",
               "RelativeDocumentMoniker": "MasterWebFormApp\\About.aspx",
-              "ToolTip": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice\\MasterWebFormApp\\MasterWebFormApp\\About.aspx",
+              "ToolTip": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\MasterWebFormApp\\About.aspx",
               "RelativeToolTip": "MasterWebFormApp\\About.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -122,23 +137,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Testimonials.aspx",
-              "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice\\MasterWebFormApp\\MasterWebFormApp\\Testimonials.aspx",
-              "RelativeDocumentMoniker": "MasterWebFormApp\\Testimonials.aspx",
-              "ToolTip": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice\\MasterWebFormApp\\MasterWebFormApp\\Testimonials.aspx",
-              "RelativeToolTip": "MasterWebFormApp\\Testimonials.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-12-11T16:30:01.231Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Cart.aspx",
-              "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice\\MasterWebFormApp\\MasterWebFormApp\\Cart.aspx",
+              "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\MasterWebFormApp\\Cart.aspx",
               "RelativeDocumentMoniker": "MasterWebFormApp\\Cart.aspx",
-              "ToolTip": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice\\MasterWebFormApp\\MasterWebFormApp\\Cart.aspx",
+              "ToolTip": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\MasterWebFormApp\\Cart.aspx",
               "RelativeToolTip": "MasterWebFormApp\\Cart.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
