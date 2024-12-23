@@ -17,7 +17,6 @@
             </div>
         </div>
     </section>
-    <!-- end inner page section -->
 
     <!-- registration form section -->
     <section class="registration_section layout_padding">
@@ -83,5 +82,5 @@
             </div>
         </div>
     </section>
-    <!-- end registration form section -->
+
 </asp:Content>
