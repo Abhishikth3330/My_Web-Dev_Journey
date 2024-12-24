@@ -1,0 +1,25 @@
+Table
+	Skills
+		1. technical(table)
+			Html,css,etc.
+		2. non-technical(table)
+			accounts,etc.
+		3. medical(table)
+			surgeon,etc.
+
+	Candidate (table)
+		Id,email,mobile,state,city,contury,qualifications(bca,mca),skills,Mode(Online/Offline),name,gender.
+	
+	Organisation(Table)
+		Job openings(Positions,skills,gender,description,company name, mob number, location, No_of_openings, qualifications, Mode(On/Off).
+
+	Candidate Register(table)
+		name,email,password,nbit(unable/disable),reg_date,mod_date.
+	Organisation Register (table)
+		name,email,password,nbit(unable/disable),reg_date, mod_date.
+
+
+Points
+1. show No. of matching jobs for candidate (Join).
+2. No. of candidates eligible for particula posts.
+3. Match with qualification, skills, mode and gender.
