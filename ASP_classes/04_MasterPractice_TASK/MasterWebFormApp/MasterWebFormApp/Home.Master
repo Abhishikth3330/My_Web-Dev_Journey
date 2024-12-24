@@ -44,6 +44,18 @@
                             <li class="nav-item active">
                                <a class="nav-link" href="Default.aspx">Home <span class="sr-only">(current)</span></a>
                             </li>
+                            <li class="nav-item">
+                               <a class="nav-link" href="Register.aspx">Register</a>
+                            </li>
+                            <li class="nav-item">
+                               <a class="nav-link" href="Category.aspx">Category</a>
+                            </li>
+                            <li class="nav-item">
+                               <a class="nav-link" href="AddProduct.aspx">Add_Products</a>
+                            </li>
+                            <li class="nav-item">
+                               <a class="nav-link" href="Products.aspx">Products</a>
+                            </li>
                            <li class="nav-item dropdown">
                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Pages</span> <span class="caret"></span></a>
                                <ul class="dropdown-menu">
@@ -51,15 +63,12 @@
                                   <li><a href="Testimonials.aspx">Testimonial</a></li>
                                </ul>
                             </li>
-                            <li class="nav-item">
-                               <a class="nav-link" href="Products.aspx">Products</a>
-                            </li>
+                            
                             <li class="nav-item">
                                <a class="nav-link" href="Blog_list.aspx">Blog</a>
                             </li>
-                            <li class="nav-item">
-                               <a class="nav-link" href="Register.aspx">Register</a>
-                            </li>
+                            
+                             
                             <li class="nav-item">
                                <a class="nav-link" href="Cart.aspx">
                                   <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">

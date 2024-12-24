@@ -3,6 +3,7 @@ CREATE DATABASE Ecommerce;
 USE Ecommerce;
 
 
+
 -- Create the CategoryTable
 CREATE TABLE CategoryTable (
     CategoryID INT IDENTITY(1,1) PRIMARY KEY, -- Auto-incrementing primary key
@@ -10,6 +11,9 @@ CREATE TABLE CategoryTable (
     RegistrationDate DATE NOT NULL,
     ModificationDate DATE NULL
 );
+
+
+
 
 
 -- Create the ProductTable
@@ -23,6 +27,20 @@ CREATE TABLE ProductTable (
     ModificationDate DATE NULL,
     FOREIGN KEY (CategoryID) REFERENCES CategoryTable(CategoryID) -- Foreign key constraint
 );
+
+-- Add a column for the product image
+ALTER TABLE ProductTable
+ADD ProductImage NVARCHAR(MAX) NULL;
+
+-- Add a column for nBit with a default value of 1
+ALTER TABLE ProductTable
+ADD nBit BIT NOT NULL DEFAULT 1;
+
+select * from ProductTable;
+
+
+
+
 
 -- Create the UserTable
 CREATE TABLE UserTable (
@@ -42,7 +60,15 @@ CREATE TABLE UserTable (
     FOREIGN KEY (ProductID) REFERENCES ProductTable(ProductID) -- Foreign key constraint
 );
 
+-- Add a column for nBit with a default value of 1
+ALTER TABLE UserTable
+ADD nBit BIT NOT NULL DEFAULT 1;
+
 select * from UserTable;
+
+
+
+
 
 -- Create the CartTable
 CREATE TABLE CartTable (
