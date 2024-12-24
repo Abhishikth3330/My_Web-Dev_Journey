@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|solutionrelative:masterwebformapp\\register.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|f:\\it_networkz\\asp_classes\\04_masterpractice_task\\masterwebformapp\\masterwebformapp\\register.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\masterwebformapp\\register.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|solutionrelative:masterwebformapp\\register.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -52,7 +52,6 @@
               "RelativeDocumentMoniker": "MasterWebFormApp\\Home.Master",
               "ToolTip": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\MasterWebFormApp\\Home.Master",
               "RelativeToolTip": "MasterWebFormApp\\Home.Master",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2024-12-11T15:25:39.94Z",
               "EditorCaption": ""
@@ -67,8 +66,7 @@
               "RelativeToolTip": "MasterWebFormApp\\Default.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-12-11T15:40:13.437Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T15:40:13.437Z"
             },
             {
               "$type": "Document",
@@ -80,8 +78,7 @@
               "RelativeToolTip": "MasterWebFormApp\\Products.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-12-11T16:13:33.271Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T16:13:33.271Z"
             },
             {
               "$type": "Document",
@@ -106,8 +103,7 @@
               "RelativeToolTip": "MasterWebFormApp\\Register.aspx.cs",
               "ViewState": "AgIAAEMAAAAAAAAAAAAQwE0AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T17:26:14.445Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T17:26:14.445Z"
             },
             {
               "$type": "Document",
@@ -119,8 +115,7 @@
               "RelativeToolTip": "MasterWebFormApp\\Blog_list.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-12-11T16:20:20.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T16:20:20.268Z"
             },
             {
               "$type": "Document",
@@ -132,8 +127,7 @@
               "RelativeToolTip": "MasterWebFormApp\\About.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-12-11T16:29:12.383Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T16:29:12.383Z"
             },
             {
               "$type": "Document",
@@ -145,8 +139,7 @@
               "RelativeToolTip": "MasterWebFormApp\\Cart.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-12-22T10:19:26.217Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-22T10:19:26.217Z"
             }
           ]
         }
