@@ -72,9 +72,10 @@
     <Content Include="Blog_list.aspx" />
     <Content Include="Cart.aspx" />
     <Content Include="Category.aspx" />
+    <Content Include="Products.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Default.aspx" />
-    <Content Include="Products.aspx" />
+    <Content Include="ProductsOld.aspx" />
     <Content Include="Testimonials.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -114,6 +115,13 @@
     <Compile Include="Category.aspx.designer.cs">
       <DependentUpon>Category.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -135,12 +143,12 @@
     <Compile Include="Home.Master.designer.cs">
       <DependentUpon>Home.Master</DependentUpon>
     </Compile>
-    <Compile Include="Products.aspx.cs">
-      <DependentUpon>Products.aspx</DependentUpon>
+    <Compile Include="ProductsOld.aspx.cs">
+      <DependentUpon>ProductsOld.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Products.aspx.designer.cs">
-      <DependentUpon>Products.aspx</DependentUpon>
+    <Compile Include="ProductsOld.aspx.designer.cs">
+      <DependentUpon>ProductsOld.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Testimonials.aspx.cs">

@@ -11,7 +11,7 @@ namespace MasterWebFormApp
 {
 
 
-    public partial class Products1
+    public partial class Products
     {
     }
 }

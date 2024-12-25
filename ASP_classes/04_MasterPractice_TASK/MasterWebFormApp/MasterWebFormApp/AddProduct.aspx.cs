@@ -10,7 +10,8 @@ namespace MasterWebFormApp
 {
     public partial class AddProduct : Page
     {
-        private readonly SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-EF5D6IS\SQLEXPRESS;Initial Catalog=Ecommerce;Integrated Security=True;Encrypt=False");
+        SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-EF5D6IS\SQLEXPRESS;Initial Catalog=Ecommerce;Integrated Security=True;Encrypt=False");
+        SqlCommand cm;
         SqlDataReader dr;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -22,15 +23,15 @@ namespace MasterWebFormApp
 
         protected void GetCategoryId()
         {
-            SqlCommand cm = new SqlCommand("select * from CategoryTable", cn);
+            SqlCommand cm = new SqlCommand("SELECT CategoryID, CategoryName FROM CategoryTable", cn);
             
             cn.Open();
             dr = cm.ExecuteReader();
             ddlCategory.DataSource = dr;
-            ddlCategory.DataTextField = "CategoryName";
             ddlCategory.DataValueField = "CategoryID";
+            ddlCategory.DataTextField = "CategoryName";
             ddlCategory.DataBind();
-            ddlCategory.Items.Insert(0, "Select");
+            //ddlCategory.Items.Insert(0, "Select");
             cn.Close();
             dr.Close();
         }
@@ -56,22 +57,7 @@ namespace MasterWebFormApp
             return "~/addedImages/" + fileName;  // Return relative path to store in DB
         }
 
-        private bool InsertProduct(string productName, decimal price, int quantity, int categoryId, string productImage)
-        {
-            using (var cmd = new SqlCommand("INSERT INTO ProductTable (ProductName, Price, Quantity, CategoryID, ProductImage, RegistrationDate) VALUES (@ProductName, @Price, @Quantity, @CategoryID, @ProductImage, @RegistrationDate)", cn))
-            {
-                cmd.Parameters.AddWithValue("@ProductName", productName);
-                cmd.Parameters.AddWithValue("@Price", price);
-                cmd.Parameters.AddWithValue("@Quantity", quantity);
-                cmd.Parameters.AddWithValue("@CategoryID", categoryId);
-                cmd.Parameters.AddWithValue("@ProductImage", productImage); // Save image path in DB
-                cmd.Parameters.AddWithValue("@RegistrationDate", DateTime.Now);
-                return cmd.ExecuteNonQuery() > 0; // Return true if product is successfully inserted
-            }
-        }
-
-
-
+        
         private void ShowMessage(string message, string alertType)
         {
             ClientScript.RegisterStartupScript(this.GetType(), "Alert", $"alert('{message}');", true);
@@ -88,33 +74,39 @@ namespace MasterWebFormApp
             fuProductImage.Dispose();
         }
 
+
         protected void btnAddProduct_Click1(object sender, EventArgs e)
         {
             if (ddlCategory.SelectedValue == "0")
             {
-                ddlCategory.CssClass += " is-invalid";
+                ShowMessage("Please select a valid category.", "danger");
                 return;
             }
 
             try
             {
-                // Open the database connection
                 cn.Open();
 
-                // Get the CategoryID based on selected Category
-                //int categoryId = GetCategoryId(ddlCategory.SelectedItem.Text.Trim());
-                //if (categoryId == 0)
-                //{
-                //    ShowMessage("Invalid category selected.", "danger");
-                //    return;
-                //}
-
-                // Save the image and get the file path
+                // Call the SaveImage function to get the image path
                 string imagePath = SaveImage();
 
-                // Insert the product into the ProductTable with the image path
-                bool isInserted = InsertProduct(txtProductName.Text.Trim(), Convert.ToDecimal(txtPrice.Text.Trim()),
-                    Convert.ToInt32(txtQuantity.Text.Trim()), ddlCategory.SelectedIndex, imagePath);
+                // Prepare the SQL command for inserting the product
+                cm = new SqlCommand(
+                    "INSERT INTO ProductTable (ProductName, Price, Quantity, CategoryID, ProductImage, RegistrationDate) " +
+                    "VALUES (@ProductName, @Price, @Quantity, @CategoryID, @ProductImage, @RegistrationDate)", cn);
+
+                // Add parameters to the command
+                cm.Parameters.AddWithValue("@ProductName", txtProductName.Text.Trim()); // Keep Trim for user-entered text
+                cm.Parameters.AddWithValue("@Price", Convert.ToDecimal(txtPrice.Text)); // Numeric conversion handles spaces
+                cm.Parameters.AddWithValue("@Quantity", Convert.ToInt32(txtQuantity.Text)); // Numeric conversion handles spaces
+                cm.Parameters.AddWithValue("@CategoryID", Convert.ToInt32(ddlCategory.SelectedValue)); // Dropdown value doesn't need Trim
+                cm.Parameters.AddWithValue("@ProductImage", imagePath); // Predefined value doesn't need Trim
+                cm.Parameters.AddWithValue("@RegistrationDate", DateTime.Now); // Date doesn't need Trim
+
+
+                // Execute the query and check if the insertion was successful
+                int rowsAffected = cm.ExecuteNonQuery();
+                bool isInserted = rowsAffected > 0;
 
                 // Show success or failure message
                 ShowMessage(isInserted ? "Product added successfully!" : "Failed to add product. Please try again.",
@@ -125,12 +117,15 @@ namespace MasterWebFormApp
             }
             catch (Exception ex)
             {
+                // Show error message if an exception occurs
                 ShowMessage($"An error occurred: {ex.Message}", "danger");
             }
             finally
             {
+                // Ensure the connection is closed
                 cn.Close();
             }
         }
+
     }
 }
