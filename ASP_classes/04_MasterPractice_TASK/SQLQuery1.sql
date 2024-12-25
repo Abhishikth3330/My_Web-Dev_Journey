@@ -37,8 +37,12 @@ ALTER TABLE ProductTable
 ADD nBit BIT NOT NULL DEFAULT 1;
 
 -- Add a new column for CategoryName
-ALTER TABLE ProducCategoryName NVARCHAR(100) tTable
-ADD NULL;
+ALTER TABLE ProductTable 
+ADD CategoryName NVARCHAR(100) NULL;
+
+ALTER TABLE ProductTable
+DROP COLUMN CategoryName;
+
 
 
 select * from ProductTable;
@@ -88,7 +92,9 @@ CREATE TABLE CartTable (
     FOREIGN KEY (CategoryID) REFERENCES CategoryTable(CategoryID) -- Foreign key constraint
 );
 
+
+
+select * from UserTable;
 select * from CategoryTable;
 select * from ProductTable;
-select * from UserTable;
 select * from CartTable;
