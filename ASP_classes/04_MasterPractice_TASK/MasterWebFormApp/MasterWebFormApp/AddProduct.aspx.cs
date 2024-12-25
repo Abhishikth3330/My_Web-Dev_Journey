@@ -1,112 +1,127 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.IO;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace MasterWebFormApp
 {
     public partial class AddProduct : Page
     {
-        SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-EF5D6IS\SQLEXPRESS;Initial Catalog=Ecommerce;Integrated Security=True;Encrypt=False");
-        SqlCommand cm;
-        SqlDataReader dr;
+        private readonly SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-EF5D6IS\SQLEXPRESS;Initial Catalog=Ecommerce;Integrated Security=True;Encrypt=False");
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                // Bind categories to the DropDownList
-                BindCategories();
-            }
+            // No need to do anything on Page_Load for now.
         }
-
-        private void BindCategories()
-        {
-            try
-            {
-                // Query to fetch categories from the Category table
-                SqlCommand cmd = new SqlCommand("SELECT CategoryID, CategoryName FROM Category", cn);
-
-                // Open the connection
-                cn.Open();
-
-                // Execute the query and read the results
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                // Clear any existing items in the DropDownList
-                ddlCategory.Items.Clear();
-                ddlCategory.Items.Add(new ListItem("Select Category", "0")); // Default item
-
-                // Loop through the data reader and add items to the DropDownList
-                while (reader.Read())
-                {
-                    // Add each category as an option in the DropDownList
-                    ddlCategory.Items.Add(new ListItem(reader["CategoryName"].ToString(), reader["CategoryID"].ToString()));
-                }
-
-                // Close the reader
-                reader.Close();
-            }
-            catch (Exception ex)
-            {
-                // Log or display the error message
-                Response.Write("<script>alert('Error: " + ex.Message + "');</script>");
-            }
-            finally
-            {
-                // Ensure the connection is closed, even if an error occurs
-                if (cn.State == System.Data.ConnectionState.Open)
-                {
-                    cn.Close();
-                }
-            }
-        }
-
 
         protected void btnAddProduct_Click(object sender, EventArgs e)
         {
-            // Validate form inputs
-            if (Page.IsValid)
+            if (ddlCategory.SelectedValue == "0")
             {
-                // Retrieve form data
-                string productName = txtProductName.Text;
-                decimal price = decimal.Parse(txtPrice.Text);
-                int quantity = int.Parse(txtQuantity.Text);
-                string productImage = string.Empty;
+                ddlCategory.CssClass += " is-invalid";
+                return;
+            }
 
-                // Handle image upload
-                if (fuProductImage.HasFile)
+            try
+            {
+                // Open the database connection
+                cn.Open();
+
+                // Get the CategoryID based on selected Category
+                int categoryId = GetCategoryId(ddlCategory.SelectedItem.Text.Trim());
+                if (categoryId == 0)
                 {
-                    // Set the product image path
-                    productImage = "~/ProductImages/" + fuProductImage.FileName;
-                    // Save the uploaded file to the server
-                    fuProductImage.SaveAs(Server.MapPath(productImage));
+                    ShowMessage("Invalid category selected.", "danger");
+                    return;
                 }
 
-                int categoryID = int.Parse(ddlCategory.SelectedValue); // Get the selected CategoryID
+                // Save the image and get the file path
+                string imagePath = SaveImage();
 
-                // Insert data into ProductTable
-                SqlCommand cm = new SqlCommand("INSERT INTO ProductTable (ProductName, Price, Quantity, ProductImage, CategoryID) VALUES (@ProductName, @Price, @Quantity, @ProductImage, @CategoryID)", cn);
-                cm.Parameters.AddWithValue("@ProductName", productName);
-                cm.Parameters.AddWithValue("@Price", price);
-                cm.Parameters.AddWithValue("@Quantity", quantity);
-                cm.Parameters.AddWithValue("@ProductImage", productImage);
-                cm.Parameters.AddWithValue("@CategoryID", categoryID);
+                // Insert the product into the ProductTable with the image path
+                bool isInserted = InsertProduct(txtProductName.Text.Trim(), Convert.ToDecimal(txtPrice.Text.Trim()),
+                    Convert.ToInt32(txtQuantity.Text.Trim()), categoryId, imagePath);
 
-                cn.Open();
-                cm.ExecuteNonQuery();
+                // Show success or failure message
+                ShowMessage(isInserted ? "Product added successfully!" : "Failed to add product. Please try again.",
+                            isInserted ? "success" : "danger");
+
+                // Clear the form if insertion was successful
+                if (isInserted) ClearForm();
+            }
+            catch (Exception ex)
+            {
+                ShowMessage($"An error occurred: {ex.Message}", "danger");
+            }
+            finally
+            {
                 cn.Close();
-
-                // Clear the form after insertion
-                txtProductName.Text = "";
-                txtPrice.Text = "";
-                txtQuantity.Text = "";
-                fuProductImage.Attributes.Clear();
-                ddlCategory.SelectedIndex = 0;
-
-                // Optionally show a success message
-                Response.Write("<script>alert('Product added successfully!');</script>");
             }
         }
+
+
+
+        private int GetCategoryId(string categoryName)
+        {
+            using (var cmd = new SqlCommand("SELECT CategoryID FROM CategoryTable WHERE CategoryName = @CategoryName", cn))
+            {
+                cmd.Parameters.AddWithValue("@CategoryName", categoryName);
+                object result = cmd.ExecuteScalar();
+                return result != null ? Convert.ToInt32(result) : 0;
+            }
+        }
+
+
+
+        private string SaveImage()
+        {
+            if (!fuProductImage.HasFile)
+                throw new Exception("Product image is required.");
+
+            string folderPath = Server.MapPath("~/addedImages/");
+            if (!Directory.Exists(folderPath))
+                Directory.CreateDirectory(folderPath);
+
+            // Generate a unique file name using timestamp and original file name
+            string fileName = DateTime.Now.ToString("yyyyMMdd_HHmmss") + "_" + fuProductImage.FileName;
+            string filePath = Path.Combine(folderPath, fileName);
+
+            // Save the file to the server
+            fuProductImage.SaveAs(filePath);
+
+            return "~/addedImages/" + fileName;  // Return relative path to store in DB
+        }
+
+        private bool InsertProduct(string productName, decimal price, int quantity, int categoryId, string productImage)
+        {
+            using (var cmd = new SqlCommand("INSERT INTO ProductTable (ProductName, Price, Quantity, CategoryID, ProductImage) VALUES (@ProductName, @Price, @Quantity, @CategoryID, @ProductImage)", cn))
+            {
+                cmd.Parameters.AddWithValue("@ProductName", productName);
+                cmd.Parameters.AddWithValue("@Price", price);
+                cmd.Parameters.AddWithValue("@Quantity", quantity);
+                cmd.Parameters.AddWithValue("@CategoryID", categoryId);
+                cmd.Parameters.AddWithValue("@ProductImage", productImage); // Save image path in DB
+
+                return cmd.ExecuteNonQuery() > 0; // Return true if product is successfully inserted
+            }
+        }
+
+
+
+        private void ShowMessage(string message, string alertType)
+        {
+            ClientScript.RegisterStartupScript(this.GetType(), "Alert", $"alert('{message}');", true);
+        }
+
+
+        private void ClearForm()
+        {
+            txtProductName.Text = string.Empty;
+            txtPrice.Text = string.Empty;
+            txtQuantity.Text = string.Empty;
+            ddlCategory.SelectedIndex = 0;
+            fuProductImage.Dispose();
+        }
+
     }
 }

@@ -25,38 +25,46 @@
                 <div class="col-lg-8">
                     <div class="card p-4">
                         <div id="ProductForm" runat="server">
+                            <!-- Product Name -->
                             <div>
                                 <asp:Label AssociatedControlID="txtProductName" Text="Product Name" CssClass="form-label" runat="server"></asp:Label>
                                 <asp:TextBox ID="txtProductName" CssClass="form-control" Placeholder="Enter product name" runat="server"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="rfvProductName" ControlToValidate="txtProductName" ErrorMessage="Product Name is required" CssClass="text-danger" runat="server"></asp:RequiredFieldValidator>
                             </div>
 
+                            <!-- Price -->
                             <div>
                                 <asp:Label AssociatedControlID="txtPrice" Text="Price" CssClass="form-label" runat="server"></asp:Label>
                                 <asp:TextBox ID="txtPrice" CssClass="form-control" Placeholder="Enter product price" runat="server"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="rfvPrice" ControlToValidate="txtPrice" ErrorMessage="Price is required" CssClass="text-danger" runat="server"></asp:RequiredFieldValidator>
                             </div>
 
+                            <!-- Quantity -->
                             <div>
                                 <asp:Label AssociatedControlID="txtQuantity" Text="Quantity" CssClass="form-label" runat="server"></asp:Label>
                                 <asp:TextBox ID="txtQuantity" CssClass="form-control" Placeholder="Enter product quantity" runat="server"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="rfvQuantity" ControlToValidate="txtQuantity" ErrorMessage="Quantity is required" CssClass="text-danger" runat="server"></asp:RequiredFieldValidator>
                             </div>
 
+                            <!-- Product Image -->
                             <div>
                                 <asp:Label AssociatedControlID="fuProductImage" Text="Product Image" CssClass="form-label" runat="server"></asp:Label>
                                 <asp:FileUpload ID="fuProductImage" CssClass="form-control" runat="server" />
                                 <asp:RequiredFieldValidator ID="rfvProductImage" ControlToValidate="fuProductImage" ErrorMessage="Product Image is required" CssClass="text-danger" runat="server"></asp:RequiredFieldValidator>
                             </div>
 
+                            <!-- Category Dropdown -->
                             <div>
                                 <asp:Label AssociatedControlID="ddlCategory" Text="Category" CssClass="form-label" runat="server"></asp:Label>
                                 <asp:DropDownList ID="ddlCategory" CssClass="form-select" runat="server">
                                     <asp:ListItem Text="Select Category" Value="0" Selected="True"></asp:ListItem>
+                                    <asp:ListItem Text="Mens" Value="1"></asp:ListItem>
+                                    <asp:ListItem Text="Womens" Value="2"></asp:ListItem>
                                 </asp:DropDownList>
                                 <asp:RequiredFieldValidator ID="rfvCategory" ControlToValidate="ddlCategory" InitialValue="0" ErrorMessage="Category is required" CssClass="text-danger" runat="server"></asp:RequiredFieldValidator>
                             </div>
 
+                            <!-- Submit Button -->
                             <div class="text-center">
                                 <asp:Button ID="btnAddProduct" CssClass="btn btn-primary w-100" Text="Add Product" runat="server" OnClick="btnAddProduct_Click" />
                             </div>

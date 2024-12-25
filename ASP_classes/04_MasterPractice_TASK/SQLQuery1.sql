@@ -36,6 +36,11 @@ ADD ProductImage NVARCHAR(MAX) NULL;
 ALTER TABLE ProductTable
 ADD nBit BIT NOT NULL DEFAULT 1;
 
+-- Add a new column for CategoryName
+ALTER TABLE ProductTable
+ADD CategoryName NVARCHAR(100) NULL;
+
+
 select * from ProductTable;
 
 
