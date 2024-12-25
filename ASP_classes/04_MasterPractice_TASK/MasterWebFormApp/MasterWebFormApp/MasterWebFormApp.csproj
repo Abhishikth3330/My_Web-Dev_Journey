@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="addedImages\20241225_224248_p2.png" />
     <Content Include="AddProduct.aspx" />
     <Content Include="Blog_list.aspx" />
     <Content Include="Cart.aspx" />
