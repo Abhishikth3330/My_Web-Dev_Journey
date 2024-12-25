@@ -1,74 +1,38 @@
 ﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 using System.Web.UI;
+using static System.Net.Mime.MediaTypeNames;
+using System.Web.UI.WebControls;
 
 namespace MasterWebFormApp
 {
     public partial class AddProduct : Page
     {
         private readonly SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-EF5D6IS\SQLEXPRESS;Initial Catalog=Ecommerce;Integrated Security=True;Encrypt=False");
+        SqlDataReader dr;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             // No need to do anything on Page_Load for now.
-        }
-
-        protected void btnAddProduct_Click(object sender, EventArgs e)
-        {
-            if (ddlCategory.SelectedValue == "0")
-            {
-                ddlCategory.CssClass += " is-invalid";
-                return;
-            }
-
-            try
-            {
-                // Open the database connection
-                cn.Open();
-
-                // Get the CategoryID based on selected Category
-                int categoryId = GetCategoryId(ddlCategory.SelectedItem.Text.Trim());
-                if (categoryId == 0)
-                {
-                    ShowMessage("Invalid category selected.", "danger");
-                    return;
-                }
-
-                // Save the image and get the file path
-                string imagePath = SaveImage();
-
-                // Insert the product into the ProductTable with the image path
-                bool isInserted = InsertProduct(txtProductName.Text.Trim(), Convert.ToDecimal(txtPrice.Text.Trim()),
-                    Convert.ToInt32(txtQuantity.Text.Trim()), categoryId, imagePath);
-
-                // Show success or failure message
-                ShowMessage(isInserted ? "Product added successfully!" : "Failed to add product. Please try again.",
-                            isInserted ? "success" : "danger");
-
-                // Clear the form if insertion was successful
-                if (isInserted) ClearForm();
-            }
-            catch (Exception ex)
-            {
-                ShowMessage($"An error occurred: {ex.Message}", "danger");
-            }
-            finally
-            {
-                cn.Close();
-            }
+            GetCategoryId();
         }
 
 
-
-        private int GetCategoryId(string categoryName)
+        protected void GetCategoryId()
         {
-            using (var cmd = new SqlCommand("SELECT CategoryID FROM CategoryTable WHERE CategoryName = @CategoryName", cn))
-            {
-                cmd.Parameters.AddWithValue("@CategoryName", categoryName);
-                object result = cmd.ExecuteScalar();
-                return result != null ? Convert.ToInt32(result) : 0;
-            }
+            SqlCommand cm = new SqlCommand("select * from CategoryTable", cn);
+            
+            cn.Open();
+            dr = cm.ExecuteReader();
+            ddlCategory.DataSource = dr;
+            ddlCategory.DataTextField = "CategoryName";
+            ddlCategory.DataValueField = "CategoryID";
+            ddlCategory.DataBind();
+            ddlCategory.Items.Insert(0, "Select");
+            cn.Close();
+            dr.Close();
         }
 
 
@@ -94,14 +58,14 @@ namespace MasterWebFormApp
 
         private bool InsertProduct(string productName, decimal price, int quantity, int categoryId, string productImage)
         {
-            using (var cmd = new SqlCommand("INSERT INTO ProductTable (ProductName, Price, Quantity, CategoryID, ProductImage) VALUES (@ProductName, @Price, @Quantity, @CategoryID, @ProductImage)", cn))
+            using (var cmd = new SqlCommand("INSERT INTO ProductTable (ProductName, Price, Quantity, CategoryID, ProductImage, RegistrationDate) VALUES (@ProductName, @Price, @Quantity, @CategoryID, @ProductImage, @RegistrationDate)", cn))
             {
                 cmd.Parameters.AddWithValue("@ProductName", productName);
                 cmd.Parameters.AddWithValue("@Price", price);
                 cmd.Parameters.AddWithValue("@Quantity", quantity);
                 cmd.Parameters.AddWithValue("@CategoryID", categoryId);
                 cmd.Parameters.AddWithValue("@ProductImage", productImage); // Save image path in DB
-
+                cmd.Parameters.AddWithValue("@RegistrationDate", DateTime.Now);
                 return cmd.ExecuteNonQuery() > 0; // Return true if product is successfully inserted
             }
         }
@@ -113,6 +77,7 @@ namespace MasterWebFormApp
             ClientScript.RegisterStartupScript(this.GetType(), "Alert", $"alert('{message}');", true);
         }
 
+        
 
         private void ClearForm()
         {
@@ -123,5 +88,49 @@ namespace MasterWebFormApp
             fuProductImage.Dispose();
         }
 
+        protected void btnAddProduct_Click1(object sender, EventArgs e)
+        {
+            if (ddlCategory.SelectedValue == "0")
+            {
+                ddlCategory.CssClass += " is-invalid";
+                return;
+            }
+
+            try
+            {
+                // Open the database connection
+                cn.Open();
+
+                // Get the CategoryID based on selected Category
+                //int categoryId = GetCategoryId(ddlCategory.SelectedItem.Text.Trim());
+                //if (categoryId == 0)
+                //{
+                //    ShowMessage("Invalid category selected.", "danger");
+                //    return;
+                //}
+
+                // Save the image and get the file path
+                string imagePath = SaveImage();
+
+                // Insert the product into the ProductTable with the image path
+                bool isInserted = InsertProduct(txtProductName.Text.Trim(), Convert.ToDecimal(txtPrice.Text.Trim()),
+                    Convert.ToInt32(txtQuantity.Text.Trim()), ddlCategory.SelectedIndex, imagePath);
+
+                // Show success or failure message
+                ShowMessage(isInserted ? "Product added successfully!" : "Failed to add product. Please try again.",
+                            isInserted ? "success" : "danger");
+
+                // Clear the form if insertion was successful
+                if (isInserted) ClearForm();
+            }
+            catch (Exception ex)
+            {
+                ShowMessage($"An error occurred: {ex.Message}", "danger");
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
 }

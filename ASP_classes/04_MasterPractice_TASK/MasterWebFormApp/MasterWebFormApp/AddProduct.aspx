@@ -56,17 +56,15 @@
                             <!-- Category Dropdown -->
                             <div>
                                 <asp:Label AssociatedControlID="ddlCategory" Text="Category" CssClass="form-label" runat="server"></asp:Label>
-                                <asp:DropDownList ID="ddlCategory" CssClass="form-select" runat="server">
-                                    <asp:ListItem Text="Select Category" Value="0" Selected="True"></asp:ListItem>
-                                    <asp:ListItem Text="Mens" Value="1"></asp:ListItem>
-                                    <asp:ListItem Text="Womens" Value="2"></asp:ListItem>
-                                </asp:DropDownList>
-                                <asp:RequiredFieldValidator ID="rfvCategory" ControlToValidate="ddlCategory" InitialValue="0" ErrorMessage="Category is required" CssClass="text-danger" runat="server"></asp:RequiredFieldValidator>
+                                <asp:DropDownList ID= "ddlCategory" runat="server" CssClass="form-control" >
+                                    <asp:ListItem Text="Select" Value="0" ></asp:ListItem >
+                                </asp:DropDownList >
+                                <%--<asp:RequiredFieldValidator ID="rfvCategory" ControlToValidate="ddlCategory" InitialValue="0" ErrorMessage="Category is required" CssClass="text-danger" runat="server"></asp:RequiredFieldValidator>--%>
                             </div>
 
                             <!-- Submit Button -->
                             <div class="text-center">
-                                <asp:Button ID="btnAddProduct" CssClass="btn btn-primary w-100" Text="Add Product" runat="server" OnClick="btnAddProduct_Click" />
+                                <asp:Button ID="btnAddProduct1" CssClass="btn btn-primary w-100" Text="Add Product" runat="server" OnClick="btnAddProduct_Click1" />
                             </div>
                         </div>
                     </div>
