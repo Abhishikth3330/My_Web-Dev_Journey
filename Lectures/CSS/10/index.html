@@ -3,78 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>Resume - Abhishikth Thul</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* min-height: 100vh; */
+            background-color: #f4f4f9;
+        }
+        .resume-container {
+            background-color: white;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 800px;
+            width: 90%;
+        }
+        h1, h3 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        hr {
+            border: none;
+            height: 2px;
+            background-color: green;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul.skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 70px;
+        }
+        /* ul.skills-list > li {
+            flex: 1 1 calc(50% - 20px);
+        } */
+    </style>
 </head>
 <body>
-    <h1>Abhishikth Thul</h1>
-    <h3>Data Scientist</h3>
+    <div class="resume-container">
+        <h1>Abhishikth Thul</h1>
+        <h3>Data Scientist</h3>
 
-    <hr color="green">
+        <hr>
 
-    <h3>Contact Me :</h3>
-    <ul>
-        <li><b>Email : </b><u>abhishikththul9@gmail.com</u></li>
-        <li><b>linkedin : </b><u>@abhishikth-thul</u></li>
-        <li><b>Github : </b><u>@Abhishikth3330</u></li>
-        <li><b>X : </b><u>@AbhishikthT</u></li>
-        <li><b>Leetcode : </b><u>@abhishikth-thul</u></li>
-        <li><b>mobile number : </b><u>+91-7020609929</u></li>
-    </ul>
+        <div class="contact">
+            <h3>Contact Me :</h3>
+            <ul>
+                <li><b>Email:</b> <u>abhishikththul9@gmail.com</u></li>
+                <li><b>LinkedIn:</b> <u>@abhishikth-thul</u></li>
+                <li><b>GitHub:</b> <u>@Abhishikth3330</u></li>
+                <li><b>X:</b> <u>@AbhishikthT</u></li>
+                <li><b>Leetcode:</b> <u>@abhishikth-thul</u></li>
+                <li><b>Mobile Number:</b> <u>+91-7020609929</u></li>
+            </ul>
+        </div>
 
-    <hr color="green">
-    <h3>Profile : </h3>
-    <p>I am a Data-scientist proficient in Python, Java, Machine Learning, SQL and Web Development, I thrive in <b>collaborative environments</b> where i can <u>leverage my skills</u> to develope innovative solutions. I am committed to making a <u>significant impact</u>, driving impactful outcomes, maintaining high code quality, and <u>nurturing <b>teamwork</b></u> to exceed expectations.</p>
+        <hr>
 
-    <hr color="green">
-    <h3>Skills</h3>
+        <div class="profile">
+            <h3>Profile:</h3>
+            <p>I am a Data Scientist proficient in Python, Java, Machine Learning, SQL, and Web Development. I thrive in <b>collaborative environments</b> where I can <u>leverage my skills</u> to develop innovative solutions. I am committed to making a <u>significant impact</u>, driving impactful outcomes, maintaining high code quality, and <u>nurturing <b>teamwork</b></u> to exceed expectations.</p>
+        </div>
 
-    <ul>
-        <li><b>Languages : </b></li>
-        <ul>
-            <li>Python</li>
-            <li>Java</li>
-            <li>C sharp</li>
-            <li>PostgreSQL</li>
-            <li>SQL server</li>
-            <li>HTML</li>
-            <li>CSS</li>
-        </ul>
+        <hr>
 
-        <li><b>Libraries/Frameworks : </b></li>
-        <ul>
-            <li>Pandas</li>
-            <li>Matplotlib</li>
-            <li>scikit-learn</li>
-            <li>Tensorflow</li>
-            <li>Pytorch</li>
-            <li>Numpy</li>
-            <li>NLTK</li>
-            <li>React</li>
-        </ul>
+        <div class="skills">
+            <h3>Skills:</h3>
+            <ul class="skills-list">
+                <li><b>Languages:</b>
+                    <ul>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>C#</li>
+                        <li>PostgreSQL</li>
+                        <li>SQL Server</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </li>
+                <li><b>Libraries/Frameworks:</b>
+                    <ul>
+                        <li>Pandas</li>
+                        <li>Matplotlib</li>
+                        <li>scikit-learn</li>
+                        <li>TensorFlow</li>
+                        <li>PyTorch</li>
+                        <li>NumPy</li>
+                        <li>NLTK</li>
+                        <li>React</li>
+                    </ul>
+                </li>
+                <li><b>Technologies:</b>
+                    <ul>
+                        <li>Git</li>
+                        <li>Linux</li>
+                        <li>Docker</li>
+                    </ul>
+                </li>
+                <li><b>Knowledge:</b>
+                    <ul>
+                        <li>Machine Learning</li>
+                        <li>Deep Learning</li>
+                        <li>Natural Language Processing</li>
+                        <li>Computer Vision</li>
+                        <li>Data Analysis</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
 
-        <li><b>Technologies : </b></li>
-        <ul>
-            <li>Git</li>
-            <li>Linux</li>
-            <li>Docker</li>
-        </ul>
+        <hr>
 
-        <li><b>Knowledge : </b></li>
-        <ul>
-            <li>Machine Learning</li>
-            <li>Deep Learning</li>
-            <li>Natural Language Processing</li>
-            <li>Computer Vision</li>
-            <li>Data Analysis</li>
-        </ul>
-    </ul>
+        <div class="courses">
+            <h3>Courses:</h3>
+            <dl>
+                <dt><b><u>2019 - 2023</u></b></dt>
+                <dd><b>Bachelor's Degree in Artificial Intelligence</b></dd>
+                <dd><i>G H Raisoni College of Engineering, Nagpur - 440016</i></dd>
+            </dl>
+        </div>
 
-    <hr color="green">
-    <h3>Courses : </h3>
-    <dl>
-        <dt><b><u>2019 - 2023</u></b></dt>
-        <dd><b>Bachelor's Degree in Artificial Intelligence</b></dd>
-        <dd><i>G H Raisoni College of Engineering, Nagpur - 440016</i></dd>
-    </dl>
+        <hr>
+
+        <div class="projects">
+            <h3>Projects:</h3>
+            <ul>
+                <li><b>Crack Detection using Deep Learning:</b>
+                    <ul>
+                        <li>Implemented a model for categorizing images depicting cracks in buildings.</li>
+                        <li>Used Deep Learning for precise crack detection and annotation.</li>
+                        <li>Optimized maintenance procedures, strengthening safety and structural integrity.</li>
+                    </ul>
+                </li>
+                <li><b>Image Restoration using Deep Learning:</b>
+                    <ul>
+                        <li>Developed an Image Restoration system to recover outdated and corrupted images.</li>
+                        <li>Explored Convolutional Neural Networks for noise reduction, deblurring, and superresolution.</li>
+                        <li>Proposed an efficient deblurring network and adaptable training algorithm.</li>
+                        <li>Validated system performance by comparing with state-of-the-art methods.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <div class="internships">
+            <h3>Internships:</h3>
+            <ul>
+                <li><b>IT Networkz:</b>
+                    <ul>
+                        <li>Contributed to the development and maintenance of responsive web applications.</li>
+                        <li>Created and managed SQL Server databases, ensuring data integrity and optimizing query performance.</li>
+                        <li>Developed backend logic using C# and ASP.NET for efficiency and seamless integration.</li>
+                        <li>Designed dynamic front-end components with ReactJS.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
