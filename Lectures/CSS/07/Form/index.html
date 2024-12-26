@@ -14,19 +14,22 @@
         .subs label {
             flex: 0 0 200px;
             text-align: left;
-            margin-right: 20px;
+            margin-right: 1px;
         }
 
+        
+
         .inputs {
-            flex: 1;
+            /* flex: 1; */
+            margin-right: 5px;
         }
     </style>
 </head>
 <body>
     <div>
-        <h2 align="center"><u>STUDENT REGISTRATION FORM</u></h2>
+        <h3 align="center"><u>STUDENT REGISTRATION FORM</u></h3>
     </div>
-    <div style="outline: 2px solid black; background-color: rgb(184, 96, 184); width: 50%; margin: 0 auto; padding: 50px;">
+    <div style="outline: 2px solid black; background-color: rgb(139, 102, 240); width: 50%; margin: 0 auto; padding: 20px 40px 10px;">
         <div class="subs">
             <label>FIRST NAME :</label>
             <input class="inputs" type="text"> (max 30 characters a-z and A-Z)
@@ -49,9 +52,9 @@
         </div>
         <div class="subs">
             <label>GENDER :</label>
-            <div class="gender-options">
-                <label>Male</label><input type="radio" name="gender">
-                <label>Female</label><input type="radio" name="gender">
+            <div class="options">
+                <input type="radio" name="gender"><label>Male</label>
+                <input type="radio" name="gender"><label>Female</label>
             </div>
         </div>
         <div class="subs">
@@ -64,7 +67,7 @@
         </div>
         <div class="subs">
             <label>PIN CODE :</label>
-            <input class="inputs" type="number">
+            <input class="inputs" type="number"> (6 digit number)
         </div>
         <div class="subs">
             <label>STATE :</label>
@@ -72,17 +75,19 @@
         </div>
         <div class="subs">
             <label>HOBBIES :</label>
-            <label>Drawing</label><input type="checkbox" name="hobbies">
-            <label>Singing</label><input type="checkbox" name="hobbies">
-            <label>Dancing</label><input type="checkbox" name="hobbies">
-            <label>Sketching</label><input type="checkbox" name="hobbies">
-            <label>Others</label><input type="checkbox" name="hobbies"><input class="inputs" type="text">
+            <div class="checks">
+                <input type="checkbox" name="hobbies"><label>Drawing</label>
+                <input type="checkbox" name="hobbies"><label>Singing</label>
+                <input type="checkbox" name="hobbies"><label>Dancing</label>
+                <input type="checkbox" name="hobbies"><label>Sketching</label><br>
+                <input type="checkbox" name="hobbies"><label>Others </label><input class="inputs" type="text">
+            </div>
         </div>
-        <div>
+        <div class="subs">
             <label>QUALIFICATION :</label>
-            <table border="2px" style="border-color: black; width: 100%;">
+            <table style="border-color: black; width: 100%;">
                 <tr>
-                    <th>Sr. No.</th>
+                    <th>Sr.No.</th>
                     <th>Examination</th>
                     <th>Board</th>
                     <th>Percentage</th>
@@ -120,12 +125,19 @@
         </div>
         <br>
         <div class="subs">
-            <label>COURSES APPLIED FOR :</label>
-            <label>BCA</label><input type="radio" name="courses">
-            <label>B.Com</label><input type="radio" name="courses">
-            <label>B.Sc</label><input type="radio" name="courses">
-            <label>B.A</label><input type="radio" name="courses">
+            <label>COURSES <br>APPLIED FOR :</label>
+            <div class="options">
+                <input type="radio" name="courses"><label>BCA</label>
+                <input type="radio" name="courses"><label>B.Com</label>
+                <input type="radio" name="courses"><label>B.Sc</label>
+                <input type="radio" name="courses"><label>B.A</label>
+            </div>
         </div>
+
+        <div align="center">
+            <button>Submit</button> <button>reset</button>
+        </div>
+
     </div>
 </body>
 </html>
