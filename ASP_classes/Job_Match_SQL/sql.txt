@@ -1,0 +1,158 @@
+1. Candidate Table
+Stores candidate information.
+
+CREATE TABLE Candidates (
+    CandidateID INT PRIMARY KEY AUTO_INCREMENT,
+    CandidateName VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) NOT NULL UNIQUE,
+    MobileNumber VARCHAR(15) NOT NULL,
+    State VARCHAR(50),
+    City VARCHAR(50),
+    Country VARCHAR(50),
+    Gender ENUM('Male', 'Female', 'Other'),
+    Qualification VARCHAR(100),
+    Mode ENUM('Online', 'Offline'),
+    RegistrationDate DATETIME DEFAULT CURRENT_TIMESTAMP,
+    ModificationDate DATETIME DEFAULT NULL
+);
+
+
+
+2. Company Table
+Stores company details.
+
+
+CREATE TABLE Companies (
+    CompanyID INT PRIMARY KEY AUTO_INCREMENT,
+    CompanyName VARCHAR(100) NOT NULL,
+    Description TEXT,
+    ContactNumber VARCHAR(15) NOT NULL,
+    Location VARCHAR(100),
+    RegistrationDate DATETIME DEFAULT CURRENT_TIMESTAMP,
+    ModificationDate DATETIME DEFAULT NULL
+);
+
+
+
+3. Job Table
+Stores job postings and requirements.
+
+
+CREATE TABLE Jobs (
+    JobID INT PRIMARY KEY AUTO_INCREMENT,
+    CompanyID INT NOT NULL,
+    RequiredSkills TEXT, -- Stores skill IDs as a comma-separated list
+    Gender ENUM('Male', 'Female', 'Any'),
+    Mode ENUM('Online', 'Offline'),
+    Qualification VARCHAR(100),
+    NumberOfOpenings INT,
+    JobLocation VARCHAR(100),
+    RegistrationDate DATETIME DEFAULT CURRENT_TIMESTAMP,
+    ModificationDate DATETIME DEFAULT NULL,
+    FOREIGN KEY (CompanyID) REFERENCES Companies(CompanyID)
+);
+
+
+
+
+4. Skills Table
+Master table for all skills categorized as technical, non-technical, or medical.
+
+
+CREATE TABLE Skills (
+    SkillID INT PRIMARY KEY AUTO_INCREMENT,
+    SkillName VARCHAR(100) NOT NULL UNIQUE,
+    SkillType ENUM('Technical', 'Non-Technical', 'Medical') NOT NULL,
+    RegistrationDate DATETIME DEFAULT CURRENT_TIMESTAMP,
+    ModificationDate DATETIME DEFAULT NULL
+);
+
+
+
+
+5. CandidateSkills Table
+Associates candidates with their skills.
+
+
+CREATE TABLE CandidateSkills (
+    CandidateID INT NOT NULL,
+    SkillID INT NOT NULL,
+    PRIMARY KEY (CandidateID, SkillID),
+    FOREIGN KEY (CandidateID) REFERENCES Candidates(CandidateID),
+    FOREIGN KEY (SkillID) REFERENCES Skills(SkillID)
+);
+
+
+
+
+
+6. JobSkills Table
+Associates jobs with their required skills.
+
+
+CREATE TABLE JobSkills (
+    JobID INT NOT NULL,
+    SkillID INT NOT NULL,
+    PRIMARY KEY (JobID, SkillID),
+    FOREIGN KEY (JobID) REFERENCES Jobs(JobID),
+    FOREIGN KEY (SkillID) REFERENCES Skills(SkillID)
+);
+
+
+
+
+
+
+Queries to Achieve Matching Functionality
+1. Find Matching Jobs for a Candidate
+
+SELECT DISTINCT j.JobID, j.JobLocation, j.NumberOfOpenings
+FROM Jobs j
+JOIN JobSkills js ON j.JobID = js.JobID
+JOIN CandidateSkills cs ON js.SkillID = cs.SkillID
+WHERE cs.CandidateID = ? -- Replace with the CandidateID
+  AND j.Qualification = (SELECT Qualification FROM Candidates WHERE CandidateID = ?)
+  AND (j.Gender = (SELECT Gender FROM Candidates WHERE CandidateID = ?) OR j.Gender = 'Any')
+  AND j.Mode = (SELECT Mode FROM Candidates WHERE CandidateID = ?);
+
+
+
+
+
+
+
+2. Find Eligible Candidates for a Job
+
+SELECT DISTINCT c.CandidateID, c.CandidateName, c.Email
+FROM Candidates c
+JOIN CandidateSkills cs ON c.CandidateID = cs.CandidateID
+JOIN JobSkills js ON cs.SkillID = js.SkillID
+WHERE js.JobID = ? -- Replace with the JobID
+  AND c.Qualification = (SELECT Qualification FROM Jobs WHERE JobID = ?)
+  AND (c.Gender = (SELECT Gender FROM Jobs WHERE JobID = ?) OR c.Gender = 'Any')
+  AND c.Mode = (SELECT Mode FROM Jobs WHERE JobID = ?);
+
+
+
+
+
+
+
+
+Additional Features to Consider
+Audit Tables: Maintain a log of changes in Candidates, Jobs, and Skills.
+Application Table: Track applications made by candidates for specific jobs.
+
+CREATE TABLE Applications (
+    ApplicationID INT PRIMARY KEY AUTO_INCREMENT,
+    CandidateID INT NOT NULL,
+    JobID INT NOT NULL,
+    ApplicationDate DATETIME DEFAULT CURRENT_TIMESTAMP,
+    Status ENUM('Pending', 'Accepted', 'Rejected') DEFAULT 'Pending',
+    FOREIGN KEY (CandidateID) REFERENCES Candidates(CandidateID),
+    FOREIGN KEY (JobID) REFERENCES Jobs(JobID)
+);
+
+
+Indexing: Add indexes on frequently searched columns like Skills.SkillName, Candidates.Qualification, and Jobs.Qualification.
+This schema ensures a robust system that is scalable and provides the flexibility to query for job-candidate matches effectively.
