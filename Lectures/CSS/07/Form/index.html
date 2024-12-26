@@ -4,75 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .subs {
+            display: flex;
+            align-items: left;
+            margin-bottom: 20px;
+        }
+
+        .subs label {
+            flex: 0 0 200px;
+            text-align: left;
+            margin-right: 20px;
+        }
+
+        .inputs {
+            flex: 1;
+        }
+    </style>
 </head>
 <body>
     <div>
         <h2 align="center"><u>STUDENT REGISTRATION FORM</u></h2>
     </div>
-    <div style="outline: 2px solid black; background-color: rgb(184, 96, 184); width: 50%; margin-left: 310px; padding: 50px;">
-        <div>
-            <label>FIRST NAME : </label>
-            <input type="text"> (max 30 charactersa-z and A-Z)
+    <div style="outline: 2px solid black; background-color: rgb(184, 96, 184); width: 50%; margin: 0 auto; padding: 50px;">
+        <div class="subs">
+            <label>FIRST NAME :</label>
+            <input class="inputs" type="text"> (max 30 characters a-z and A-Z)
         </div>
-        <br><br>
-        <div>
-            <label>LAST NAME : </label>
-            <input type="text"> (max 30 charactersa-z and A-Z)
+        <div class="subs">
+            <label>LAST NAME :</label>
+            <input class="inputs" type="text"> (max 30 characters a-z and A-Z)
         </div>
-        <br><br>
-        <div>
-            <label>DATE OF BIRTH : </label>
-            <input type="date">
+        <div class="subs">
+            <label>DATE OF BIRTH :</label>
+            <input class="inputs" type="date">
         </div>
-        <br><br>
-        <div>
-            <label>EMAIL ID : </label>
-            <input type="text">
+        <div class="subs">
+            <label>EMAIL ID :</label>
+            <input class="inputs" type="text">
         </div>
-        <br><br>
-        <div>
-            <label>MOBILE NUMBER : </label>
-            <input type="number"> (10 digit number)
+        <div class="subs">
+            <label>MOBILE NUMBER :</label>
+            <input class="inputs" type="number"> (10 digit number)
         </div>
-        <br><br>
-        <div>
-            <label>GENDER : </label>
-            <label>Male</label><input type="radio" name="gender">
-            <label>Female</label><input type="radio" name="gender">
+        <div class="subs">
+            <label>GENDER :</label>
+            <div class="gender-options">
+                <label>Male</label><input type="radio" name="gender">
+                <label>Female</label><input type="radio" name="gender">
+            </div>
         </div>
-        <br><br>
-        <div>
-            <label>ADDRESS : </label>
-            <textarea cols="30" rows="4" ></textarea>
+        <div class="subs">
+            <label>ADDRESS :</label>
+            <textarea class="inputs" cols="30" rows="4"></textarea>
         </div>
-        <br><br>
-        <div>
-            <label>CITY : </label>
-            <input type="text"> (max 30 characters a-z and A-Z)
+        <div class="subs">
+            <label>CITY :</label>
+            <input class="inputs" type="text"> (max 30 characters a-z and A-Z)
         </div>
-        <br><br>
-        <div>
-            <label> PIN CODE : </label>
-            <input type="number">
+        <div class="subs">
+            <label>PIN CODE :</label>
+            <input class="inputs" type="number">
         </div>
-        <br><br>
-        <div>
-            <label>STATE : </label>
-            <input type="text"> (max 30 characters a-z and A-Z)
+        <div class="subs">
+            <label>STATE :</label>
+            <input class="inputs" type="text"> (max 30 characters a-z and A-Z)
         </div>
-        <br><br>
-        <div>
-            <label>HOBBIES : </label>
+        <div class="subs">
+            <label>HOBBIES :</label>
             <label>Drawing</label><input type="checkbox" name="hobbies">
             <label>Singing</label><input type="checkbox" name="hobbies">
             <label>Dancing</label><input type="checkbox" name="hobbies">
             <label>Sketching</label><input type="checkbox" name="hobbies">
-            <label>Others</label><input type="checkbox" name="hobbies"><input type="text">
+            <label>Others</label><input type="checkbox" name="hobbies"><input class="inputs" type="text">
         </div>
-        <br><br>
         <div>
-            <label>QUALIFICATION : </label>
-            <table border="2px" style="border-color: black;">
+            <label>QUALIFICATION :</label>
+            <table border="2px" style="border-color: black; width: 100%;">
                 <tr>
                     <th>Sr. No.</th>
                     <th>Examination</th>
@@ -110,16 +118,14 @@
                 </tr>
             </table>
         </div>
-        <br><br>
-        <div>
-            <label> COURSES APPLIED FOR : </label>
+        <br>
+        <div class="subs">
+            <label>COURSES APPLIED FOR :</label>
             <label>BCA</label><input type="radio" name="courses">
             <label>B.Com</label><input type="radio" name="courses">
             <label>B.Sc</label><input type="radio" name="courses">
             <label>B.A</label><input type="radio" name="courses">
         </div>
     </div>
-
-
 </body>
 </html>
