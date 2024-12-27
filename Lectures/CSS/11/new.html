@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block & Inline Levels</title>
+
+    <style>
+        .main{
+            float: left;
+            width: 100%;
+            /* border: 10px solid; */
+        }
+
+        .one{
+            float: left;
+            width: 25%;
+            padding: 10px;
+            border: 3px solid;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- div tag : Block Level -->
+    <div class="main">
+        <div class="one" style="background-color: lightgreen;">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio vero quae libero numquam? Pariatur similique, eligendi minima dicta repellat exercitationem eveniet dolores unde qui iure commodi, corporis doloremque quod, ab velit neque!</p>
+        </div>
+    
+        <div class="one" style="background-color: lightblue;">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio vero quae libero numquam? <span style="color: purple;">Pariatur similique</span>, eligendi minima dicta repellat exercitationem eveniet dolores unde qui iure commodi, corporis doloremque quod, ab velit neque!</p>
+        </div>
+
+        <div class="one" style="background-color: lightpink;">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio vero quae libero numquam? Pariatur similique, eligendi minima dicta repellat exercitationem eveniet dolores unde qui iure commodi, corporis doloremque quod, ab velit neque!</p>
+        </div>
+
+        <!-- <div class="one" style="background-color: lightyellow;">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio vero quae libero numquam? Pariatur similique, eligendi minima dicta repellat exercitationem eveniet dolores unde qui iure commodi, corporis doloremque quod, ab velit neque!</p>
+        </div> -->
+    </div>
+
+    <!-- Span tag: inline level -->
+    <!-- <p>Nagpur is famous for <span style="color: orange;">Oranges</span> !!</p> -->
+</body>
+</html>
