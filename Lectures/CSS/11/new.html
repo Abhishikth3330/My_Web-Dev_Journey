@@ -3,21 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Block & Inline Levels</title>
+    <title>Block & Inline Levels with z-index</title>
 
     <style>
-        .main{
+        .main {
             float: left;
             width: 100%;
-            /* border: 10px solid; */
+            /* position: relative; */
         }
 
-        .one{
+        .one {
             float: left;
             width: 25%;
             padding: 10px;
             border: 3px solid;
-            margin: 10px;
+            /* margin: -20px; */
+            position: relative;
+            z-index: 1;
+            /* transition: all 0.3s ease; */
+        }
+
+        .one:hover {
+            z-index: 10;
+            transform: scale(1.5);
         }
     </style>
 </head>
@@ -35,13 +43,6 @@
         <div class="one" style="background-color: lightpink;">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio vero quae libero numquam? Pariatur similique, eligendi minima dicta repellat exercitationem eveniet dolores unde qui iure commodi, corporis doloremque quod, ab velit neque!</p>
         </div>
-
-        <!-- <div class="one" style="background-color: lightyellow;">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio vero quae libero numquam? Pariatur similique, eligendi minima dicta repellat exercitationem eveniet dolores unde qui iure commodi, corporis doloremque quod, ab velit neque!</p>
-        </div> -->
     </div>
-
-    <!-- Span tag: inline level -->
-    <!-- <p>Nagpur is famous for <span style="color: orange;">Oranges</span> !!</p> -->
 </body>
 </html>
