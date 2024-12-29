@@ -54,6 +54,7 @@
             <div class="col-md-12 text-end">
                 <asp:TextBox ID="txtEmail" CssClass="form-control d-inline-block w-auto" Placeholder="Email" runat="server" style="text-transform:none;"></asp:TextBox>
                 <asp:TextBox ID="txtPassword" CssClass="form-control d-inline-block w-auto" TextMode="Password" Placeholder="Password" runat="server"></asp:TextBox>
+                <asp:Button ID="btnLogin" Text="Login" CssClass="btn btn-primary" OnClick="btnLogin_Click" runat="server" />
             </div>
         </div>
     </section>
@@ -68,7 +69,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- Hidden field to store selected category -->
     <asp:HiddenField ID="hfCategory" runat="server" />
