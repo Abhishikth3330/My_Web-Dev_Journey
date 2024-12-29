@@ -9,106 +9,108 @@ namespace MasterWebFormApp
     public partial class Products1 : Page
     {
         // Connection string
-        SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-EF5D6IS\SQLEXPRESS;Initial Catalog=Ecommerce;Integrated Security=True;Encrypt=False");
-        SqlCommand cm;
-        SqlDataReader dr;
+        private readonly string connectionString = @"Data Source=DESKTOP-EF5D6IS\SQLEXPRESS;Initial Catalog=Ecommerce;Integrated Security=True;Encrypt=False";
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                // Load products for the default category (e.g., Mens)
+                // Default category to load
                 LoadProducts("Mens");
             }
+            else
+            {
+                string category = hfCategory.Value;
+                if (!string.IsNullOrEmpty(category))
+                {
+                    LoadProducts(category);
+                }
+            }
         }
 
-        // Method to load products based on the selected category
         private void LoadProducts(string category)
         {
-            string query = "SELECT p.ProductID, p.ProductName, p.Price, p.ProductImage FROM ProductTable p INNER JOIN CategoryTable c ON p.CategoryID = c.CategoryID WHERE c.CategoryName = @Category";
+            string query;
 
-            cm = new SqlCommand(query, cn);
-            cm.Parameters.AddWithValue("@Category", category);
-
-            try
+            // Adjust query based on category
+            if (category == "All")
             {
-                cn.Open();
-                dr = cm.ExecuteReader();
-
-                // Use a DataTable to hold the results
-                DataTable dt = new DataTable();
-                dt.Load(dr);
-
-                // Set the Repeater's data source to the DataTable
-                rptProducts.DataSource = dt;
-                rptProducts.DataBind();
+                query = "SELECT p.ProductID, p.ProductName, p.Price, p.ProductImage " +
+                        "FROM ProductTable p";
             }
-            catch (Exception ex)
+            else
             {
-                // Handle exceptions (for example, display error message)
-                Response.Write("<script>alert('Error loading products: " + ex.Message + "');</script>");
+                query = "SELECT p.ProductID, p.ProductName, p.Price, p.ProductImage " +
+                        "FROM ProductTable p INNER JOIN CategoryTable c ON p.CategoryID = c.CategoryID " +
+                        "WHERE c.CategoryName = @Category";
             }
-            finally
+
+            using (SqlConnection cn = new SqlConnection(connectionString))
+            using (SqlCommand cm = new SqlCommand(query, cn))
             {
-                // Ensure the connection is always closed
-                cn.Close();
+                if (category != "All")
+                {
+                    cm.Parameters.AddWithValue("@Category", category);
+                }
+
+                try
+                {
+                    cn.Open();
+                    SqlDataReader dr = cm.ExecuteReader();
+
+                    DataTable dt = new DataTable();
+                    dt.Load(dr);
+
+                    rptProducts.DataSource = dt;
+                    rptProducts.DataBind();
+                }
+                catch (Exception ex)
+                {
+                    // Log error or display meaningful feedback
+                    Response.Write($"<script>alert('Error loading products: {ex.Message}');</script>");
+                }
             }
         }
 
 
-        // Login button click event handler
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            // Retrieve email and password from the textboxes
             string email = txtEmail.Text;
             string password = txtPassword.Text;
 
-            // Create the SQL connection
-            SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-EF5D6IS\SQLEXPRESS;Initial Catalog=Ecommerce;Integrated Security=True;Encrypt=False");
-            SqlCommand cm;
-
-            // SQL query to check if the email and password match in the Users table
             string query = "SELECT COUNT(*) FROM Users WHERE Email = @Email AND Password = @Password";
 
-            // Create SqlCommand with query and connection
-            cm = new SqlCommand(query, cn);
-            cm.Parameters.AddWithValue("@Email", email);
-            cm.Parameters.AddWithValue("@Password", password);
-
-            try
+            using (SqlConnection cn = new SqlConnection(connectionString))
+            using (SqlCommand cm = new SqlCommand(query, cn))
             {
-                // Open connection to the database
-                cn.Open();
+                cm.Parameters.AddWithValue("@Email", email);
+                cm.Parameters.AddWithValue("@Password", password); // Consider hashing and validating password
 
-                // Execute the query and get the count of matching records
-                int count = (int)cm.ExecuteScalar();
-
-                // If count is greater than 0, user is validated
-                if (count > 0)
+                try
                 {
-                    Response.Write("<script>alert('Login successful!');</script>");
+                    cn.Open();
+                    int count = (int)cm.ExecuteScalar();
+
+                    if (count > 0)
+                    {
+                        // Redirect to another page after successful login
+                        Response.Redirect("Dashboard.aspx");
+                    }
+                    else
+                    {
+                        Response.Write("<script>alert('Invalid email or password!');</script>");
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    Response.Write("<script>alert('Invalid email or password!');</script>");
+                    Response.Write($"<script>alert('Error during login: {ex.Message}');</script>");
                 }
-            }
-            catch (Exception ex)
-            {
-                // Handle any exceptions that occur during the database operation
-                Response.Write("<script>alert('Error validating user: " + ex.Message + "');</script>");
-            }
-            finally
-            {
-                // Ensure the database connection is always closed
-                cn.Close();
             }
         }
 
-
-        // Method to handle category selection (for example: Mens or Womens)
         protected void showCategory(string category)
         {
+            hfCategory.Value = category; // Update hidden field
             LoadProducts(category);
         }
     }

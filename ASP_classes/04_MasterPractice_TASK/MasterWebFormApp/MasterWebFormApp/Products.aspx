@@ -19,7 +19,7 @@
 
         .product-card img {
             max-width: 100%;
-            height: auto;
+            height: 400px;
             border-radius: 8px;
         }
 
@@ -54,7 +54,6 @@
             <div class="col-md-12 text-end">
                 <asp:TextBox ID="txtEmail" CssClass="form-control d-inline-block w-auto" Placeholder="Email" runat="server" style="text-transform:none;"></asp:TextBox>
                 <asp:TextBox ID="txtPassword" CssClass="form-control d-inline-block w-auto" TextMode="Password" Placeholder="Password" runat="server"></asp:TextBox>
-                <asp:Button ID="btnLogin" CssClass="btn btn-primary d-inline-block" Text="Login" runat="server" OnClick="btnLogin_Click" />
             </div>
         </div>
     </section>
@@ -63,11 +62,16 @@
     <section class="container mt-4">
         <div class="row">
             <div class="col-md-12 text-center">
+                <button class="btn btn-info" id="btnAll" onclick="showCategory('All')">All</button>
                 <button class="btn btn-info" id="btnMens" onclick="showCategory('Mens')">Mens</button>
                 <button class="btn btn-info" id="btnWomens" onclick="showCategory('Womens')">Womens</button>
             </div>
         </div>
     </section>
+
+
+    <!-- Hidden field to store selected category -->
+    <asp:HiddenField ID="hfCategory" runat="server" />
 
     <!-- Product Cards Section -->
     <section class="container mt-4">
@@ -91,15 +95,14 @@
 
     <script>
         function showCategory(category) {
-            // Logic to filter products by category and dynamically load them into the repeater
-            // You can make an AJAX call or use server-side filtering to load the products dynamically based on the selected category
-            console.log("Category selected:", category);
-            // Example: Filter by category (Mens/Womens) and bind data accordingly
+            // Set the selected category in a hidden field
+            document.getElementById('<%= hfCategory.ClientID %>').value = category;
+            // Submit the form to trigger a server-side event
+            __doPostBack('btnShowCategory', '');
         }
 
         function addToCart(productId) {
-            // Logic to add the selected product to the cart
-            console.log("Product added to cart:", productId);
+            alert("Product with ID " + productId + " added to cart.");
         }
     </script>
 </asp:Content>

@@ -94,6 +94,8 @@ CREATE TABLE CartTable (
 
 
 
+delete from ProductTable where ProductID = 16;
+
 select * from UserTable;
 select * from CategoryTable;
 select * from ProductTable;

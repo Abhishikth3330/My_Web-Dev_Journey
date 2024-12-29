@@ -16,8 +16,10 @@ namespace MasterWebFormApp
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            // No need to do anything on Page_Load for now.
-            GetCategoryId();
+            if (!IsPostBack)
+            {
+                GetCategoryId();
+            }
         }
 
 
@@ -31,7 +33,7 @@ namespace MasterWebFormApp
             ddlCategory.DataValueField = "CategoryID";
             ddlCategory.DataTextField = "CategoryName";
             ddlCategory.DataBind();
-            //ddlCategory.Items.Insert(0, "Select");
+            ddlCategory.Items.Insert(0, "Select");
             cn.Close();
             dr.Close();
         }
@@ -86,6 +88,8 @@ namespace MasterWebFormApp
             try
             {
                 cn.Open();
+
+                Response.Write($"Selected Category ID: {ddlCategory.SelectedValue}");
 
                 // Call the SaveImage function to get the image path
                 string imagePath = SaveImage();
