@@ -49,7 +49,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!-- Top Section: Email, Password, and Login Button -->
-    <section class="container mt-3">
+    <%--<section class="container mt-3">
         <div class="row">
             <div class="col-md-12 text-end">
                 <asp:TextBox ID="txtEmail" CssClass="form-control d-inline-block w-auto" Placeholder="Email" runat="server" style="text-transform:none;"></asp:TextBox>
@@ -57,7 +57,7 @@
                 <asp:Button ID="btnLogin" Text="Login" CssClass="btn btn-primary" OnClick="btnLogin_Click" runat="server" />
             </div>
         </div>
-    </section>
+    </section>--%>
 
     <!-- Category Selection: Mens | Womens -->
     <section class="container mt-4">
@@ -84,7 +84,7 @@
                             <img src='<%# Page.ResolveUrl(Eval("ProductImage").ToString()) %>' alt="Product Image" class="product-image" />
                             <h5><%# Eval("ProductName") %></h5>
                             <p>Price: $<%# Eval("Price") %></p>
-                            <input type="number" min="1" value="1" class="quantity-input" />
+                            <input type="number" min="1" value="1" class="quantity-input" id="quantity_<%# Eval("ProductID") %>" />
                             <button class="add-to-cart" onclick="addToCart(<%# Eval("ProductID") %>)">Add to Cart</button>
                         </div>
                     </div>
@@ -102,7 +102,8 @@
         }
 
         function addToCart(productId) {
-            alert("Product with ID " + productId + " added to cart.");
+            var quantity = document.getElementById('quantity_' + productId).value;
+            window.location.href = 'Cart.aspx?ProductID=' + productId + '&Quantity=' + quantity;
         }
     </script>
 </asp:Content>

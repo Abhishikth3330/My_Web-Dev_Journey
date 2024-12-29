@@ -8,10 +8,7 @@ namespace MasterWebFormApp
 {
     public partial class Products1 : Page
     {
-        // Connection string for the database
         private readonly string connectionString = @"Data Source=DESKTOP-EF5D6IS\SQLEXPRESS;Initial Catalog=Ecommerce;Integrated Security=True;Encrypt=False";
-
-        // SqlConnection, SqlCommand, SqlDataReader declared at the class level
         private SqlConnection cn;
         private SqlCommand cm;
         private SqlDataReader dr;
@@ -21,7 +18,6 @@ namespace MasterWebFormApp
         {
             if (!IsPostBack)
             {
-                // Default category to load
                 LoadProducts("All");
             }
             else
@@ -38,7 +34,6 @@ namespace MasterWebFormApp
         {
             string query;
 
-            // Adjust query based on category
             if (category == "All")
             {
                 query = "SELECT p.ProductID, p.ProductName, p.Price, p.ProductImage " +
@@ -71,58 +66,60 @@ namespace MasterWebFormApp
             }
             catch (Exception ex)
             {
-                // Log error or display meaningful feedback
                 Response.Write($"<script>alert('Error loading products: {ex.Message}');</script>");
             }
             finally
             {
-                // Close the connection and reader
                 dr?.Close();
                 cn?.Close();
             }
         }
 
         // Login button handler
-        protected void btnLogin_Click(object sender, EventArgs e)
-        {
-            string email = txtEmail.Text;
-            string password = txtPassword.Text;
+        //protected void btnLogin_Click(object sender, EventArgs e)
+        //{
+        //    string email = txtEmail.Text;
+        //    string password = txtPassword.Text;
 
-            string query = "SELECT UserID FROM UserTable WHERE Email = @Email AND Password = @Password";
+        //    string query = "SELECT UserID FROM UserTable WHERE Email = @Email AND Password = @Password";
 
-            try
-            {
-                cn = new SqlConnection(connectionString);
-                cm = new SqlCommand(query, cn);
-                cm.Parameters.AddWithValue("@Email", email);
-                cm.Parameters.AddWithValue("@Password", password); // Consider hashing and validating password
+        //    try
+        //    {
+        //        cn = new SqlConnection(connectionString);
+        //        cm = new SqlCommand(query, cn);
+        //        cm.Parameters.AddWithValue("@Email", email);
+        //        cm.Parameters.AddWithValue("@Password", password); // Consider hashing and validating password
 
-                cn.Open();
-                object result = cm.ExecuteScalar();
+        //        cn.Open();
+        //        object result = cm.ExecuteScalar();
 
-                if (result != null)
-                {
-                    // Store UserID in session or a variable
-                    Session["UserID"] = result.ToString();
-                    Response.Write("<script>alert('Login successful!');</script>");
-                }
-                else
-                {
-                    Response.Write("<script>alert('Invalid email or password!');</script>");
-                }
-            }
-            catch (Exception ex)
-            {
-                Response.Write($"<script>alert('Error during login: {ex.Message}');</script>");
-            }
-            finally
-            {
-                // Close the connection
-                cn?.Close();
-            }
-        }
+        //        if (result != null)
+        //        {
+        //            Session["UserEmail"] = txtEmail.Text.Trim();
+        //            Session["UserPassword"] = txtPassword.Text.Trim();
+
+        //            // Store UserID in session or a variable
+        //            Session["UserID"] = result.ToString();
+        //            Response.Write("<script>alert('Login successful!');</script>");
+        //        }
+        //        else
+        //        {
+        //            Response.Write("<script>alert('Invalid email or password!');</script>");
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Response.Write($"<script>alert('Error during login: {ex.Message}');</script>");
+        //    }
+        //    finally
+        //    {
+        //        // Close the connection
+        //        cn?.Close();
+        //    }
+        //}
 
         // Add to cart functionality
+        
         protected void addToCart(int productId, int quantity)
         {
             // Retrieve UserID from session

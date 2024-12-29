@@ -57,6 +57,8 @@ F:\IT_Networkz\ASP_classes\04_MasterPractice\MasterWebFormApp\MasterWebFormApp\o
 F:\IT_Networkz\ASP_classes\04_MasterPractice\MasterWebFormApp\MasterWebFormApp\obj\Debug\MasterWe.9F403FC1.Up2Date
 F:\IT_Networkz\ASP_classes\04_MasterPractice\MasterWebFormApp\MasterWebFormApp\obj\Debug\MasterWebFormApp.dll
 F:\IT_Networkz\ASP_classes\04_MasterPractice\MasterWebFormApp\MasterWebFormApp\obj\Debug\MasterWebFormApp.pdb
+F:\IT_Networkz\ASP_classes\04_MasterPractice_TASK\MasterWebFormApp\MasterWebFormApp\obj\Debug\MasterWebFormApp.csproj.AssemblyReference.cache
+F:\IT_Networkz\ASP_classes\04_MasterPractice_TASK\MasterWebFormApp\MasterWebFormApp\obj\Debug\MasterWebFormApp.csproj.CoreCompileInputs.cache
 F:\IT_Networkz\ASP_classes\04_MasterPractice_TASK\MasterWebFormApp\MasterWebFormApp\bin\MasterWebFormApp.dll.config
 F:\IT_Networkz\ASP_classes\04_MasterPractice_TASK\MasterWebFormApp\MasterWebFormApp\bin\MasterWebFormApp.dll
 F:\IT_Networkz\ASP_classes\04_MasterPractice_TASK\MasterWebFormApp\MasterWebFormApp\bin\MasterWebFormApp.pdb
@@ -111,8 +113,6 @@ F:\IT_Networkz\ASP_classes\04_MasterPractice_TASK\MasterWebFormApp\MasterWebForm
 F:\IT_Networkz\ASP_classes\04_MasterPractice_TASK\MasterWebFormApp\MasterWebFormApp\bin\roslyn\VBCSCompiler.exe.config
 F:\IT_Networkz\ASP_classes\04_MasterPractice_TASK\MasterWebFormApp\MasterWebFormApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 F:\IT_Networkz\ASP_classes\04_MasterPractice_TASK\MasterWebFormApp\MasterWebFormApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-F:\IT_Networkz\ASP_classes\04_MasterPractice_TASK\MasterWebFormApp\MasterWebFormApp\obj\Debug\MasterWebFormApp.csproj.AssemblyReference.cache
-F:\IT_Networkz\ASP_classes\04_MasterPractice_TASK\MasterWebFormApp\MasterWebFormApp\obj\Debug\MasterWebFormApp.csproj.CoreCompileInputs.cache
 F:\IT_Networkz\ASP_classes\04_MasterPractice_TASK\MasterWebFormApp\MasterWebFormApp\obj\Debug\MasterWe.9F403FC1.Up2Date
 F:\IT_Networkz\ASP_classes\04_MasterPractice_TASK\MasterWebFormApp\MasterWebFormApp\obj\Debug\MasterWebFormApp.dll
 F:\IT_Networkz\ASP_classes\04_MasterPractice_TASK\MasterWebFormApp\MasterWebFormApp\obj\Debug\MasterWebFormApp.pdb
