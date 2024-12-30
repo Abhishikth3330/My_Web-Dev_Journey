@@ -3,19 +3,19 @@
   "WorkspaceRootPath": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\masterwebformapp\\products.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|solutionrelative:masterwebformapp\\products.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\masterwebformapp\\products.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|solutionrelative:masterwebformapp\\products.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|f:\\it_networkz\\asp_classes\\04_masterpractice_task\\masterwebformapp\\masterwebformapp\\products.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|solutionrelative:masterwebformapp\\products.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\masterwebformapp\\cart.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|solutionrelative:masterwebformapp\\cart.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|f:\\it_networkz\\asp_classes\\04_masterpractice_task\\masterwebformapp\\masterwebformapp\\cart.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\masterwebformapp\\cart.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{8BBB069B-3617-4FF0-827B-8B389053DD8E}|MasterWebFormApp\\MasterWebFormApp.csproj|solutionrelative:masterwebformapp\\cart.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -72,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Products.aspx",
               "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\MasterWebFormApp\\Products.aspx",
               "RelativeDocumentMoniker": "MasterWebFormApp\\Products.aspx",
@@ -85,13 +85,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Products.aspx.cs",
               "DocumentMoniker": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\MasterWebFormApp\\Products.aspx.cs",
               "RelativeDocumentMoniker": "MasterWebFormApp\\Products.aspx.cs",
               "ToolTip": "F:\\IT_Networkz\\ASP_classes\\04_MasterPractice_TASK\\MasterWebFormApp\\MasterWebFormApp\\Products.aspx.cs",
               "RelativeToolTip": "MasterWebFormApp\\Products.aspx.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAEoAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAowHkAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-25T18:31:47.782Z",
               "EditorCaption": ""
@@ -106,8 +106,7 @@
               "RelativeToolTip": "MasterWebFormApp\\Default.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-12-11T15:40:13.437Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T15:40:13.437Z"
             },
             {
               "$type": "Document",
@@ -155,8 +154,7 @@
               "RelativeToolTip": "MasterWebFormApp\\AddProduct.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-12-24T15:35:26.998Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-24T15:35:26.998Z"
             },
             {
               "$type": "Document",
@@ -180,8 +178,7 @@
               "RelativeToolTip": "MasterWebFormApp\\Cart.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-12-22T10:19:26.217Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-22T10:19:26.217Z"
             },
             {
               "$type": "Document",
@@ -193,8 +190,7 @@
               "RelativeToolTip": "MasterWebFormApp\\Cart.aspx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-29T14:44:55.689Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-29T14:44:55.689Z"
             }
           ]
         }

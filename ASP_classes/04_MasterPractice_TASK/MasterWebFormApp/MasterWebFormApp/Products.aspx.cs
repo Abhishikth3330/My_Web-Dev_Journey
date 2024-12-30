@@ -119,7 +119,6 @@ namespace MasterWebFormApp
         //}
 
         // Add to cart functionality
-        
         protected void addToCart(int productId, int quantity)
         {
             // Retrieve UserID from session
