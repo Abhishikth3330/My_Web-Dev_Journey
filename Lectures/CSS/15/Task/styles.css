@@ -1,0 +1,61 @@
+/* Reset Styles for Used Tags */
+body, nav, div, span, a, h1 {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    /* position: fixed; */
+    width: 100%;
+    /* z-index: 10; */
+}
+
+nav .icon {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline; 
+}
+
+div.content {
+    background-image: url('banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+div.content div.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+div.content h1 {
+    font-size: 36px;
+    font-weight: bold;
+    /* line-height: 1.5; */
+}
