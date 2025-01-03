@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Book Haven</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #4CAF50;
+            color: white;
+            display: flex;
+            /* justify-content: center; */
+            padding-top: 20px;
+            flex-direction: column;
+            float: left;
+            height: 100vh;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            padding: 20px;
+            margin-bottom: 20px;
+            margin-left: 100px;
+            margin-right: 20px;
+            text-align: center;
+            background-color: aqua;
+            /* border-radius: 80px; */
+            border-top-left-radius: 30px;
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .main{
+            text-overflow: clip;
+            /* text-overflow: ellipsis; */
+            overflow: hidden;
+            white-space: nowrap;
+            width: 400px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="content">
+        <h1>Welcome to Book Haven</h1>
+        <p>Discover the world of books. Explore various genres, including self-help, fiction, non-fiction, and more.</p>
+    </div>
+
+    <div class="content">
+        <img src="taj-mahal.jpg" alt="taj-mahal" height="100px">
+    </div>
+
+    <div class="main">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolor nihil quibusdam corporis quos eum iure ipsa dolore doloribus illum nostrum qui, voluptatum fugiat eaque aliquid corrupti nesciunt ducimus. Repudiandae, at eaque!
+        </p>
+    </div>
+</body>
+</html>
