@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <style>
+        body {
+            background-color: aqua;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            padding: 10px;
+            margin: 10px;
+            background-color: gray;
+            column-gap: 30px;
+            row-gap: 20px;
+        }
+
+        .container div {
+            border: 2px solid black;
+            padding: 20px;
+            text-align: center;
+            background-color: lightgreen;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <div class="card">
+                <h3>Weekly Sales</h3>
+                <p>$ 150,000</p>
+            </div>
+        </div>
+
+        <div>
+            <div class="card">
+                <h3>Weekly Orders</h3>
+                <p>45,789</p>
+            </div>
+        </div>
+
+        <div>
+            <div class="card">
+                <h3>Visitors Online</h3>
+                <p>987,456</p>
+            </div>
+        </div>
+
+        
+        <div>
+            <div class="image">
+                <h4><u>Bar Graph</u></h4>
+                <img src="bar_graph.png" alt="bar_graph" height="100px">
+            </div>
+        </div>
+
+        
+        <div>
+            <div class="image">
+                <h4><u>Donut Graph</u></h4>
+                <img src="donut.png" alt="donut" height="100px">
+            </div>
+        </div>
+
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fruit</th>
+                        <th>Color</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Apple</td>
+                        <td>Red</td>
+                    </tr>
+                    <tr>
+                        <td>Banana</td>
+                        <td>Yellow</td>
+                    </tr>
+                    <tr>
+                        <td>Grapes</td>
+                        <td>Purple</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Bootstrap</li>
+                <li>C#</li>
+                <li>Python</li>
+            </ul>
+        </div>
+
+        <div>
+            <div class="image">
+                <h4><u>Info</u></h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+        <div>Something</div>
+    </div>
+</body>
+</html>
