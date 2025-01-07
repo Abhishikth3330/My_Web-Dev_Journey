@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Navbar</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: lightgray;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(53, 51, 51);
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .content {
+            display: flex;
+            column-gap: 30px;
+        }
+
+        .content a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .content a:hover {
+            text-decoration: underline;
+            text-decoration-color: red;
+            
+        }
+
+        .resumebtn {
+            font-size: 18px;
+        }
+
+        .resumebtn a {
+            color: white;
+            text-decoration: none;
+            border: 1px solid white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .resumebtn a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .name{
+            font-size: 30px;
+            text-align: center;
+        }
+        
+        .name span{
+            font-size: 20px;
+            letter-spacing: 5px;
+            word-spacing: 7px;
+        }
+
+        .social{
+            margin-left: 400px;
+            text-align: center;
+            background-color: white;
+            width: 50%;
+        }
+
+        .social_links a {
+            text-decoration: none;
+        }
+
+        .social_links a:hover{
+            text-decoration: underline;
+            text-decoration-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Abhi</div>
+
+        <div class="content">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Resume</a>
+            <a href="#">Projects</a>
+            <a href="#">Experience</a>
+            <a href="#">Socials</a>
+        </div>
+
+        <div class="resumebtn">
+            <a href="#">Resume</a>
+        </div>
+    </nav>
+
+    <div class="name">
+        <h2>ABHISHIKTH <span><i>(SDE INTERN)</i></span></h2>
+    </div>
+
+    <div class="social">
+        <p>Hello, Welcome to my Portfolio page. I am an intern at IT NetworkZ Infosystems Pvt. Ltd. from November 2023.</p>
+        
+        <div>
+            <p>Projects</p>
+        </div>
+
+
+        <div class="social_links">
+            <label>Connect With me on Socials :</label>
+            <a href="#">LinkedIn</a>
+            <a href="#">Twiiter</a>
+            <a href="#">Github</a>
+            <a href="#">Leetcode</a>
+        </div>
+    </div>
+
+
+</body>
+</html>
