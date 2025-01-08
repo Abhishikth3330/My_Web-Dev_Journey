@@ -6,9 +6,12 @@
     <title>Document</title>
 
     <style>
-
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        
         body{
             background-color: aqua;
+            font-family: 'Poppins', sans-serif;
         }
 
         .container{
@@ -18,30 +21,110 @@
             margin: 10px;
             background-color: gray;
             column-gap: 30px;
-            row-gap: 20px;
+            row-gap: 30px;
+            font-size: 20px;
+            /* vertical-align: middle; */
         }
 
         .container div{
             border: 2px solid black;
-            padding: 20px;
+            padding: 5px;
             text-align: center;
             background-color: lightgreen;
         }
 
-        .headingcontent{
-            grid-column-start: 1/3;
+        .headcontent{
+            grid-column: 1/4;
         }
+
+        .navigate{
+            grid-column: 1/4;
+        }
+
+        .footcontent{
+            grid-column: 1/4;
+        }
+
+        .headcontent h2 {
+            color: black;
+            font-size: 70px;
+            margin: 10px 0;
+        }
+
+        .headcontent h4 {
+            font-size: 30px;
+            margin: 5px 0;
+            color: #0f0e0e;
+        }
+
+        .navigate-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .navigate-links a {
+            color: black;
+            text-decoration: none;
+            font-size: 12px;
+            border: 2px solid black;
+            padding: 3px;
+            border-radius: 5px;
+        }
+
+        .navigate-links a:hover {
+            background-color: white;
+            color: darkgreen;
+        }
+
 
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="headcontent">HEADER</div>
-        <div>NAVIGATION</div>
-        <div>CONTENT</div>
-        <div>MAIN CONTENT</div>
-        <div>CONTENT</div>
-        <div>FOOTER</div>
+        <div class="headcontent">
+            <h2><u>ABHI THUL</u></h2>
+            <h4>DEVELOPER</h4>
+        </div>
+
+        <div class="navigate">
+            <!-- NAVIGATION -->
+            <div class="navigate-links">
+                <a href="#">About</a>
+                <a href="#">Resume</a>
+                <a href="#">Socials</a>
+            </div>
+        </div>
+        
+        <div class="leftcontent">
+            <h4 style="margin-bottom: 0;">PROJECTS</h4>
+            <hr color="black">
+            <ul align="left">
+                <li>Crack Detection Using Deep learning</li>
+                <li>Image Restoration</li>
+                <li>E-Commerce Site using asp.net</li>
+            </ul>
+        </div>
+
+        <div class="maincontent">
+            <h4 style="margin-bottom: 0;">QUALIFICATION</h4>
+            <hr color="black">
+            <dl align="left">
+               <dt><u><b>Bachelor of Technology</b></u></dt>
+               <dd>Artificial Intelligence (2019 - 2023)</dd>
+               <dd>G H RAISONI COLLEGE OF ENGINEERING, NAGPUR</dd> 
+            </dl>
+        </div>
+
+        <div class="rightcontent">
+            <h4 style="margin-bottom: 0;">EXPERIENCE</h4>
+            <hr color="black">
+            <dl align="left">
+               <dt><u><b>Project Trainee Intern</b></u></dt>
+               <dd>IT-NetworkZ Infosystems Pvt. Ltd.</dd> 
+            </dl>
+        </div>
+        <div class="footcontent">FOOTER</div>
     </div>
 </body>
 </html>
