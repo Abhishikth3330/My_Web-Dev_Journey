@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
+using System.Web.UI.WebControls;
 
 namespace MasterWebFormApp
 {
@@ -11,40 +11,22 @@ namespace MasterWebFormApp
         private readonly string connectionString = @"Data Source=DESKTOP-EF5D6IS\SQLEXPRESS;Initial Catalog=Ecommerce;Integrated Security=True;Encrypt=False";
         private SqlConnection cn;
         private SqlCommand cm;
-        private SqlDataReader dr;
 
-        // Page Load function
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
+                // Load all products by default
                 LoadProducts("All");
-            }
-            else
-            {
-                string category = hfCategory.Value;
-                if (!string.IsNullOrEmpty(category))
-                {
-                    LoadProducts(category);
-                }
             }
         }
 
+        // Method to load products based on category
         private void LoadProducts(string category)
         {
-            string query;
-
-            if (category == "All")
-            {
-                query = "SELECT p.ProductID, p.ProductName, p.Price, p.ProductImage " +
-                        "FROM ProductTable p";
-            }
-            else
-            {
-                query = "SELECT p.ProductID, p.ProductName, p.Price, p.ProductImage " +
-                        "FROM ProductTable p INNER JOIN CategoryTable c ON p.CategoryID = c.CategoryID " +
-                        "WHERE c.CategoryName = @Category";
-            }
+            string query = category == "All"
+                ? "SELECT ProductID, ProductName, Price, ProductImage FROM ProductTable"
+                : "SELECT ProductID, ProductName, Price, ProductImage FROM ProductTable WHERE CategoryID = (SELECT CategoryID FROM CategoryTable WHERE CategoryName = @Category)";
 
             try
             {
@@ -56,8 +38,7 @@ namespace MasterWebFormApp
                 }
 
                 cn.Open();
-                dr = cm.ExecuteReader();
-
+                SqlDataReader dr = cm.ExecuteReader();
                 DataTable dt = new DataTable();
                 dt.Load(dr);
 
@@ -70,64 +51,49 @@ namespace MasterWebFormApp
             }
             finally
             {
-                dr?.Close();
                 cn?.Close();
             }
         }
 
-        // Login button handler
-        //protected void btnLogin_Click(object sender, EventArgs e)
-        //{
-        //    string email = txtEmail.Text;
-        //    string password = txtPassword.Text;
-
-        //    string query = "SELECT UserID FROM UserTable WHERE Email = @Email AND Password = @Password";
-
-        //    try
-        //    {
-        //        cn = new SqlConnection(connectionString);
-        //        cm = new SqlCommand(query, cn);
-        //        cm.Parameters.AddWithValue("@Email", email);
-        //        cm.Parameters.AddWithValue("@Password", password); // Consider hashing and validating password
-
-        //        cn.Open();
-        //        object result = cm.ExecuteScalar();
-
-        //        if (result != null)
-        //        {
-        //            Session["UserEmail"] = txtEmail.Text.Trim();
-        //            Session["UserPassword"] = txtPassword.Text.Trim();
-
-        //            // Store UserID in session or a variable
-        //            Session["UserID"] = result.ToString();
-        //            Response.Write("<script>alert('Login successful!');</script>");
-        //        }
-        //        else
-        //        {
-        //            Response.Write("<script>alert('Invalid email or password!');</script>");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Response.Write($"<script>alert('Error during login: {ex.Message}');</script>");
-        //    }
-        //    finally
-        //    {
-        //        // Close the connection
-        //        cn?.Close();
-        //    }
-        //}
-
-        // Add to cart functionality
-        protected void addToCart(int productId, int quantity)
+        // Add to Cart method
+        protected void AddToCart(string email, string password, int productId, int quantity)
         {
-            // Retrieve UserID from session
-            int userId = Convert.ToInt32(Session["UserID"]);
+            int userId = 0;
+            int categoryId = 0;
+
+            // Retrieve UserID using Email and Password
+            string userQuery = "SELECT UserID FROM UserTable WHERE Email = @Email AND Password = @Password";
+            try
+            {
+                cn = new SqlConnection(connectionString);
+                cm = new SqlCommand(userQuery, cn);
+                cm.Parameters.AddWithValue("@Email", email);
+                cm.Parameters.AddWithValue("@Password", password);
+
+                cn.Open();
+                object result = cm.ExecuteScalar();
+                if (result != null)
+                {
+                    userId = Convert.ToInt32(result);
+                }
+                else
+                {
+                    Response.Write("<script>alert('Invalid email or password.');</script>");
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                Response.Write($"<script>alert('Error retrieving user: {ex.Message}');</script>");
+                return;
+            }
+            finally
+            {
+                cn?.Close();
+            }
 
             // Retrieve CategoryID using ProductID
             string categoryQuery = "SELECT CategoryID FROM ProductTable WHERE ProductID = @ProductID";
-            int categoryId = 0;
-
             try
             {
                 cn = new SqlConnection(connectionString);
@@ -135,7 +101,7 @@ namespace MasterWebFormApp
                 cm.Parameters.AddWithValue("@ProductID", productId);
 
                 cn.Open();
-                categoryId = (int)cm.ExecuteScalar();
+                categoryId = Convert.ToInt32(cm.ExecuteScalar());
             }
             catch (Exception ex)
             {
@@ -144,14 +110,11 @@ namespace MasterWebFormApp
             }
             finally
             {
-                // Close the connection
                 cn?.Close();
             }
 
             // Insert data into CartTable
-            string insertQuery = "INSERT INTO CartTable (UserID, ProductID, CategoryID, Quantity, AddedDate) " +
-                                 "VALUES (@UserID, @ProductID, @CategoryID, @Quantity, GETDATE())";
-
+            string insertQuery = "INSERT INTO CartTable (UserID, ProductID, CategoryID, Quantity, AddedDate) VALUES (@UserID, @ProductID, @CategoryID, @Quantity, GETDATE())";
             try
             {
                 cn = new SqlConnection(connectionString);
@@ -171,26 +134,33 @@ namespace MasterWebFormApp
             }
             finally
             {
-                // Close the connection
                 cn?.Close();
             }
         }
 
-        // JavaScript function for add to cart
+        // Handle Add to Cart button click from the frontend
         protected void btnAddToCart_Click(object sender, EventArgs e)
         {
-            // Get ProductID from the button click and Quantity from input
-            int productId = Convert.ToInt32(Request.Form["productId"]);
-            int quantity = Convert.ToInt32(Request.Form["quantity"]);
+            // Get the product ID from CommandArgument
+            Button btn = sender as Button;
+            int productId = Convert.ToInt32(btn.CommandArgument);
 
-            // Call addToCart method
-            addToCart(productId, quantity);
+            // Get the quantity from the corresponding input field
+            int quantity = Convert.ToInt32(Request.Form["quantity_" + productId]);
+
+            // Retrieve email and password from the respective textboxes
+            string email = txtEmail.Text;
+            string password = txtPassword.Text;
+
+            // Call the AddToCart method
+            AddToCart(email, password, productId, quantity);
         }
 
-        // Category display functionality
-        protected void showCategory(string category)
+
+        // Handle category button clicks
+        protected void btnCategory_Click(object sender, EventArgs e)
         {
-            hfCategory.Value = category; // Update hidden field
+            string category = (sender as Button).Text;  // Get category from button text
             LoadProducts(category);
         }
     }

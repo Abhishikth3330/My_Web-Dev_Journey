@@ -48,30 +48,15 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <!-- Top Section: Email, Password, and Login Button -->
-    <%--<section class="container mt-3">
+    <!-- Top Section: Email, Password -->
+    <section class="container mt-3">
         <div class="row">
             <div class="col-md-12 text-end">
                 <asp:TextBox ID="txtEmail" CssClass="form-control d-inline-block w-auto" Placeholder="Email" runat="server" style="text-transform:none;"></asp:TextBox>
                 <asp:TextBox ID="txtPassword" CssClass="form-control d-inline-block w-auto" TextMode="Password" Placeholder="Password" runat="server"></asp:TextBox>
-                <asp:Button ID="btnLogin" Text="Login" CssClass="btn btn-primary" OnClick="btnLogin_Click" runat="server" />
-            </div>
-        </div>
-    </section>--%>
-
-    <!-- Category Selection: Mens | Womens -->
-    <section class="container mt-4">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <button class="btn btn-info" id="btnAll" onclick="showCategory('All')">All</button>
-                <button class="btn btn-info" id="btnMens" onclick="showCategory('Mens')">Mens</button>
-                <button class="btn btn-info" id="btnWomens" onclick="showCategory('Womens')">Womens</button>
             </div>
         </div>
     </section>
-
-    <!-- Hidden field to store selected category -->
-    <asp:HiddenField ID="hfCategory" runat="server" />
 
     <!-- Product Cards Section -->
     <section class="container mt-4">
@@ -79,14 +64,16 @@
             <!-- Dynamically populated product cards will go here -->
             <asp:Repeater ID="rptProducts" runat="server">
                 <ItemTemplate>
-                    <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
-                        <div class="product-card">
-                            <img src='<%# Page.ResolveUrl(Eval("ProductImage").ToString()) %>' alt="Product Image" class="product-image" />
-                            <h5><%# Eval("ProductName") %></h5>
-                            <p>Price: $<%# Eval("Price") %></p>
-                            <input type="number" min="1" value="1" class="quantity-input" id="quantity_<%# Eval("ProductID") %>" />
-                            <button class="add-to-cart" onclick="addToCart(<%# Eval("ProductID") %>)">Add to Cart</button>
-                        </div>
+                    <div>
+                        <img src='<%# Eval("ProductImage") %>' alt='<%# Eval("ProductName") %>' />
+                        <h3><%# Eval("ProductName") %></h3>
+                        <p>Price: $<%# Eval("Price") %></p>
+
+                        <!-- Quantity Input -->
+                        <input type="number" id="quantity_<%# Eval("ProductID") %>" name="quantity_<%# Eval("ProductID") %>" value="1" min="1" />
+
+                        <!-- Add to Cart Button -->
+                        <asp:Button runat="server" Text="Add to Cart" CommandName="AddToCart" CommandArgument='<%# Eval("ProductID") %>' OnClick="btnAddToCart_Click" />
                     </div>
                 </ItemTemplate>
             </asp:Repeater>
@@ -94,16 +81,9 @@
     </section>
 
     <script>
-        function showCategory(category) {
-            // Set the selected category in a hidden field
-            document.getElementById('<%= hfCategory.ClientID %>').value = category;
-            // Submit the form to trigger a server-side event
-            __doPostBack('btnShowCategory', '');
-        }
-
         function addToCart(productId) {
             var quantity = document.getElementById('quantity_' + productId).value;
-            window.location.href = 'Cart.aspx?ProductID=' + productId + '&Quantity=' + quantity;
+            window.location.href = 'Products.aspx?ProductID=' + productId + '&Quantity=' + quantity;
         }
     </script>
 </asp:Content>
