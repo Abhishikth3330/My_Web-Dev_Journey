@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            background-color: aqua;
+        }
+
+        .container{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            padding: 10px;
+            margin: 10px;
+            background-color: gray;
+            column-gap: 30px;
+            row-gap: 20px;
+        }
+
+        .container div{
+            border: 2px solid black;
+            padding: 20px;
+            text-align: center;
+            background-color: lightgreen;
+        }
+
+        .headingcontent{
+            grid-column-start: 1/3;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="headcontent">HEADER</div>
+        <div>NAVIGATION</div>
+        <div>CONTENT</div>
+        <div>MAIN CONTENT</div>
+        <div>CONTENT</div>
+        <div>FOOTER</div>
+    </div>
+</body>
+</html>
