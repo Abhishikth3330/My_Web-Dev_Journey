@@ -2,8 +2,8 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!-- inner page section -->
     <section class="inner_page_head">
         <div class="container_fuild">
@@ -25,6 +25,26 @@
                 <h2>Your <span>Cart</span></h2>
             </div>
 
+
+            <!-- User Details Section -->
+            <div class="user_details">
+                <h3>User Information</h3>
+                <div class="form-group">
+                    <label for="txtUserName">Name</label>
+                    <asp:TextBox ID="txtUserName" runat="server" CssClass="form-control" ReadOnly="true" />
+                </div>
+                <div class="form-group">
+                    <label for="txtUserEmail">Email</label>
+                    <asp:TextBox ID="txtUserEmail" runat="server" CssClass="form-control" ReadOnly="true" />
+                </div>
+                <div class="form-group">
+                    <label for="txtUserAddress">Address</label>
+                    <asp:TextBox ID="txtUserAddress" runat="server" CssClass="form-control" TextMode="MultiLine" ReadOnly="true" />
+                </div>
+            </div>
+
+
+
             <div class="table-responsive">
                 <table class="table table-bordered">
                     <thead class="thead-dark">
@@ -38,65 +58,31 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><img src="images/product1.png" alt="Product" style="width: 50px; height: 50px;"></td>
-                            <td>Men's Shirt</td>
-                            <td>
-                                <input type="number" class="form-control" value="1" min="1" style="width: 70px;">
-                            </td>
-                            <td>$75</td>
-                            <td>$75</td>
-                            <td>
-                                <button class="btn btn-danger btn-sm">Remove</button>
-                            </td>
-                        </tr>
-                        <!-- Additional rows for more products -->
+                        <asp:Repeater ID="rptCart" runat="server">
+                            <ItemTemplate>
+                                <tr>
+                                    <td><img src='<%# Eval("ProductImage") %>' alt="Product" style="width: 50px; height: 50px;"></td>
+                                    <td><%# Eval("ProductName") %></td>
+                                    <td>
+                                        <asp:TextBox ID="txtQuantity" runat="server" Text='<%# Eval("Quantity") %>' CssClass="form-control" OnTextChanged="Quantity_TextChanged" AutoPostBack="true" />
+                                    </td>
+                                    <td>$<%# Eval("Price") %></td>
+                                    <td>$<%# Eval("Total") %></td> 
+                                    <%-- need to write the code to get the total amount in the C#, need to use the price of one product and then multiply it with the given price
+                                       also add the sub total to get the total price --%>
+                                    <td>
+                                        <asp:Button ID="btnRemove" runat="server" Text="Remove" CssClass="btn btn-danger btn-sm" CommandArgument='<%# Eval("CartItemID") %>' OnClick="RemoveButton_Click" />
+                                    </td>
+                                </tr>
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </tbody>
                 </table>
             </div>
 
-            <div class="row mt-5">
-                <div class="col-md-6">
-                    <div class="user_details">
-                        <h5>User Details</h5>
-                        <form>
-                            <div class="form-group">
-                                <label for="userName">Name:</label>
-                                <input type="text" id="userName" class="form-control" placeholder="Enter your name" readonly>
-                            </div>
-                            <div class="form-group">
-                                <label for="userEmail">Email:</label>
-                                <input type="email" id="userEmail" class="form-control" placeholder="Enter your email" readonly>
-                            </div>
-                            <div class="form-group">
-                                <label for="userAddress">Address:</label>
-                                <textarea id="userAddress" class="form-control" placeholder="Enter your address" rows="3" readonly></textarea>
-                            </div>
-                        </form>
-                    </div>
-                </div>
 
-                <div class="col-md-6">
-                    <div class="cart_summary">
-                        <h5>Cart Summary</h5>
-                        <ul class="list-group">
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Subtotal:
-                                <span>$75</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Shipping:
-                                <span>$5</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Total:
-                                <span>$80</span>
-                            </li>
-                        </ul>
-                        <button class="btn btn-primary btn-block mt-3">Proceed to Checkout</button>
-                    </div>
-                </div>
-            </div>
+
+
         </div>
     </section>
     <!-- end cart section -->

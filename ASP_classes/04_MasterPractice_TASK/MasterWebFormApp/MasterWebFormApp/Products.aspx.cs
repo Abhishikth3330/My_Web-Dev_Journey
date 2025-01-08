@@ -113,30 +113,54 @@ namespace MasterWebFormApp
                 cn?.Close();
             }
 
-            // Insert data into CartTable
-            string insertQuery = "INSERT INTO CartTable (UserID, ProductID, CategoryID, Quantity, AddedDate) VALUES (@UserID, @ProductID, @CategoryID, @Quantity, GETDATE())";
+            // Check if the product is already in the cart
+            string checkCartQuery = "SELECT COUNT(*) FROM CartTable WHERE UserID = @UserID AND ProductID = @ProductID";
             try
             {
                 cn = new SqlConnection(connectionString);
-                cm = new SqlCommand(insertQuery, cn);
+                cm = new SqlCommand(checkCartQuery, cn);
                 cm.Parameters.AddWithValue("@UserID", userId);
                 cm.Parameters.AddWithValue("@ProductID", productId);
-                cm.Parameters.AddWithValue("@CategoryID", categoryId);
-                cm.Parameters.AddWithValue("@Quantity", quantity);
 
                 cn.Open();
-                cm.ExecuteNonQuery();
-                Response.Write("<script>alert('Product added to cart successfully!');</script>");
+                int count = Convert.ToInt32(cm.ExecuteScalar());
+
+                if (count > 0)
+                {
+                    // If product exists, update quantity
+                    string updateQuery = "UPDATE CartTable SET Quantity = Quantity + @Quantity WHERE UserID = @UserID AND ProductID = @ProductID";
+                    cm = new SqlCommand(updateQuery, cn);
+                    cm.Parameters.AddWithValue("@UserID", userId);
+                    cm.Parameters.AddWithValue("@ProductID", productId);
+                    cm.Parameters.AddWithValue("@Quantity", quantity);
+
+                    cm.ExecuteNonQuery();
+                    Response.Write("<script>alert('Product quantity updated in cart!');</script>");
+                }
+                else
+                {
+                    // If product does not exist, insert new record
+                    string insertQuery = "INSERT INTO CartTable (UserID, ProductID, CategoryID, Quantity, AddedDate) VALUES (@UserID, @ProductID, @CategoryID, @Quantity, GETDATE())";
+                    cm = new SqlCommand(insertQuery, cn);
+                    cm.Parameters.AddWithValue("@UserID", userId);
+                    cm.Parameters.AddWithValue("@ProductID", productId);
+                    cm.Parameters.AddWithValue("@CategoryID", categoryId);
+                    cm.Parameters.AddWithValue("@Quantity", quantity);
+
+                    cm.ExecuteNonQuery();
+                    Response.Write("<script>alert('Product added to cart successfully!');</script>");
+                }
             }
             catch (Exception ex)
             {
-                Response.Write($"<script>alert('Error adding to cart: {ex.Message}');</script>");
+                Response.Write($"<script>alert('Error checking cart: {ex.Message}');</script>");
             }
             finally
             {
                 cn?.Close();
             }
         }
+
 
         // Handle Add to Cart button click from the frontend
         protected void btnAddToCart_Click(object sender, EventArgs e)

@@ -64,16 +64,18 @@
             <!-- Dynamically populated product cards will go here -->
             <asp:Repeater ID="rptProducts" runat="server">
                 <ItemTemplate>
-                    <div>
-                        <img src='<%# Eval("ProductImage") %>' alt='<%# Eval("ProductName") %>' />
-                        <h3><%# Eval("ProductName") %></h3>
-                        <p>Price: $<%# Eval("Price") %></p>
+                    <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+                        <div class="product-card">
+                            <img src='<%# Page.ResolveUrl(Eval("ProductImage").ToString()) %>' alt='<%# Eval("ProductName") %>' />
+                            <h3><%# Eval("ProductName") %></h3>
+                            <p>Price: $<%# Eval("Price") %></p>
 
-                        <!-- Quantity Input -->
-                        <input type="number" id="quantity_<%# Eval("ProductID") %>" name="quantity_<%# Eval("ProductID") %>" value="1" min="1" />
+                            <!-- Quantity Input -->
+                            <input type="number" id="quantity_<%# Eval("ProductID") %>" name="quantity_<%# Eval("ProductID") %>" value="1" min="1" />
 
-                        <!-- Add to Cart Button -->
-                        <asp:Button runat="server" Text="Add to Cart" CommandName="AddToCart" CommandArgument='<%# Eval("ProductID") %>' OnClick="btnAddToCart_Click" />
+                            <!-- Add to Cart Button -->
+                            <asp:Button runat="server" Text="Add to Cart" CommandName="AddToCart" CommandArgument='<%# Eval("ProductID") %>' OnClick="btnAddToCart_Click" />
+                        </div>
                     </div>
                 </ItemTemplate>
             </asp:Repeater>
