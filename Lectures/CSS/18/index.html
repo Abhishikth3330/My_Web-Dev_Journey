@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Page</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 1200px;
+            background-color: #fff;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h3 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .card-content p {
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            color: #e63946;
+            font-weight: bold;
+        }
+
+        .add-to-cart {
+            margin-top: 10px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #2a9d8f;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart:hover {
+            background-color: #21867a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="product1.jpg" alt="Product 1">
+            <div class="card-content">
+                <h3>Product 1</h3>
+                <p>A short description of Product 1.</p>
+                <p class="price">$10.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="product2.jpg" alt="Product 2">
+            <div class="card-content">
+                <h3>Product 2</h3>
+                <p>A short description of Product 2.</p>
+                <p class="price">$15.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="product3.jpg" alt="Product 3">
+            <div class="card-content">
+                <h3>Product 3</h3>
+                <p>A short description of Product 3.</p>
+                <p class="price">$20.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="product4.jpg" alt="Product 4">
+            <div class="card-content">
+                <h3>Product 4</h3>
+                <p>A short description of Product 4.</p>
+                <p class="price">$8.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="product5.jpg" alt="Product 5">
+            <div class="card-content">
+                <h3>Product 5</h3>
+                <p>A short description of Product 5.</p>
+                <p class="price">$12.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="product6.jpg" alt="Product 6">
+            <div class="card-content">
+                <h3>Product 6</h3>
+                <p>A short description of Product 6.</p>
+                <p class="price">$18.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
