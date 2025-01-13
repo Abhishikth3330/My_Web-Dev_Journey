@@ -81,6 +81,18 @@ a{
     color: black;
 }
 
-.sci{
-    
+.btn-sci {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sci {
+    display: flex;
+    gap: 10px;
+}
+
+.sci a img {
+    width: 30px;
+    height: 30px;
 }
