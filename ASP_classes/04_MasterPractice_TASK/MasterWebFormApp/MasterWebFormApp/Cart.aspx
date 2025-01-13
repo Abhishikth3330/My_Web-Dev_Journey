@@ -61,23 +61,51 @@
                         <asp:Repeater ID="rptCart" runat="server">
                             <ItemTemplate>
                                 <tr>
-                                    <td><img src='<%# Eval("ProductImage") %>' alt="Product" style="width: 50px; height: 50px;"></td>
+                                    <td>
+                                        <img src='<%# Page.ResolveUrl(Eval("ProductImage").ToString()) %>' alt='<%# Eval("ProductName") %>' style="width: 100px; height: 100px;" />
+                                    </td>
+
                                     <td><%# Eval("ProductName") %></td>
                                     <td>
-                                        <asp:TextBox ID="txtQuantity" runat="server" Text='<%# Eval("Quantity") %>' CssClass="form-control" OnTextChanged="Quantity_TextChanged" AutoPostBack="true" />
+                                        <div class="input-group">
+                                            <!-- Decrease Quantity Button -->
+                                            <div class="input-group-prepend">
+                                                <asp:Button ID="btnDecrease" runat="server" Text="-" CssClass="btn btn-outline-secondary" CommandArgument='<%# Eval("CartID") %>' OnClick="DecreaseButton_Click" />
+                                            </div>
+                    
+                                            <!-- Quantity TextBox -->
+                                            <asp:TextBox ID="txtQuantity" runat="server" Text='<%# Eval("Quantity") %>' CssClass="form-control text-center" ReadOnly="true" />
+                    
+                                            <!-- Increase Quantity Button -->
+                                            <div class="input-group-append">
+                                                <asp:Button ID="btnIncrease" runat="server" Text="+" CssClass="btn btn-outline-secondary" CommandArgument='<%# Eval("CartID") %>' OnClick="IncreaseButton_Click" />
+                                            </div>
+                                        </div>
+                                        <asp:HiddenField ID="hfCartItemID" runat="server" Value='<%# Eval("CartID") %>' />
                                     </td>
                                     <td>$<%# Eval("Price") %></td>
-                                    <td>$<%# Eval("Total") %></td> 
-                                    <%-- need to write the code to get the total amount in the C#, need to use the price of one product and then multiply it with the given price
-                                       also add the sub total to get the total price --%>
+                                    <td>$<%# Eval("Total") %></td>
                                     <td>
-                                        <asp:Button ID="btnRemove" runat="server" Text="Remove" CssClass="btn btn-danger btn-sm" CommandArgument='<%# Eval("CartItemID") %>' OnClick="RemoveButton_Click" />
+                                        <asp:Button ID="btnRemove" runat="server" Text="Remove" CssClass="btn btn-danger btn-sm" CommandArgument='<%# Eval("CartID") %>' OnClick="RemoveButton_Click" />
                                     </td>
                                 </tr>
                             </ItemTemplate>
                         </asp:Repeater>
+
+
                     </tbody>
                 </table>
+            </div>
+
+            <div class="subtotal-section">
+                <label for="lblSubtotal">Subtotal:</label>
+                <asp:Label ID="Label1" runat="server" CssClass="subtotal-label"></asp:Label>
+            </div>
+
+
+            <div class="cart_summary">
+                <h4>Cart Summary</h4>
+                <p><strong>Subtotal:</strong> <asp:Label ID="lblSubtotal" runat="server" CssClass="subtotal-label"></asp:Label></p>
             </div>
 
 
