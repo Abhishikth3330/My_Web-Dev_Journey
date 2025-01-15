@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background: gray;
+        }
+
+        a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar{
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            padding: 25px, 9%;
+            background: orange;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .navbar .logo{
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .navbar ul{
+            display: flex;
+        }
+
+        .navbar ul li{
+            list-style: none;
+            margin-left: 35px;
+        }
+
+        .navbar ul li a{
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .navbar ul li:hover a{
+            color: aqua;
+        }
+
+        .navbar ul li.active a{
+            color: aqua;
+        }
+
+        .about-me{
+            padding: 60px;
+            /* text-align: center; */
+            font-size: larger;
+        }
+
+        .education dl{
+            color: white;
+            font-style: italic;
+        }
+
+        
+    </style>
+
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">Portfolio</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="about.html">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="about-me">
+        <div class="education">
+            <h2>Qualification :</h2>
+            <dl>
+                <dt>G H Raisoni College of Engineering, Nagpur - 440016</dt>
+                <dd>B.Tech in Artificial Intelligence (2019-2023)</dd>
+            </dl>
+        </div>
+    </section>
+</body>
+</html>

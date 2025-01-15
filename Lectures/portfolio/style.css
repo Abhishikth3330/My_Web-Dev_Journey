@@ -96,3 +96,14 @@ a{
     width: 30px;
     height: 30px;
 }
+
+.home-img img{
+    height: 300px;
+    float: right;
+    border-radius: 10px;
+}
+
+.border-img{
+    border: 2px solid black;
+    border-radius: 10px;
+}
