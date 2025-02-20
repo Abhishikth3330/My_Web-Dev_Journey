@@ -143,8 +143,15 @@
 
 
 // 20.  Check if a number is a perfect square.
-var num = 25;
-var sqrt = Math.sqrt(num);
-if (){
-    console.log("The number is a perfect square");
-}
+// var num = 25;
+// var sqrt = Math.sqrt(num);
+// if (sqrt === Math.floor(sqrt)){
+//     console.log("The number is a perfect square");
+// }
+
+
+// 21.  Check if a number ends with the digit 5
+// var number = 625;
+// if (number % 10 == 5){
+//     console.log("Number ends with digit 5.");
+// }

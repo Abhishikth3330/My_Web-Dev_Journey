@@ -17,7 +17,7 @@ for (i = 1; i <= 5; i++){
 }
 
 console.log("\n");
-
+// upper triangle
 var i, j;
 for (i = 1; i <= 5; i++){
     var row = "";
@@ -28,7 +28,7 @@ for (i = 1; i <= 5; i++){
 }
 
 console.log("\n");
-
+// lower traingle
 var i, j;
 for (i = 1; i <= 5; i++){
     var row = "";
@@ -36,4 +36,14 @@ for (i = 1; i <= 5; i++){
         row += "* "
     }
     console.log(row)
+}
+
+// Middle spaces (2 * (n - i))
+for (let j = 1; j <= 2 * (n - i); j++) {
+    row += "  ";
+}
+
+// Right triangle
+for (let j = 1; j <= i; j++) {
+    row += "* ";
 }
