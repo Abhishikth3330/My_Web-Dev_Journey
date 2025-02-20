@@ -155,3 +155,177 @@
 // if (number % 10 == 5){
 //     console.log("Number ends with digit 5.");
 // }
+
+
+// 22.  Check if a person is eligible for a discount (if age < 12 or > 60).
+// var age = 23;
+// if (age > 12 || age < 60){
+//     console.log("Eligible for a discount");
+// }
+
+
+// 23.  Check if a string starts with the letter "A".
+// var sentence = "Abhishikth"
+// if (sentence.startsWith('A')){
+//     console.log("Starts with letter 'A'.");
+// }
+
+
+// 24.  Check if a number is a palindrome (same when reversed).
+// var str1 = "121";
+// var rev = "";
+// for (var i = str1.length - 1; i >= 0; i--){
+//     rev += str1[i];
+// }
+// if (str1 == rev){
+//     console.log("number is palindrome");
+// }
+
+// 25.  Check if a number is a prime number.
+// var num = 5;
+// if (num === 1){
+//     console.log("1 is neither prime nor composite.");
+// }else{
+//     for (var i = 2; i <= num; i++){
+//         if (num % i == 0){
+//             console.log("Prime Number.");
+//         }
+//     }
+// }
+
+
+// 26.  Check if a given string is a valid email address (contains '@' and '.').
+// var email = "abhishikththul9@gmail.com"
+// if (email.includes('@' && '.')){
+//     console.log("Valid Email Address.");
+// }
+
+
+// 27.  Check if a person is eligible for a scholarship (marks > 85 and income < 5L).
+// var income = 420000;
+// if (income > 85000 && income < 500000){
+//     console.log("Eligible for scholarship.");
+// }
+
+
+// 28.  Check if a mobile number is 10 digits long.
+// var mobile = 7865490873;
+// if (mobile.toString().length == 10){
+//     console.log("mobile number has 10 digits");
+// }
+
+
+// 29.  Check if a password is strong (length > 8 and contains a special character).
+// var password = "Sampras@123";
+// if (password.toString().length > 8){
+//     console.log("Password is strong.");
+// }
+
+
+// 30.  Check if a number is positive, and print "Positive" if true.
+// var number = 23;
+// if (number > 0){
+//     console.log("Positive");
+// }
+
+
+// 31.  Check if a user has entered the correct password ("admin123").
+// var password = "admin123";
+// var user_password = "admin123";
+// if (password == user_password){
+//     console.log("Correct Password.");
+// }
+
+
+// 32.  Check if a given letter is lowercase.
+// var letter = 'c';
+// if (letter > 'a' && letter < 'z'){
+//     console.log("Lowercase");
+// }
+
+
+// 33.  Check if a number is greater than 500.
+// var num = 505;
+// if (num > 500){
+//     console.log("Greater than 500.");
+// }
+
+
+// 34.  Check if a number is exactly 50.
+// var num = 50;
+// if (num = 50){
+//     console.log("Number is exactly 50.");
+// }
+
+
+// 35.  Check if the first digit of a number is even.
+// var num = 246;
+// var firstDigit = num.toString()[0];
+// if (firstDigit % 2 == 0){
+//     console.log("First digit is even");
+// }
+
+
+// 36.  Check if the last digit of a number is 0. 
+// var number = 2020;
+// var lastDigit = number % 10;
+// if (lastDigit == 0){
+//     console.log("last digit is zero");
+// }
+
+
+// 37.  Check if a person can get a driving license (age >= 18 and has passed the test).
+// var age = 19;
+// var test = "passed";
+// if (age >= 18 && test == "passed"){
+//     console.log("person can get a driving license.");
+// }
+
+
+// 38.  Check if the length of a string is greater than 10.
+// var sentence = "I am Abhishikth Thul";
+// var lengthSentence = sentence.toString().length;
+// if (lengthSentence > 10){
+//     console.log("Length of the string is greater than 10.");
+// }
+
+
+// 39.  Check if the given temperature is above boiling point (100°C).
+// var temp = 120;
+// if (temp > 100){
+//     console.log("Above boiling point.");
+// }
+
+
+// 40.  Check if a triangle is isosceles (two sides equal).
+// var a = 5, b = 5, c = 8;
+// if (a === b || b === c || c === a){
+//     console.log("Isosceles Triangle.");
+// }
+
+
+// 41.  Check if a word is a palindrome ("madam" → palindrome).
+// var word = "madam";
+// var reversed = word.split("").reverse().join("");
+// if (word === reversed){
+//     console.log("palindrome.");
+// }
+
+
+// 42.  Check if an online order is eligible for free shipping (total price >= ₹500)
+// var price = 600;
+// if (price >= 500){
+//     console.log("order is eligible for free shipping.");
+// }
+
+
+// 43.  Check if a date falls on a weekend (Saturday or Sunday)
+// var date = new Date("2025-02-22");
+// var reference = new Date("1970-01-04");
+// var diff = (date - reference) / (1000 * 60 * 60 * 24);
+
+// if (diff % 7 === 0 || diff % 7 === 6) 
+//     console.log("Weekend");
+
+
+// 44.  Check if a person is eligible for a cashback offer (purchase > ₹1000 and payment via credit card).
