@@ -329,3 +329,45 @@
 
 
 // 44.  Check if a person is eligible for a cashback offer (purchase > ₹1000 and payment via credit card).
+// var purchase = 1200;
+// var mode = "credit_card";
+// if (purchase > 1000 && mode === "credit_card"){
+//     console.log("Eligible for a cashback.");
+// }
+
+
+// 45.  Check if a person qualifies for a credit card (age > 21 and credit score > 700).
+// var age = 27;
+// var score = 800;
+// if (age > 21 && score > 700){
+//     console.log("qualifies for a credit card.");
+// }
+
+
+// 46.  Check if an ATM withdrawal amount is a multiple of ₹100.
+// var amount = 15000;
+// if (amount % 100 == 0){
+//     console.log("amount is multiple of 100.");
+// }
+
+
+// 47.  Check if a person is eligible for a work-from-home policy (role = "developer" or "manager")
+// var role = "developer";
+// if (role == "developer" || role == "manager"){
+//     console.log("Eligible for work form home.");
+// }
+
+
+// 48.  Check if an email address belongs to a specific domain (ends with "@gmail.com").
+// var email = "abhishikththul9@gmail.com"
+// if (email.endsWith("@gmail.com")){
+//     console.log("belongs to gmail.com domain");
+// }
+
+
+// 49.  Check if a user can access premium content (logged in & has active subscription)
+// var logged_in = "True";
+// var subscription = "active";
+// if (logged_in === "True" && subscription === "active"){
+//     console.log("Access to Premium Content.");
+// }
