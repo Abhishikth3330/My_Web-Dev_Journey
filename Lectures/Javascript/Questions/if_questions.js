@@ -34,7 +34,7 @@
 
 
 // 5. Check if a given character is uppercase. 
-// var letter = 'R';
+// var letter = 'B';
 // if (letter >= 'A' && letter <= 'Z'){
 //     console.log("The letter is Uppercase");
 // }
