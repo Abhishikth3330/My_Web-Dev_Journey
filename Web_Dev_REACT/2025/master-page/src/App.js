@@ -1,11 +1,13 @@
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Pages from "./components/pages/Pages";
 
-function App() {
+const App = () => {
   return (
-    <>
-      <h1>Meow</h1>
-    </>
+    <Router>
+      <Pages />
+    </Router>
   );
-}
+};
 
 export default App;
