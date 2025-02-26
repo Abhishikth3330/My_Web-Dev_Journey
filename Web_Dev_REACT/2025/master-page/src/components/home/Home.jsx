@@ -1,8 +1,6 @@
 import React from "react";
 import heroImage from "../images/hero-img.png";
 
-
-
 const Home = () => {
   return (
     <section id="hero" className="hero section light-background">
