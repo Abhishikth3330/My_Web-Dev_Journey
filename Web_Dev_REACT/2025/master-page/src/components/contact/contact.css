@@ -1,0 +1,32 @@
+.contact-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.contact-container h2 {
+    text-align: center;
+    color: #343a40; /* Dark Gray */
+}
+
+.contact-container .btn-primary {
+    width: 100%;
+}
+
+.social-icons {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #007bff; /* Bootstrap primary color */
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: #0056b3; /* Darker Blue */
+}

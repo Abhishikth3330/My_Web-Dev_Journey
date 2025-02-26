@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+/* Ensure the entire page takes up at least the full viewport height */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make sure the main container stretches to fill available space */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Ensure the main content expands while the footer stays at the bottom */
+.main-content {
+  flex: 1;
+}
+
+/* Footer styles */
+.footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #282c34;
+  color: white;
+  width: 100%;
+}

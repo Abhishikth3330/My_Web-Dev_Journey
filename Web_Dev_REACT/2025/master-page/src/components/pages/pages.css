@@ -1,0 +1,4 @@
+.main-content * {
+    all: unset;  /* Resets all inherited styles */
+  }
+  
