@@ -8,6 +8,8 @@ import Contact from "../contact/Contact";
 import Menu from "../menu/Menu";
 // import "./pages.css";
 
+
+
 const Pages = () => {
   return (
     <div className="app-container">
