@@ -5,7 +5,6 @@ import './assets/css/main.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-
 const App = () => {
   return (
     <Router>
