@@ -39,7 +39,7 @@
   
   /* Caption Styling */
   .carousel-caption {
-    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    background: rgba(0, 0, 0, 0.6);
     padding: 10px;
     border-radius: 10px;
   }
@@ -55,7 +55,6 @@
     color: #ddd;
   }
   
-  /* Right Side Signup/Login Placeholder */
   .signup-placeholder {
     text-align: center;
     color: white;
