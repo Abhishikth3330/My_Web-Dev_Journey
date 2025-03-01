@@ -22,6 +22,7 @@ function div(a, b){
     }
 }
 
+
 var a = 10, b = 5;
 ans = div(a, b);
 console.log(ans);
