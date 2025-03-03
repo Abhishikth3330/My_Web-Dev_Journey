@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./home.css"; // Minimal custom styles
+import "./home.css";
 
 import img2 from "../images/dsa.jpg";
 import img3 from "../images/gh.png";
