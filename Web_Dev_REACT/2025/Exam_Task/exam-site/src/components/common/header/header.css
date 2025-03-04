@@ -7,9 +7,6 @@
   width: 100%;
   z-index: 1000;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 /* Container */
@@ -20,6 +17,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  padding: 0 20px;
 }
 
 /* Logo */
@@ -34,11 +33,6 @@
 .logo:hover {
   transform: scale(1.05);
 }
-
-/* .logo span {
-  color: #ffdd57;
-  font-size: 32px;
-} */
 
 /* Navigation Menu */
 .navmenu {
@@ -97,9 +91,8 @@
   border: none;
   color: white;
   cursor: pointer;
-  margin-left: auto;
-  margin-right: 10px;
-  margin-top: 50px;
+  position: absolute;
+  right: 20px;
 }
 
 /* Mobile Styles */
@@ -114,9 +107,9 @@
   .navmenu {
     display: none;
     position: absolute;
-    top: 60px; /* Adjusted so it appears below the hamburger */
-    right: 10px;
-    width: 90%;
+    top: 60px;
+    right: 0;
+    width: 100%;
     background: linear-gradient(0deg, #ff7e5f, #feb47b);
     text-align: center;
     padding: 15px 0;
@@ -143,7 +136,5 @@
 
   .hamburger {
     display: block;
-    position: absolute;
-    right: 20px;
   }
 }
