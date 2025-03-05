@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\IT_Networkz\\Web_Dev_REACT\\2025\\Exam_MVC\\Examzz\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{65FDEACD-6EDB-4D10-964F-F0614856F913}|Examzz\\Examzz.csproj|f:\\it_networkz\\web_dev_react\\2025\\exam_mvc\\examzz\\examzz\\wwwroot\\client\\src\\components\\login.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{65FDEACD-6EDB-4D10-964F-F0614856F913}|Examzz\\Examzz.csproj|solutionrelative:examzz\\wwwroot\\client\\src\\components\\login.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65FDEACD-6EDB-4D10-964F-F0614856F913}|Examzz\\Examzz.csproj|f:\\it_networkz\\web_dev_react\\2025\\exam_mvc\\examzz\\examzz\\wwwroot\\client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{65FDEACD-6EDB-4D10-964F-F0614856F913}|Examzz\\Examzz.csproj|solutionrelative:examzz\\wwwroot\\client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65FDEACD-6EDB-4D10-964F-F0614856F913}|Examzz\\Examzz.csproj|f:\\it_networkz\\web_dev_react\\2025\\exam_mvc\\examzz\\examzz\\wwwroot\\client\\src\\index.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{65FDEACD-6EDB-4D10-964F-F0614856F913}|Examzz\\Examzz.csproj|solutionrelative:examzz\\wwwroot\\client\\src\\index.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65FDEACD-6EDB-4D10-964F-F0614856F913}|Examzz\\Examzz.csproj|f:\\it_networkz\\web_dev_react\\2025\\exam_mvc\\examzz\\examzz\\wwwroot\\client\\src\\components\\signup.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{65FDEACD-6EDB-4D10-964F-F0614856F913}|Examzz\\Examzz.csproj|solutionrelative:examzz\\wwwroot\\client\\src\\components\\signup.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "index.jsx",
+              "DocumentMoniker": "F:\\IT_Networkz\\Web_Dev_REACT\\2025\\Exam_MVC\\Examzz\\Examzz\\wwwroot\\client\\src\\index.jsx",
+              "RelativeDocumentMoniker": "Examzz\\wwwroot\\client\\src\\index.jsx",
+              "ToolTip": "F:\\IT_Networkz\\Web_Dev_REACT\\2025\\Exam_MVC\\Examzz\\Examzz\\wwwroot\\client\\src\\index.jsx",
+              "RelativeToolTip": "Examzz\\wwwroot\\client\\src\\index.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-03-05T06:55:52.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.jsx",
+              "DocumentMoniker": "F:\\IT_Networkz\\Web_Dev_REACT\\2025\\Exam_MVC\\Examzz\\Examzz\\wwwroot\\client\\src\\App.jsx",
+              "RelativeDocumentMoniker": "Examzz\\wwwroot\\client\\src\\App.jsx",
+              "ToolTip": "F:\\IT_Networkz\\Web_Dev_REACT\\2025\\Exam_MVC\\Examzz\\Examzz\\wwwroot\\client\\src\\App.jsx",
+              "RelativeToolTip": "Examzz\\wwwroot\\client\\src\\App.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-03-05T06:56:47.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Signup.jsx",
+              "DocumentMoniker": "F:\\IT_Networkz\\Web_Dev_REACT\\2025\\Exam_MVC\\Examzz\\Examzz\\wwwroot\\client\\src\\components\\Signup.jsx",
+              "RelativeDocumentMoniker": "Examzz\\wwwroot\\client\\src\\components\\Signup.jsx",
+              "ToolTip": "F:\\IT_Networkz\\Web_Dev_REACT\\2025\\Exam_MVC\\Examzz\\Examzz\\wwwroot\\client\\src\\components\\Signup.jsx",
+              "RelativeToolTip": "Examzz\\wwwroot\\client\\src\\components\\Signup.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-03-05T06:58:52.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.jsx",
+              "DocumentMoniker": "F:\\IT_Networkz\\Web_Dev_REACT\\2025\\Exam_MVC\\Examzz\\Examzz\\wwwroot\\client\\src\\components\\Login.jsx",
+              "RelativeDocumentMoniker": "Examzz\\wwwroot\\client\\src\\components\\Login.jsx",
+              "ToolTip": "F:\\IT_Networkz\\Web_Dev_REACT\\2025\\Exam_MVC\\Examzz\\Examzz\\wwwroot\\client\\src\\components\\Login.jsx",
+              "RelativeToolTip": "Examzz\\wwwroot\\client\\src\\components\\Login.jsx",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAiwCsAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-03-05T06:58:27.026Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
