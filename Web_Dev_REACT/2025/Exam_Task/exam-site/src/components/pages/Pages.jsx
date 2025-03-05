@@ -3,12 +3,8 @@ import Header from "../common/header/Header";
 import Footer from "../common/footer/Footer";
 import { Routes, Route } from "react-router-dom";
 import Home from "../home/Home";
-// import About from "../about/About";
-// import Contact from "../contact/Contact";
-// import Menu from "../menu/Menu";
-// import "./pages.css";
-
-
+import About from "../about/About";
+import Services from "../services/Services";
 
 const Pages = () => {
   return (
@@ -17,10 +13,8 @@ const Pages = () => {
       <div className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/services" element={<h2>Services Page Coming Soon...</h2>} />
-          <Route path="/menu" element={<Menu />} /> */}
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
         </Routes>
       </div>
       <Footer />
