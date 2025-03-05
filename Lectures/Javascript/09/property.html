@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // create a variable
+        // var car = "Abc";
+        // document.write("Car : " + car);
+
+
+
+        // create object
+        const car = {type:"ABC", model:"500", color:"white"};
+        document.write("The car type is : " + car.type + "<br>");
+        document.write("The car model is : " + car.model + "<br>");
+        document.write("The car color is : " + car.color + "<br><br>");
+        
+
+
+        const fruits = {color : "Red",
+                        name: "Apple",
+                        taste: "Sweet",
+                        season: "Winter",
+                        other_name : "False Fruit",
+                        quantity : 110
+                    };
+
+        // accessing data
+        document.write("Name of the Fruit is " + fruits.name + "<br>")
+        document.write(fruits.name + " is farmed in " + fruits.season + "<br>")
+        document.write("It is also known as " + fruits.other_name + "<br>")
+        document.write("Quantity of " + fruits.name + " is " + fruits.quantity + "<br><br>")
+
+
+
+
+        // creating an object
+        const person = {};
+        
+        // adding properties
+        person.firstname = "ABC";
+        person.lastname = "XYZ";
+        person.age = 25;
+
+        // display the data
+        document.write("Name : " + person.firstname + "<br><br>");
+
+
+
+
+        // creating an object
+        const person2 = new Object();
+        
+        // adding properties
+        person2.firstname = "Abhi";
+        person2.lastname = "Thul";
+        person2.age = 25;
+
+        // display the data
+        document.write("Name : " + person2.firstname + "<br><br>");
+
+
+
+        const languages = new Object();
+
+        languages.oop = "Java";
+        languages.script = "Javascript";
+        languages.dynamic = "Python";
+        languages.database = "SQL";
+
+
+        document.write("Scripting Language is " + languages.script + "<br>");
+        document.write("Database Language is " + languages.database);
+
+
+        
+
+    </script>
+</body>
+</html>
