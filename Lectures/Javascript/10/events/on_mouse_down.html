@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Control</title>
+</head>
+<body onload="alert('Page has loaded successfully!')">
+    
+    <button onclick="light.src='on.avif'">ON</button>
+    
+    <img id="light" src="off.avif"  
+         onmousedown="light.src='on.avif'">
+         <!-- when we hold the mouse button on the image, the light will glow -->
+
+    <button onclick="light.src='off.avif'">OFF</button>
+
+</body>
+</html>

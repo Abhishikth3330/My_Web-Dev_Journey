@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Control</title>
+</head>
+<!-- this will give a popup that the page has loaded successfully -->
+<body onload="alert('Page has loaded successfully!')">
+    
+    <button onclick="light.src='on.avif'">ON</button>
+    
+    <img id="light" src="off.avif" 
+         onmouseover="light.src='on.avif'" 
+         onmouseout="light.src='off.avif'">
+    
+    <button onclick="light.src='off.avif'">OFF</button>
+
+</body>
+</html>
