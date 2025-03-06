@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // const student = new Object();
+
+        // student.name = "Abhi";
+        // student.age = 25;
+        // student.marks = 88;
+        // student.address = "Nagpur";
+
+
+        // document.write("Name : " + student["name"] + "<br>")
+        // document.write("Age : " + student["age"] + "<br>")
+        // document.write("Marks : " + student["marks"] + "<br>")
+        // document.write("Address : " + student["address"] + "<br>")
+
+
+
+        // object named student
+        // left side property and right side values
+        const student = {
+            first_name : "ABC",
+            last_name : "XYZ",
+            age : 20
+        };
+
+        // adding new properties to an existing object
+        student.aadhar = 675327482437;
+
+
+        // deleting a property using the delete property
+        delete student.last_name;
+
+        var x = "first_name";
+        var y = "last_name";
+
+        document.write(student[x] + " " + student[y] + " is " + student["age"] + " years old. <br>" + "Aadhar No.: " + student.aadhar + "<br>");
+        document.write(student.last_name)
+
+    </script>
+</body>
+</html>
