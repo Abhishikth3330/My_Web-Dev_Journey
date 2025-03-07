@@ -37,16 +37,16 @@ console.log(e.lastIndexOf('s'));
 
 
 
-// string definition
-const sentence = "JavaScript1JavaScript2";
+// Updated sentence
+const sentence = "Hello World";
 
-// a pattern having 'JavaScript' followed by a digit
-const regex = /JavaScript\d/g;
+// A regex pattern to match 'Hello' or 'World'
+const regex = /Hello|World/g;
 
-// finding matches in the string for the given regular expression
+// Using matchAll directly
 let results = sentence.matchAll(regex);
 
-// looping through the iterator
-for (result of results) {
+// Looping through the iterator and printing results
+for (let result of results) {
   console.log(result);
 }

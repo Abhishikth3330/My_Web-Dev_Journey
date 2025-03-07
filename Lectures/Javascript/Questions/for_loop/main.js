@@ -237,3 +237,324 @@
 //     sum += i % 10;
 // }
 // console.log("Sum of digits:", sum);
+
+
+// 9. Check if a number is an Armstrong number using a for loop (e.g., 153 = 1³ + 5³ + 3³). 
+// let num = 153;
+// let sum = 0;
+// let temp = num;
+// let digits = 0;
+// // Count the number of digits
+// for (let i = num; i > 0; i = Math.floor(i / 10)) {
+//     digits++;
+// }
+// // Calculate the sum of each digit raised to the power of digits
+// for (let i = num; i > 0; i = Math.floor(i / 10)) {
+//     let digit = i % 10;
+//     sum += Math.pow(digit, digits);
+// }
+// // Check if it's an Armstrong number
+// if (sum === temp) {
+//     console.log(num, "is an Armstrong number.");
+// } else {
+//     console.log(num, "is not an Armstrong number.");
+// }
+
+
+
+// 10.  Write a program to print the GCD (Greatest Common Divisor) of two numbers using a for loop.
+// let a = 36;
+// let b = 60;
+// let gcd = 1;
+// for (let i = 1; i <= Math.min(a, b); i++) {
+//     if (a % i === 0 && b % i === 0) {
+//         gcd = i;
+//     }
+// }
+// console.log("GCD of", a, "and", b, "is:", gcd);
+
+
+
+// 11.  Print all perfect numbers between 1 and 1000 using a for loop (A number is perfect if the sum of its factors, excluding itself, is equal to the number).
+// for (let num = 1; num <= 1000; num++) {
+//     let sum = 0;
+//     // Find factors of num (excluding itself)
+//     for (let i = 1; i < num; i++) {
+//         if (num % i === 0) {
+//             sum += i;
+//         }
+//     }
+//     // Check if the sum of factors equals the number itself
+//     if (sum === num) {
+//         console.log(num, "is a perfect number");
+//     }
+// }
+
+
+// 12.  Write a program to check if a number is palindrome using a for loop (e.g., 121 is a palindrome).
+// var num = 121;
+// var originalNum = num;
+// var reversedNum = 0;
+// for (var i = num; i > 0; i = Math.floor(i/10)){
+//     var digit = i % 10;
+//     reversedNum = reversedNum*10 + digit;
+// }
+// if (originalNum === reversedNum){
+//     console.log(num, "is a palindrome.");
+// }else{
+//     console.log(num, "is not a palindrome.");
+// }
+
+
+// 13.  Write a program to generate a Floyd’s Triangle using a for loop: 
+// 1   
+// 2 3   
+// 4 5 6   
+// 7 8 9 10  
+
+// var rows = 4;
+// var num = 1;
+// for (let i = 1; i <= rows; i++){
+//     var rowOutput = "";
+//     for (var j = 1; j <= i; j++){
+//         rowOutput += num + " ";
+//         num++;
+//     }
+//     console.log(rowOutput);
+// }
+
+
+// 14.  Generate the following pattern using a for loop: 
+// 1 
+// 2 3 
+// 4 5 6 
+// 7 8 9 10 
+
+// var rows = 4;
+// var num = 1;
+// for (let i = 1; i <= rows; i++){
+//     var rowOutput = "";
+//     for (var j = 1; j <= i; j++){
+//         rowOutput += num + " ";
+//         num++;
+//     }
+//     console.log(rowOutput);
+// }
+
+
+
+// 1. Print all multiples of 3 from 1 to 100 using a for loop.
+// for (var i = 3; i <= 100; i += 3){
+//     console.log(i);
+// }
+
+
+// 2. Write a program to print numbers in descending order from n to 1.
+// var n = 10;
+// for (var i = n; i >= 1; i--){
+//     console.log(i);
+// }
+
+
+
+// 3. Print the ASCII values of characters from ‘A’ to ‘Z’ using a for loop. 
+// for (var ch = 'A'.charCodeAt(0); ch <= 'Z'.charCodeAt(0); ch++){
+//     console.log(String.fromCharCode(ch) + " : " + ch);
+// }
+
+
+// 4. Print the sum of the first n odd numbers.
+// var n = 5;
+// var sum = 0;
+// var oddNumber = 1;
+// for (var i = 1; i <= n; i++){
+//     sum += oddNumber;
+//     oddNumber += 2;
+// }
+// console.log(`Sum of first ${n} odd numbers is ${sum}`);
+
+
+
+// 5. Find the sum of all numbers divisible by 5 between 1 and 100.
+// var sum = 0;
+// for (var i = 5; i <= 100; i += 5){
+//     sum += i;
+// }
+// console.log(sum);
+
+
+// 6. Print all prime factors of a given number using a for loop.
+// var num = 60;
+// console.log(`Prime factors of ${num} are : `);
+// for (var i = 2; i <= num; i++){
+//     while (num % i === 0){
+//         console.log(i);
+//         num /= i;
+//     }
+// }
+
+
+// 7. Write a program to count the number of words in a string using a for loop. 
+// let str = "Hello world, this is JavaScript";
+// let count = 0;
+// let inWord = false;
+// for (let i = 0; i < str.length; i++) {
+//     if (str[i] !== ' ' && str[i] !== '\t' && str[i] !== '\n') {
+//         if (!inWord) {
+//             count++;
+//             inWord = true;
+//         }
+//     } else {
+//         inWord = false;
+//     }
+// }
+// console.log("Number of words:", count);
+
+
+// 8. Find the LCM (Least Common Multiple) of two numbers using a for loop. 
+// let num1 = 12;
+// let num2 = 18;
+// let max = num1 > num2 ? num1 : num2;
+// for (let lcm = max; ; lcm++) {
+//     if (lcm % num1 === 0 && lcm % num2 === 0) {
+//         console.log("LCM of", num1, "and", num2, "is:", lcm);
+//         break;
+//     }
+// }
+
+
+
+// 9. Print the reverse of an array using a for loop.
+// let arr = [1, 2, 3, 4, 5];
+// console.log("Reversed array:");
+// for (let i = arr.length - 1; i >= 0; i--) {
+//     console.log(arr[i]);
+// }
+
+
+
+// 11.  Find the sum of digits of all numbers from 1 to n using a for loop. 
+// var n = 15;
+// var totalSum = 0;
+// for (var i = 1; i <= n; i++){
+//     var num = i;
+//     var sumOfDigits = 0;
+
+//     while(num > 0){
+//         sumOfDigits += num % 10;
+//         num = Math.floor(num / 10);
+//     }
+//     totalSum += sumOfDigits;
+// }
+// console.log(totalSum);
+
+
+
+// 12.  Convert a binary number to decimal using a for loop.
+// var binary = "1101";
+// var decimal = 0;
+// var length = binary.length;
+// for (var i = 0; i < length; i++){
+//     var digit = parseInt(binary[i]);
+//     decimal = decimal * 2 + digit;
+// }
+// console.log(decimal);
+
+
+
+// 13.  Generate the Fibonacci sequence up to n terms using a for loop.
+// var n = 10;
+// var a = 0, b = 1;
+// for (var i = 0; i < n; i++){
+//     console.log(a);
+//     var c = a+b;
+//     a=b;
+//     b = c;
+// }
+
+
+// 14.  Print all Armstrong numbers between 1 and 1000 using a for loop.
+// for (var num = 1; num <= 1000; num++){
+//     var sum = 0;
+//     var temp = num;
+//     var digits = num.toString().length;
+//     while (temp > 0){
+//         var digit = temp % 10;
+//         sum += Math.pow(digit, digits);
+//         temp = Math.floor(temp / 10);
+//     }
+//     if (sum === num){
+//         console.log(num);
+//     }
+// }
+
+
+
+// 15.  Find the smallest and largest number in a given list using a for loop.
+// let numbers = [25, 78, 5, 89, 12, 44, 99, 3];
+// var smallest = numbers[0];
+// var largest = numbers[0];
+// for (var i = 1; i < numbers.length; i++){
+//     if (numbers[i] < smallest){
+//         smallest = numbers[i];
+//     }
+//     if (numbers[i] > largest){
+//         largest = numbers[i];
+//     }
+// }
+// console.log(smallest);
+// console.log(largest);
+
+
+
+// 16.  Write a program to print a Hollow Square Pattern using a for loop: 
+// ***** 
+// *   * 
+// *   * 
+// ***** 
+
+// var size = 5;
+// for (var i = 0; i < size; i++){
+//     let row = "";
+//     for (let j = 0; j < size; j++){
+//         if (i === 0 || i === size - 1 || j === 0 || j === size - 1){
+//             row += "*";
+//         }else{
+//             row += " ";
+//         }
+//     }
+//     console.log(row);
+// }
+
+
+
+// 17.  Generate a Diamond Pattern using a for loop: 
+//    * 
+//   *** 
+//  ***** 
+//   *** 
+//    * 
+
+let n = 3;
+
+for (let i = 1; i <= n; i++) {
+    let row = "";
+    for (let j = 1; j <= n - i; j++) {
+        row += " ";
+    }
+    for (let k = 1; k <= 2 * i - 1; k++) {
+        row += "*";
+    }
+    console.log(row);
+}
+
+for (let i = n - 1; i >= 1; i--) {
+    let row = "";
+    for (let j = 1; j <= n - i; j++) {
+        row += " ";
+    }
+    for (let k = 1; k <= 2 * i - 1; k++) {
+        row += "*";
+    }
+    console.log(row);
+}
