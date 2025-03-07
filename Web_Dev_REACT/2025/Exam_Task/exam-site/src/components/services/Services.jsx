@@ -18,7 +18,7 @@ const Services = () => {
       {/* What We Offer */}
       <div className="container py-5 d-flex justify-content-center">
         <div className="white-box text-center p-4">
-          <h2>What We Offer</h2>
+          <h2 style={{color:"black"}}>What We Offer</h2>
           <p className="lead">
             Our platform provides a range of services aimed at improving 
             <strong> learning outcomes</strong> and boosting 
@@ -32,7 +32,7 @@ const Services = () => {
 
       {/* Our Key Services */}
       <div className="container py-5 bg-light">
-        <h2 className="text-center">Why Choose Our Services?</h2>
+        <h2 className="text-center" style={{color:"black"}}>Why Choose Our Services?</h2>
         <div className="row text-center mt-4">
           <div className="col-md-4">
             <div className="white-box p-4">
@@ -58,7 +58,7 @@ const Services = () => {
       {/* Additional Features */}
       <div className="container py-5 d-flex justify-content-center">
         <div className="white-box text-center p-4">
-          <h2>Enhance Your Learning Experience</h2>
+          <h2 style={{color:"black"}}>Enhance Your Learning Experience</h2>
           <p>
             Our services go beyond traditional learning methods by integrating 
             <strong> interactive challenges</strong>, <strong> real-time quizzes</strong>, 
@@ -71,7 +71,7 @@ const Services = () => {
       {/* Call to Action */}
       <div className="container py-5 d-flex justify-content-center">
         <div className="white-box text-center p-4">
-          <h2>Start Your Learning Journey Now!</h2>
+          <h2 style={{color:"black"}}>Start Your Learning Journey Now!</h2>
           <p>Join a community of learners dedicated to academic and professional success.</p>
           <button className="btn btn-primary">Explore Services</button>
         </div>
