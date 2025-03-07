@@ -1,9 +1,11 @@
 import React from "react";
 // import "./services.css";
 
+
 const Services = () => {
   return (
     <div>
+      
       {/* Hero Section */}
       <div className="hero-section text-white text-center d-flex align-items-center justify-content-center">
         <div>
@@ -11,6 +13,7 @@ const Services = () => {
           <p>Comprehensive solutions designed to enhance learning and test preparation.</p>
         </div>
       </div>
+
 
       {/* What We Offer */}
       <div className="container py-5 d-flex justify-content-center">
@@ -25,6 +28,7 @@ const Services = () => {
           </p>
         </div>
       </div>
+
 
       {/* Our Key Services */}
       <div className="container py-5 bg-light">
