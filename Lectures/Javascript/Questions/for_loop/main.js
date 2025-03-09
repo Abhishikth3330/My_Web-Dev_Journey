@@ -812,3 +812,630 @@
 //     }
 //     console.log(row);
 // }
+
+
+
+// 13.  Print an hourglass pattern using nested for loops: 
+// ******* 
+//  ***** 
+//   *** 
+//    * 
+//   *** 
+//  ***** 
+// *******
+
+// var n = 4;
+// for (var i = 0; i < n; i++){
+//     var row = "";
+//     for (var j = 0; j < i; j++){
+//         row += " ";
+//     }
+//     for (var k = 0; k < (2 * (n-i) - 1); k++){
+//         row += "*";
+//     }
+//     console.log(row);    
+// }
+// for (var i = n-2; i >= 0; i--){
+//     var row = "";
+//     for (var j = 0; j < i; j++){
+//         row += " ";
+//     }
+//     for (var k = 0; k < (2 * (n - i) - 1); k++){
+//         row += "*";
+//     }
+//     console.log(row);
+// }
+
+
+
+// 14.  Print an X-pattern using nested for loops: 
+// *   * 
+//  * * 
+//   * 
+//  * * 
+// *   * 
+
+// var n = 5;
+// for (var i = 0; i < n; i++){
+//     var row = "";
+//     for (var j = 0; j < n; j++){
+//         if (j === i || j === n-i-1){
+//             row += "*";
+//         }else{
+//             row += " ";
+//         }
+//     }
+//     console.log(row);    
+// }
+
+
+// 15.  Print a hollow diamond pattern using nested loops: 
+//    * 
+//   * * 
+//  *   * 
+// *     * 
+//  *   * 
+//   * * 
+//    * 
+
+// var n = 4;
+// for (var i = 0; i < n; i++){
+//     var row = "";
+//     for (var j = 0; j < n-i-1; j++){
+//         row += " ";
+//     }
+//     for (var j = 0; j < 2*i + 1; j++){
+//         if (j===0 || j === 2*i){
+//             row += "*";
+//         }else{
+//             row += " ";
+//         }
+//     }
+//     console.log(row);
+// }
+// for (let i = n - 2; i >= 0; i--) {
+//     let row = "";
+//     for (let j = 0; j < n - i - 1; j++) {
+//         row += " ";
+//     }
+//     for (let j = 0; j < 2 * i + 1; j++) {
+//         if (j === 0 || j === 2 * i) {
+//             row += "*";
+//         } else {
+//             row += " ";
+//         }
+//     }
+//     console.log(row);
+// }
+
+
+
+// 16.  Print the chessboard pattern using # and spaces: 
+// # # # # 
+// # # # # 
+// # # # # 
+// # # # # 
+
+// var size = 4;
+// for (var i = 0; i < size; i++){
+//     var row = "";
+//     for (var j = 0; j < size; j++){
+//         if ((i+j) % 2 === 0){
+//             row += "#";
+//         }else{
+//             row += " ";
+//         }
+//     }
+//     console.log(row);
+// }
+
+
+
+// 1. Print the following square pattern: 
+// ***** 
+// ***** 
+// ***** 
+// *****
+
+// var size = 4;
+// for (var i = 0; i < size; i++){
+//     var row = "";
+//     for (var j = 0; j < size; j++){
+//         row += "*";
+//     }
+//     console.log(row);
+// }
+
+
+// 2. Print a right-angled triangle pattern: 
+// * 
+// ** 
+// *** 
+// ****
+
+// var size = 4;
+// for (var i = 1; i <= size; i++){
+//     var row = "";
+//     for (var j = 1; j <= i; j++){
+//         row += "*";
+//     }
+//     console.log(row);
+// }
+
+
+// 3. Print a reverse right-angled triangle pattern: 
+// **** 
+// *** 
+// ** 
+// *
+
+// var size = 4;
+// for (var i = size; i >= 1; i--){
+//     var row = "";
+//     for (var j = 1; j <= i; j++){
+//         row += "*";
+//     }
+//     console.log(row);
+// }
+
+
+// 4. Print a hollow square pattern: 
+// ***** 
+// *   * 
+// *   * 
+// *****
+
+// var size = 5;
+// for (var i = 1; i <= size; i++){
+//     var row = "";
+//     for (var j = 1; j <= size; j++){
+//         if (i === 1 || i === size || j === 1 || j === size){
+//             row += "*";
+//         }else{
+//             row += " ";
+//         }
+//     }
+//     console.log(row);
+// }
+
+
+// 5. Print a number pattern: 
+// 1 
+// 12 
+// 123 
+// 1234
+
+// var rows = 4;
+// for (var i = 1; i <= rows; i++){
+//     var rowStr = "";
+//     for (var j = 1; j <= i; j++){
+//         rowStr += j;
+//     }
+//     console.log(rowStr);
+// }
+
+
+// 6. Print a pyramid pattern: 
+//    * 
+//   *** 
+//  ***** 
+// ******* 
+
+// var n = 5;
+// for (var i = 1; i <=n; i ++){
+//     var row = "";
+//     for (var j = 1; j <= n - i; j++){
+//         row += "  ";
+//     }
+//     for (var k = 1; k <= 2*i - 1; k++){
+//         row += "* "
+//     }
+//     console.log(row);
+// }
+
+
+
+// 7. Print a hollow pyramid pattern: 
+//    * 
+//   * * 
+//  *   * 
+// ******* 
+
+// var n = 4;
+// for (var i = 1; i <= n; i++){
+//     var row = "";
+//     for (var j = 1; j <= n-i; j++){
+//         row += " ";
+//     }
+//     for (var k = 1; k <= 2*i - 1; k++){
+//         if (k === 1 || k === 2*i - 1 || i === n){
+//             row += "*";
+//         }else{
+//             row += " ";
+//         }
+//     }
+//     console.log(row);    
+// }
+
+
+// 8. Print a diamond pattern: 
+//    * 
+//   *** 
+//  ***** 
+// ******* 
+//  ***** 
+//   *** 
+//    * 
+
+// var n = 4;
+// for (var i = 1; i <= n; i++){
+//     var row = "";
+//     for (var j = 1; j <= n - i; j++){
+//         row += " ";
+//     }
+//     for (var k = 1; k <= 2*i - 1; k++){
+//         row += "*";
+//     }
+//     console.log(row);
+// }
+
+// for (var i = n-1; i >= 1; i--){
+//     var row = "";
+//     for (var j = 1; j <= n-i; j++){
+//         row += " ";
+//     }
+//     for (var k = 1; k <= 2*i - 1; k++){
+//         row += "*";
+//     }
+//     console.log(row);
+// }
+
+
+// 9. Print a number pyramid: 
+//    1 
+//   121 
+//  12321 
+// 1234321
+
+// var n = 4;
+// for (var i = 1; i <= n; i++) {
+//     var row = "";
+//     for (var j = 1; j <= n - i; j++) {
+//         row += " ";
+//     }
+//     for (var k = 1; k <= i; k++) {
+//         row += k;
+//     }
+//     for (var k = i - 1; k >= 1; k--) {
+//         row += k;
+//     }
+//     console.log(row);
+// }
+
+
+// 10.  Print Floyd’s triangle: 
+//    1 
+//   2 3 
+//  4 5 6 
+// 7 8 9 10
+
+// var n = 4;
+// var num = 1;
+// for (var i = 1; i <= n; i++) {
+//     var row = "";
+//     for (var j = 1; j <= n - i; j++) {
+//         row += " ";
+//     }
+//     for (var k = 1; k <= i; k++) {
+//         row += num + " ";
+//         num++;
+//     }
+//     console.log(row);
+// }
+
+
+// 11.  Print Pascal’s Triangle up to n rows.
+
+// function printPascalsTriangle(n) {
+//     for (var i = 0; i < n; i++) {
+//         var row = "";
+//         for (var j = 0; j < n - i - 1; j++) {
+//             row += "  ";
+//         }
+//         var num = 1;
+//         for (var k = 0; k <= i; k++) {
+//             row += num + "   ";
+//             num = num * (i - k) / (k + 1);
+//         }
+//         console.log(row);
+//     }
+// }
+// printPascalsTriangle(5);
+
+
+
+// 12.  Print an hourglass pattern: 
+// ******* 
+//  ***** 
+//   *** 
+//    * 
+//   *** 
+//  ***** 
+// ******* 
+
+// var n = 4;
+// for (var i = 0; i < n; i++) {
+//     var row = "";
+//     for (var j = 0; j < i; j++) {
+//         row += " ";
+//     }
+//     for (var k = 0; k < 2 * (n - i) - 1; k++) {
+//         row += "*";
+//     }
+//     console.log(row);
+// }
+
+// for (var i = n - 2; i >= 0; i--) {
+//     var row = "";
+//     for (var j = 0; j < i; j++) {
+//         row += " ";
+//     }
+//     for (var k = 0; k < 2 * (n - i) - 1; k++) {
+//         row += "*";
+//     }
+//     console.log(row);
+// }
+
+
+
+// 13.  Print an X-pattern: 
+// *   * 
+//  * * 
+//   * 
+//  * * 
+// *   * 
+
+
+// var n = 5;
+// for (var i = 0; i < n; i++) {
+//     var row = "";
+//     for (var j = 0; j < n; j++) {
+//         if (j == i || j == n - i - 1) {
+//             row += "*";
+//         } else {
+//             row += " ";
+//         }
+//     }
+//     console.log(row);
+// }
+
+
+
+// 4.  Print a hollow diamond pattern: 
+//    * 
+//   * * 
+//  *   * 
+// *     * 
+//  *   * 
+//   * * 
+//    * 
+
+
+// var n = 4;
+// for (var i = 1; i <= n; i++) {
+//     var row = "";
+//     for (var j = 1; j <= n - i; j++) {
+//         row += " ";
+//     }
+//     for (var j = 1; j <= 2 * i - 1; j++) {
+//         if (j == 1 || j == 2 * i - 1) {
+//             row += "*";
+//         } else {
+//             row += " ";
+//         }
+//     }
+//     console.log(row);
+// }
+// for (var i = n - 1; i >= 1; i--) {
+//     var row = "";
+//     for (var j = 1; j <= n - i; j++) {
+//         row += " ";
+//     }
+//     for (var j = 1; j <= 2 * i - 1; j++) {
+//         if (j == 1 || j == 2 * i - 1) {
+//             row += "*";
+//         } else {
+//             row += " ";
+//         }
+//     }
+//     console.log(row);
+// }
+
+
+
+// 15.  Generate a checkerboard pattern using * and spaces: 
+// * * * * * 
+// * * * * * 
+// * * * * * 
+// * * * * *
+
+// var n = 5;
+// for (var i = 1; i <= n; i++) {
+//     var row = "";
+//     for (var j = 1; j <= n; j++) {
+//         if ((i + j) % 2 == 0) {
+//             row += "* ";
+//         } else {
+//             row += "  ";
+//         }
+//     }
+//     console.log(row);
+// }
+
+
+
+// 6.  Print Zig-Zag Pattern: 
+// *       * 
+// * *     * * 
+// *   *   *   * 
+// *     * *     * 
+
+// var n = 4;
+// var m = 9;
+// for (var i = 0; i < n; i++) {
+//     var row = "";
+//     for (var j = 0; j < m; j++) {
+//         if (j % (n - 1) == i || j % (n - 1) == (n - 1 - i)) {
+//             row += "* ";
+//         } else {
+//             row += "  ";
+//         }
+//     }
+//     console.log(row);
+// }
+
+
+
+// 17.  Find and print all prime numbers between 1 and 100 using nested loops. 
+// for (var num = 2; num <= 100; num++) {
+//     var isPrime = true;
+//     for (var i = 2; i * i <= num; i++) { 
+//         if (num % i == 0) {
+//             isPrime = false;
+//             break; 
+//         }
+//     }
+//     if (isPrime) {
+//         console.log(num);
+//     }
+// }
+
+
+// 18.  Print a Chessboard Pattern using # and spaces: 
+// # # # # 
+// # # # # 
+// # # # # 
+// # # # # 
+
+// var size = 4; 
+// for (var i = 0; i < size; i++) {
+//     var row = "";
+//     for (var j = 0; j < size; j++) {
+//         if ((i + j) % 2 == 0) {
+//             row += "# ";
+//         } else {
+//             row += "  "; 
+//         }
+//     }
+//     console.log(row);
+// }
+
+
+// 19.  Print the Hollow Butterfly Pattern: 
+// *       * 
+// **     ** 
+// * *   * * 
+// *  * *  * 
+// *   *   * 
+// *  * *  * 
+// * *   * * 
+// **     ** 
+// *       * 
+
+// var n = 5; 
+
+// for (var i = 1; i <= n; i++) {
+//     var row = "";
+
+//     // Left part of the butterfly
+//     for (var j = 1; j <= i; j++) {
+//         if (j == 1 || j == i) {
+//             row += "*";
+//         } else {
+//             row += " ";
+//         }
+//     }
+
+//     // Spaces in between
+//     for (var j = 1; j <= (2 * (n - i)); j++) {
+//         row += " ";
+//     }
+
+//     // Right part of the butterfly
+//     for (var j = 1; j <= i; j++) {
+//         if (j == 1 || j == i) {
+//             row += "*";
+//         } else {
+//             row += " ";
+//         }
+//     }
+
+//     console.log(row);
+// }
+
+// // Lower half of the butterfly
+// for (var i = n - 1; i >= 1; i--) {
+//     var row = "";
+
+//     // Left part of the butterfly
+//     for (var j = 1; j <= i; j++) {
+//         if (j == 1 || j == i) {
+//             row += "*";
+//         } else {
+//             row += " ";
+//         }
+//     }
+
+//     // Spaces in between
+//     for (var j = 1; j <= (2 * (n - i)); j++) {
+//         row += " ";
+//     }
+
+//     // Right part of the butterfly
+//     for (var j = 1; j <= i; j++) {
+//         if (j == 1 || j == i) {
+//             row += "*";
+//         } else {
+//             row += " ";
+//         }
+//     }
+
+//     console.log(row);
+// }
+
+
+
+// 20.  Print an inverted hourglass pattern: 
+// ******* 
+//  *****   
+//   ***   
+//    *   
+//   ***   
+//  *****   
+// *******
+
+
+// var n = 4; 
+// // Upper half of the hourglass
+// for (var i = n; i >= 1; i--) {
+//     var row = "";
+//     for (var j = 1; j <= (n - i); j++) {
+//         row += " ";
+//     }
+//     for (var j = 1; j <= (2 * i - 1); j++) {
+//         row += "*";
+//     }
+//     console.log(row);
+// }
+
+// // Lower half of the hourglass
+// for (var i = 2; i <= n; i++) {
+//     var row = "";
+//     for (var j = 1; j <= (n - i); j++) {
+//         row += " ";
+//     }
+//     for (var j = 1; j <= (2 * i - 1); j++) {
+//         row += "*";
+//     }
+//     console.log(row);
+// }
