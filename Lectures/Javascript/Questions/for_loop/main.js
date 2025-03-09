@@ -535,26 +535,280 @@
 //   *** 
 //    * 
 
-let n = 3;
+// let n = 3;
 
-for (let i = 1; i <= n; i++) {
-    let row = "";
-    for (let j = 1; j <= n - i; j++) {
-        row += " ";
-    }
-    for (let k = 1; k <= 2 * i - 1; k++) {
-        row += "*";
-    }
-    console.log(row);
-}
+// for (let i = 1; i <= n; i++) {
+//     let row = "";
+//     for (let j = 1; j <= n - i; j++) {
+//         row += " ";
+//     }
+//     for (let k = 1; k <= 2 * i - 1; k++) {
+//         row += "*";
+//     }
+//     console.log(row);
+// }
 
-for (let i = n - 1; i >= 1; i--) {
-    let row = "";
-    for (let j = 1; j <= n - i; j++) {
-        row += " ";
-    }
-    for (let k = 1; k <= 2 * i - 1; k++) {
-        row += "*";
-    }
-    console.log(row);
-}
+// for (let i = n - 1; i >= 1; i--) {
+//     let row = "";
+//     for (let j = 1; j <= n - i; j++) {
+//         row += " ";
+//     }
+//     for (let k = 1; k <= 2 * i - 1; k++) {
+//         row += "*";
+//     }
+//     console.log(row);
+// }
+
+
+
+// 1. Print the following pattern using nested for loops: 
+// ***** 
+// ***** 
+// ***** 
+// *****
+
+// for (var i = 1; i <= 4; i++){
+//     var row = ""
+//     for (var j = 1; j <= 5; j++){
+//         row += "*";
+//     }
+//     console.log(row);    
+// }
+
+
+
+// 2. Print a right-angled triangle pattern: 
+// * 
+// ** 
+// *** 
+// **** 
+// *****
+
+// var i, j;
+// for (i = 1; i <= 5; i++){
+//     var row = "";
+//     for (j = 1; j <= i; j++){
+//         row += "* "
+//     }
+//     console.log(row)
+// }
+
+
+
+// 3. Print a square pattern with numbers: 
+// 1111 
+// 2222 
+// 3333 
+// 4444 
+
+
+// var num = 1;
+// for (var i = 1; i <= 4; i++){
+//     var row = ""
+//     for (var j = 1; j <= 4; j++){
+//         row += num;
+//     }
+//     num++;
+//     console.log(row);    
+// }
+
+
+
+// 4. Print a decreasing number triangle: 
+// 55555 
+// 4444 
+// 333 
+// 22 
+// 1
+
+// var num = 5;
+// for (var i = 1; i <= 5; i++){
+//     var row = "";
+//     for (var j = 1; j <= 5 - i + 1; j++){
+//         row += num;
+//     }
+//     num--;
+//     console.log(row);    
+// }
+
+
+// 5. Print a multiplication table for numbers 1 to 5 using nested for loops. 
+// for (var i = 1; i <= 5; i++){
+//     console.log(`Multiplication table of ${i} : `);
+//     for (var j = 1; j <= 10; j++){
+//         console.log(`${i} x ${j} = ${i*j}`)
+//     }
+//     console.log("");
+// }
+
+
+// 6. Print a pyramid pattern: 
+//    * 
+//   *** 
+//  ***** 
+// ******* 
+
+// var n = 5;
+// for (var i = 1; i <=n; i ++){
+//     var row = "";
+//     for (var j = 1; j <= n - i; j++){
+//         row += "  ";
+//     }
+//     for (var k = 1; k <= 2*i - 1; k++){
+//         row += "* "
+//     }
+//     console.log(row);
+// }
+
+
+// 7. Print an inverted pyramid pattern: 
+// ******* 
+//  ***** 
+//   *** 
+//    * 
+
+// var n = 5;
+// for (var i = n - 1; i >= 1; i--){
+//     var row = "";
+//     for (var j = 1; j <= n-i; j++){
+//         row += "  ";
+//     }
+//     for (var k = 1; k <= 2*i - 1; k++){
+//         row += "* ";
+//     }
+//     console.log(row);    
+// }
+
+
+// 8. Print a Floyd’s triangle: 
+//    1 
+//   2 3 
+//  4 5 6 
+// 7 8 9 10
+
+// let n = 4;
+// let num = 1;
+
+// for (let i = 1; i <= n; i++) {
+//     let row = "";
+    
+//     // Loop to add spaces before numbers
+//     for (let s = 1; s <= n - i; s++) {
+//         row += " ";
+//     }
+
+//     // Loop to print numbers in each row
+//     for (let j = 1; j <= i; j++) {
+//         row += num + " ";
+//         num++;
+//     }
+
+//     console.log(row);
+// }
+
+
+
+// 9. Print a hollow square pattern: 
+// ***** 
+// *   * 
+// *   * 
+// *****
+
+// let n = 4;
+// for (let i = 0; i < n; i++) {
+//     let row = "";
+
+//     for (let j = 0; j < n; j++) { 
+//         if (i === 0 || i === n - 1 || j === 0 || j === n - 1) {
+//             row += "*";
+//         } else {
+//             row += " ";
+//         }
+//     }
+//     console.log(row);
+// }
+
+
+// 10.  Print a number pyramid: 
+//    1 
+//   121 
+//  12321 
+// 1234321 
+
+// let n = 4;
+// for (let i = 1; i <= n; i++) { 
+//     let row = "";
+//     // Print spaces
+//     for (let s = 1; s <= n - i; s++) {
+//         row += " ";
+//     }
+//     // Print increasing numbers
+//     for (let j = 1; j <= i; j++) {
+//         row += j;
+//     }
+//     // Print decreasing numbers
+//     for (let j = i - 1; j >= 1; j--) {
+//         row += j;
+//     }
+//     console.log(row);
+// }
+
+
+// 11.  Print a diamond pattern using nested for loops: 
+//    * 
+//   *** 
+//  ***** 
+// ******* 
+//  ***** 
+//   *** 
+//    * 
+
+// let n = 4;
+// // Upper part of the diamond
+// for (let i = 1; i <= n; i++) { 
+//     let row = "";
+//     // Print spaces
+//     for (let s = 1; s <= n - i; s++) {
+//         row += " ";
+//     }
+//     // Print stars
+//     for (let j = 1; j <= 2 * i - 1; j++) {
+//         row += "*";
+//     }
+//     console.log(row);
+// }
+
+// // Lower part of the diamond
+// for (let i = n - 1; i >= 1; i--) { 
+//     let row = "";
+//     // Print spaces
+//     for (let s = 1; s <= n - i; s++) {
+//         row += " ";
+//     }
+//     // Print stars
+//     for (let j = 1; j <= 2 * i - 1; j++) {
+//         row += "*";
+//     }
+//     console.log(row);
+// }
+
+
+// 12.  Print a checkerboard pattern using * and spaces: 
+// *   *   * 
+//   *   *   
+// *   *   * 
+//   *   *   
+
+// let rows = 4;
+// let cols = 5;
+// for (let i = 0; i < rows; i++) {
+//     let row = "";  
+//     for (let j = 0; j < cols; j++) {
+//         if ((i + j) % 2 === 0) {
+//             row += "* ";
+//         } else {
+//             row += "  ";
+//         }
+//     }
+//     console.log(row);
+// }
