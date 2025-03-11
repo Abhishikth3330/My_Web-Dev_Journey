@@ -17,25 +17,50 @@ namespace WebApplication1API_CRUD.Controllers
         // GET api/values
         public List<Employee> Get()
         {
+            SqlDataAdapter sda = new SqlDataAdapter("SP_BrowseRegister", cn);
+            sda.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
             List<Employee> employees = new List<Employee>();
 
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Employee", cn);
-            cn.Open();
-            SqlDataReader dr = cmd.ExecuteReader();
-
-            while (dr.Read())
+            if (dt.Rows.Count > 0)
             {
-                employees.Add(new Employee
+                for(int i = 0; i < dt.Rows.Count; i++)
                 {
-                    e_Id = Convert.ToInt32(dr["e_ID"]),
-                    e_Name = dr["e_Name"].ToString(),
-                    e_Age = Convert.ToInt32(dr["e_Age"]),
-                    e_Active = Convert.ToInt32(dr["e_Active"])
-                });
+                    Employee emp = new Employee();
+                    emp.e_Id = Convert.ToInt32(dt.Rows[i]["e_ID"]);
+                    emp.e_Name = dt.Rows[i]["e_Name"].ToString();
+                    emp.e_Age = Convert.ToInt32(dt.Rows[i]["e_Age"]);
+                    emp.e_Active = Convert.ToInt32(dt.Rows[i]["e_Active"]);
+                    employees.Add(emp);
+                }
             }
-            dr.Close();
-            cn.Close();
-            return employees;
+            if (employees.Count > 0)
+            {
+                return employees;
+            }
+            else
+            {
+                return null;
+            }
+
+
+            //SqlCommand cmd = new SqlCommand("SELECT * FROM Employee", cn);
+            //cn.Open();
+            //SqlDataReader dr = cmd.ExecuteReader();
+            //while (dr.Read())
+            //{
+            //    employees.Add(new Employee
+            //    {
+            //        e_Id = Convert.ToInt32(dr["e_ID"]),
+            //        e_Name = dr["e_Name"].ToString(),
+            //        e_Age = Convert.ToInt32(dr["e_Age"]),
+            //        e_Active = Convert.ToInt32(dr["e_Active"])
+            //    });
+            //}
+            //dr.Close();
+            //cn.Close();
+            //return employees;
         }   
 
         // GET api/values/5

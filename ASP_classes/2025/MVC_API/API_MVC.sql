@@ -45,6 +45,16 @@ END;
 -- clear the table and reset the e_Id to start from 0
 TRUNCATE TABLE Employee;
 
+
+CREATE PROCEDURE SP_BrowseRegister
+AS
+BEGIN
+    SELECT e_ID, e_Name, e_Age, e_Active 
+    FROM Employee;
+END;
+
+
+
 -- print data of the table
 select * from Employee;
 
