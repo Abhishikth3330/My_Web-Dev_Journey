@@ -87,13 +87,13 @@
 
 
 // 11.  Check if a String Starts or Ends with a Specific Word
-function checkStartEnd(str, word) {
-    return {
-        startsWith: str.startsWith(word),
-        endsWith: str.endsWith(word)
-    };
-}
-let str = "JavaScript is awesome";
-console.log(checkStartEnd(str, "JavaScript"));
-console.log(checkStartEnd(str, "awesome"));
-console.log(checkStartEnd(str, "is"));
+// function checkStartEnd(str, word) {
+//     return {
+//         startsWith: str.startsWith(word),
+//         endsWith: str.endsWith(word)
+//     };
+// }
+// let str = "JavaScript is awesome";
+// console.log(checkStartEnd(str, "JavaScript"));
+// console.log(checkStartEnd(str, "awesome"));
+// console.log(checkStartEnd(str, "is"));
