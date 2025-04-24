@@ -1,12 +1,12 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
-import Pages from "./components/pages/Pages"; // Ensure correct path
+import { BrowserRouter as Router } from "react-router-dom";
+import Pages from "./components/pages/Pages";
 
 const App = () => {
     return (
-        <BrowserRouter>
+        <Router>
             <Pages />
-        </BrowserRouter>
+        </Router>
     );
 };
 

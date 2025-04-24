@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("exam__mcq")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e06e30e119f39d6ea6898d1824bdb0b7cc4cbb65")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c262bc49bff200df2eb128ca43e78828ce59dbc")]
 [assembly: System.Reflection.AssemblyProductAttribute("exam__mcq")]
 [assembly: System.Reflection.AssemblyTitleAttribute("exam__mcq")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

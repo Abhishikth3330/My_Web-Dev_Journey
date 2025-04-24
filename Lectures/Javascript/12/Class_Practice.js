@@ -23,6 +23,7 @@ const std1 = new student1("ABC", 21);
 const std2 = new student1("XYZ", 24);
 const std3 = new student1("PQRS", 30);
 
+
 // display
 
 // console.log(std1._name, std1._age);
@@ -43,6 +44,7 @@ class Employee {
 // objects
 const emp1 = new Employee("ABC", "Web_Dev", 10000, 1);
 const emp2 = new Employee("XYZ", "Sales", 5000, 2);
+
 
 // display
 
