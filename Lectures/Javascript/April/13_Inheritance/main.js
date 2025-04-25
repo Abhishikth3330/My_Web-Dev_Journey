@@ -18,7 +18,7 @@ class B extends A{
 // obj.Sap2();
 
 
-// multi level inheritance
+// multiple inheritance
 class C extends A{
     Sap3(){
         console.log("Inside class C");        
