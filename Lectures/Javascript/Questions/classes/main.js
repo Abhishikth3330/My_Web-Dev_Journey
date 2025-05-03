@@ -217,3 +217,218 @@
 // }
 // const recipe1 = new Recipe("Pasta", ["Pasta", "Tomato Sauce", "Cheese", "Garlic"], 20);
 // recipe1.display();
+
+
+
+
+// Encapsulation
+
+
+// 1. Create a BankAccount class with accountNumber and a private property balance. Add methods deposit(), withdraw(), and checkBalance().
+
+// class BankAccount {
+//     constructor(accountNumber, initialBalance) {
+//         this.accountNumber = accountNumber;
+//         this.#balance = initialBalance;
+//     }
+//     #balance;
+//     deposite(amount) {
+//         if (amount > 0) {
+//             this.#balance += amount;
+//             console.log(`Depositeed ${amount}`);
+//         }else {
+//             console.log(`Deposite amount must be positive`);
+//         }
+//     }
+//     withdraw(amount) {
+//         if (amount <= this.#balance){
+//             this.#balance -= amount;
+//             console.log(`Withdraw ${amount}`);
+//         }else {
+//             console.log(`Insufficient Balance`);
+//         }
+//     }
+//     checkBalance() {
+//         console.log(`Current Balance : ${this.#balance}`);
+//     }
+// }
+// const account = new BankAccount("ABCD1234", 500);
+// account.deposite(200);
+// account.checkBalance();
+// account.withdraw(100);
+// account.checkBalance();
+
+
+// 2. Implement a PasswordManager class where the password is private. Provide methods to setPassword() and verifyPassword(inputPassword) securely.
+
+// class PasswordManager {
+//     #password;
+
+//     setPassword(newPassword) {
+//         if (newPassword.length >= 6) {
+//             this.#password = newPassword;
+//             console.log(`Password set successfully`);
+//         } else {
+//             console.log(`Password must be atleast 6 characters long`);
+//         }
+//     }
+
+//     verifyPassword(input) {
+//         if (input === this.#password) {
+//             console.log(`Access Granted.`);
+//             return true;
+//         } else {
+//             console.log(`Access Denied.`);
+//             return false;
+//         }
+//     }
+// }
+// const user = new PasswordManager();
+// user.setPassword('Abhi@123');
+// user.verifyPassword('abcd123');
+// user.verifyPassword('Abhi@123');
+
+
+// 3. Create a User class with private properties like email and password. Only allow access through methods (getter and setter methods). 
+
+// class User {
+//     #email;
+//     #password;
+
+//     constructor(email, password){
+//         this.#email = email;
+//         this.#password = password;
+//     }
+
+//     get email() {
+//         return this.#email;
+//     }
+
+//     set email(newEmail) {
+//         if (newEmail.includes("@")) {
+//             this.#email = newEmail;
+//             console.log("Email Updated");
+//         } else {
+//             console.log("Invalid email format");
+//         }
+//     }
+
+//     get password() {
+//         return `Access Denied: Cannot retrieve password`;
+//     }
+
+//     set password(newPassword) {
+//         if (newPassword.length >= 6) {
+//             this.#password = newPassword;
+//             console.log("Password updated");
+//         }else {
+//             console.log("Password must be at least 6 characters.");
+//         }
+//     }
+// }
+// const user = new User("abhishikththul9@gmail.com");
+// console.log(user.email);
+// console.log(user.password);
+
+// user.email = "abhithul9@gmail.com";
+// user.password = "123";
+// user.password = "Abhi@123";
+
+
+
+// 4. Create a Door class with a private field isLocked. Provide methods to lock() and unlock(). Prevent direct access to isLocked.
+
+// class Door {
+//     #isLocked;
+
+//     constructor() {
+//         this.#isLocked = false;
+//     }
+
+//     lock() {
+//         this.#isLocked = true;
+//         console.log("Door is now locked");
+//     }
+
+//     unlock() {
+//         this.#isLocked = false;
+//         console.log("Door is now unlocked");
+//     }
+
+//     isLocked() {
+//         return this.#isLocked;
+//     }
+// }
+
+// const myDoor = new Door();
+// console.log(myDoor.isLocked());
+// myDoor.lock();
+// console.log(myDoor.isLocked());
+// myDoor.unlock();
+// console.log(myDoor.isLocked());
+
+
+// 5. Design a SecretNote class with private content. Allow only a method read(secretCode) to read it if the correct code is entered. 
+
+// class SecretNote {
+//     #content;
+//     #secretCode;
+
+//     constructor(content, secretCode) {
+//         this.#content = content;
+//         this.#secretCode = secretCode;
+//     }
+
+//     read(secretCode) {
+//         if (secretCode === this.#secretCode) {
+//             console.log("Note Content: " + this.#content);
+//         }else {
+//             console.log("Incorrect secret code. Access Denied");
+//         }
+//     }
+// }
+// const myNote = new SecretNote("Welcome to Meow Meow Gang.", "12345");
+// myNote.read("54321");
+// myNote.read("12345");
+
+
+
+// 6. Make  a  VotingMachine  class  where  votes  are  private.  Only  a  public  method castVote(candidateName) and showResults(adminPassword) can interact with votes. 
+
+// class VotingMachine {
+//     #votes;
+//     #adminPassword;
+
+//     constructor(adminPassword) {
+//         this.#votes = {}; // this object will store the vote counts for candidates
+//         this.#adminPassword = adminPassword;
+//     }
+
+//     castVote(candidateName) {
+//         if (this.#votes[candidateName]) {
+//             this.#votes[candidateName] += 1;
+//         }else {
+//             this.#votes[candidateName] = 1;
+//         }
+//         console.log(`${candidateName} has received vote.`);
+//     }
+
+//     showResult(adminPassword) {
+//         if (adminPassword === this.#adminPassword) {
+//             console.log("Voting Result: ");
+//             for (const [candidate, votes] of Object.entries(this.#votes)) {
+//                 console.log(`${candidate}: ${votes} votes`);
+//             }
+//         }else {
+//             console.log("Incorrect password. Access denied");
+//         }
+//     }
+// }
+
+// const machine = new VotingMachine("admin123");
+// machine.castVote("Alice");
+// machine.castVote("Bob");
+// machine.castVote("Alice");
+
+// machine.showResult("wrongPassword");
+// machine.showResult("admin123");
