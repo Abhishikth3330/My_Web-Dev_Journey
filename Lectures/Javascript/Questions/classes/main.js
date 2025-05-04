@@ -690,3 +690,159 @@
 
 // const phone = new Smartphone("Realme X", 20000, "12 MP");
 // phone.takePhoto();
+
+
+
+
+// Advance
+
+// 1. Create a Library class that holds a collection of Book objects. Implement methods like addBook(book), removeBook(title), and findBook(title).
+
+// class Book {
+//     constructor(title, author) {
+//         this.title = title;
+//         this.author = author;
+//     }
+//     display(){
+//         console.log(`${this.title} by ${this.author}`);
+//     }
+// }
+
+// class Library {
+//     constructor(){
+//         this.books = [];
+//     }
+
+//     addBook(book){
+//         this.books.push(book);
+//         console.log(`Added: ${book.title}`);
+//     }
+
+//     removeBook(title) {
+//         const index = this.books.findIndex(book => book.title === title);
+//         if (index !== -1){
+//             const removed = this.books.splice(index, 1)[0];
+//             console.log(`Removed: ${removed.title}`);
+//         }else {
+//             console.log(`Book Titled ${title} not found`);
+//         }
+//     }
+
+//     findBook(title) {
+//         const found = this.books.find(book => book.title === title);
+//         if (found) {
+//             console.log(`Found: ${found.title}`);
+//         }else {
+//             console.log(`Book Titled ${title} not found`);
+//         }
+//     }
+
+//     listBooks(){
+//         console.log(`\nBooks in Library:`);
+//         this.books.forEach(book => book.display());
+//     }
+// }
+
+// const library = new Library();
+
+// const book1 = new Book("The Alchemist", "Paulo Coelho");
+// const book2 = new Book("1984", "George Orwell");
+
+// library.addBook(book1);
+// library.addBook(book2);
+// library.findBook("1984");
+// library.removeBook("The Alchemist");
+// library.listBooks();
+
+
+// 2. Create  a  Product  class  with  name,  price,  and  private  stockQuantity.  Add  methods  to purchase(quantity) and restock(quantity). Inherit a PerishableProduct class from Product and add expiryDate.
+
+// class Product {
+//     #stockQuantity;
+//     constructor(name, price, stockQuantity) {
+//         this.name = name;
+//         this.price = price;
+//         this.#stockQuantity =stockQuantity;
+//     }
+
+//     purchase(quantity) {
+//         if (quantity <= this.#stockQuantity){
+//             this.#stockQuantity -= quantity;
+//             console.log(`Purchased ${quantity} of ${this.name}. Remaining stock: ${this.#stockQuantity}`);
+//         }else {
+//             console.log(`Insufficient Stock for ${this.name}. Only ${this.#stockQuantity} left.`);
+//         }
+//     }
+
+//     restock(quantity) {
+//         this.#stockQuantity += quantity;
+//         console.log(`Restocked ${quantity} of ${this.name}. Total stock: ${this.#stockQuantity}`);
+//     }
+
+//     getStock() {
+//         return this.#stockQuantity;
+//     }
+// }
+
+// class PerishableProduct extends Product {
+//     constructor(name, price, stockQuantity, expiryDate) {
+//         super(name, price, stockQuantity);
+//         this.expiryDate = expiryDate;
+//     }
+
+//     showDetails() {
+//         console.log(`${this.name} | ${this.price} | Expires on: ${this.expiryDate}`);
+//     }
+// }
+
+// const milk = new PerishableProduct("Milk", 50, 10, "2025-06-01");
+// milk.showDetails();
+// milk.purchase(3);
+// milk.restock(5);
+// console.log(`Stock Left : ${milk.getStock()}`);
+
+
+// 3. Design a GameCharacter class with name, health, and strength. Then create Warrior and Mage subclasses that have additional abilities like attack() and castSpell().
+
+// class GameCharacter {
+//     constructor(name, health, strength) {
+//         this.name = name;
+//         this.health = health;
+//         this.strength = strength;
+//     }
+//     displayStats(){
+//         console.log(`${this.name} | Health: ${this.health} | Strength: ${this.strength}`);
+//     }
+// }
+
+// class Warrior extends GameCharacter {
+//     constructor(name, health, strength, weapon) {
+//         super(name, health, strength);
+//         this.weapon = weapon;
+//     }
+
+//     attack(){
+//         console.log(`${this.name} attacks with ${this.weapon}, dealing ${this.strength} damage!`);
+//     }
+// }
+
+// class Mage extends GameCharacter {
+//     constructor(name, health, strength, magicPower) {
+//         super(name, health, strength);
+//         this.magicPower = magicPower;
+//     }
+//     castSpell(spellName) {
+//         console.log(`${this.name} casts ${spellName} with magic power ${this.magicPower}`);
+//     }
+// }
+
+// const warrior = new Warrior("Aragon", 100, 25, "Sword");
+// const mage = new Mage("Gandalf", 80, 15, 500000);
+
+// warrior.displayStats();
+// warrior.attack();
+// console.log();
+// mage.displayStats();
+// mage.castSpell("Avada Kadabra!!!!!");
+
+
