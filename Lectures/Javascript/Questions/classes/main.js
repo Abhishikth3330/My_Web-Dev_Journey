@@ -432,3 +432,261 @@
 
 // machine.showResult("wrongPassword");
 // machine.showResult("admin123");
+
+
+
+// Inheritance
+
+
+// 1. Create a Person class with properties name and age. Then create a Teacher class that inherits from Person and adds a subject property and a method teach().
+
+// class Person {
+//     constructor(name, age) {
+//         this.name = name;
+//         this.age = age;
+//     }
+// }
+
+// class Teacher extends Person {
+//     constructor(name, age, subject) {
+//         super(name, age);
+//         this.subject = subject;
+//     }
+
+//     teach() {
+//         console.log(`${this.name} teaches a subject ${this.subject} & is aged ${this.age}`);
+//     }
+// }
+
+// const teacher1 = new Teacher("Abhi", 24, "DSA");
+// teacher1.teach();
+
+
+
+// 2. Create a Shape class with a method calculateArea(). Then create Rectangle and Circle classes that inherit from Shape and override the calculateArea() method.
+
+// class Shape {
+//     calculateArea(){
+//         console.log("Calculate Area.")
+//     }
+// }
+
+// class Rectangle extends Shape {
+//     constructor(width, height) {
+//         super();
+//         this.width = width;
+//         this.height = height;
+//     }
+
+//     calculateArea() {
+//         const area = this.width * this.height;
+//         console.log(`Area of Rectangle: ${area}`);
+//     }
+// }
+
+// class Circle extends Shape {
+//     constructor(radius) {
+//         super();
+//         this.radius = radius;
+//     }
+
+//     calculateArea() {
+//         const area = Math.PI * this.radius * this.radius;
+//         console.log(`Area of Circle: ${area.toFixed(2)}`);
+//     }
+// }
+
+// const rect = new Rectangle(10, 5);
+// rect.calculateArea();
+
+// const circ = new Circle(7);
+// circ.calculateArea();
+
+
+
+// 3. Design a Vehicle class with common properties like speed. Create Bike and Truck classes that extend Vehicle and add their specific properties/methods.
+
+// class Vehicle {
+//     constructor(speed) {
+//         this.speed = speed;
+//     }
+
+//     display() {
+//         console.log(`Speed : ${this.speed} km/h`);
+//     }
+// }
+
+// class Bike extends Vehicle {
+//     constructor(speed, type) {
+//         super(speed);
+//         this.type = type;
+//     }
+
+//     details() {
+//         console.log(`Bike Type: ${this.type}`);
+//         this.display();
+//     }
+// }
+
+// class Truck extends Vehicle {
+//     constructor(speed, capacity) {
+//         super(speed);
+//         this.capacity = capacity;
+//     }
+//     details() {
+//         console.log(`Truck Capacity: ${this.capacity} tons`);
+//         this.display();
+//     }
+// }
+
+// const bike = new Bike(120, "sport");
+// bike.details();
+
+// const truck = new Truck(80, 15);
+// truck.details();
+
+
+
+// 4. Create an Appliance class with properties like brand and power. Create WashingMachine and Microwave classes extending Appliance.
+
+// class Appliance {
+//     constructor(brand, power) {
+//         this.brand = brand;
+//         this.power = power;
+//     }
+
+//     info() {
+//         console.log(`Brand: ${this.brand}, Power: ${this.power} W`);
+//     }
+// }
+
+// class WashingMachine extends Appliance {
+//     constructor(brand, power, loadCapacity) {
+//         super(brand, power);
+//         this.loadCapacity = loadCapacity;
+//     }
+
+//     wash() {
+//         console.log(`${this.brand} washing machine is washing clothes...`);
+//         this.info();
+//         console.log(`Load Capacity: ${this.loadCapacity} kg`);
+//     }
+// }
+
+// class Microwave extends Appliance {
+//     constructor (brand, power, volume) {
+//         super(brand, power);
+//         this.volume = volume;
+//     }
+//     heat() {
+//         console.log(`${this.brand} microwave is heating food...`);
+//         this.info();
+//         console.log(`Volume: ${this.volume} L`);
+//     }
+// }
+
+// const wm = new WashingMachine("LG", 1500, 7);
+// wm.wash();
+// const mw = new Microwave("Samsung", 1200, 30);
+// mw.heat();
+
+
+
+// 5. Design a SportsPlayer class with name and team. Create Cricketer and Footballer classes extending it, each with their own method (bat() or kick()).
+
+// class SportsPlayer {
+//     constructor (name, team) {
+//         this.name = name;
+//         this.team = team;
+//     }
+//     display(){
+//         console.log(`Player: ${this.name}, Team: ${this.team}`);
+//     }
+// }
+
+// class Cricketer extends SportsPlayer {
+//     constructor(name, team){
+//         super(name, team);
+//     }
+
+//     bat() {
+//         this.display();
+//         console.log(`${this.name} is batting !`);
+//     }
+// }
+
+// class Footballer extends SportsPlayer {
+//     constructor ( name, team) {
+//         super(name, team);
+//     }
+
+//     kick(){
+//         this.display();
+//         console.log(`${this.name} is kicking the ball !`);
+//     }
+// }
+
+// const player1 = new Cricketer("Virat Kohli", "India");
+// player1.bat();
+// const player2 = new Footballer("Lionel Messi", "Argentina");
+// player2.kick();
+
+
+
+// 6. Build a Notification base class with method send(). Create EmailNotification, SMSNotification, and PushNotification subclasses overriding send() differently.
+
+
+// class Notification{
+//     send() {
+//         console.log("Sending a Notification...");
+//     }
+// }
+// class EmailNotification extends Notification {
+//     send(){
+//         console.log("Sending an Email notification");        
+//     }
+// }
+// class SMSNotification extends Notification {
+//     send() {
+//         console.log("Sending an SMS Notification");
+//     }
+// }
+// class PushNotification extends Notification {
+//     send() {
+//         console.log("Sending a Push Notification"); 
+//     }
+// }
+// const email = new EmailNotification();
+// email.send();
+// const sms = new SMSNotification();
+// sms.send();
+// const push = new PushNotification();
+// push.send();
+
+
+
+// 7. Create  a  Gadget  class  with  model  and  price.  Inherit  a  Smartphone  class  that  adds cameraQuality and a takePhoto() method.
+
+// class Gadget {
+//     constructor(model, price) {
+//         this.model = model;
+//         this.price = price;
+//     }
+//     details() {
+//         console.log(`Model: ${this.model}, Price: ${this.price}`);
+//     }
+// }
+// class Smartphone extends Gadget {
+//     constructor(model, price, cameraQuality) {
+//         super(model, price);
+//         this.cameraQuality = cameraQuality;
+//     }
+
+//     takePhoto() {
+//         this.details();
+//         console.log(`Taking photo with ${this.cameraQuality} camera`);
+//     }
+// }
+
+// const phone = new Smartphone("Realme X", 20000, "12 MP");
+// phone.takePhoto();
