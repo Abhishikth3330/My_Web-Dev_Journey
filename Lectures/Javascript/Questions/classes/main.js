@@ -1158,3 +1158,447 @@
 // checking.withdraw(2500);
 // checking.deposite(1000);
 // console.log("Final Balance:", checking.getBalance());
+
+
+
+// 9. University Enrollment System 
+// • Task: Implement a Person class with properties name and email. 
+// • Inheritance: Create subclasses Student and Professor. Student should have a studentID and a list of courses, while Professor should have an employeeID and a list of subjects. 
+// • Encapsulation: Keep the lists of courses and subjects private. 
+// • Methods:  Add  methods  to  addCourse(courseName)  for  students  and addSubject(subjectName) for professors.
+
+
+// class Person {
+//     constructor(name, email) {
+//         this.name = name;
+//         this.email = email;
+//     }
+// }
+
+// class Student extends Person {
+//     #courses;
+
+//     constructor(name, email, studentID){
+//         super(name, email);
+//         this.studentID = studentID;
+//         this.#courses = [];
+//     }
+
+//     addCourse(courseName) {
+//         this.#courses.push(courseName);
+//         console.log(`${this.name} enrolled in course: ${courseName}`);
+//     }
+
+//     getCourses() {
+//         return this.#courses;
+//     }
+// }
+
+// class Professor extends Person {
+//     #subjects;
+
+//     constructor(name, email, employeeID) {
+//         super(name, email);
+//         this.employeeID = employeeID;
+//         this.#subjects = [];
+//     }
+
+//     addSubject(subjectName) {
+//         this.#subjects.push(subjectName);
+//         console.log(`${this.name} assigned to teach: ${subjectName}`);
+//     }
+
+//     getSubjects() {
+//         return this.#subjects;
+//     }
+// }
+
+// const student = new Student("Abhi Thul", "abhishikththul9@gmail.com", "ST123");
+// student.addCourse("DSA");
+// student.addCourse("DBMS");
+// console.log(`Student Course: ${student.getCourses()}`);
+
+// console.log("--------------");
+
+// const professor = new Professor("Runali Ma'am", "runali@gmail.com", "PROF123");
+// professor.addSubject("JavaScript");
+// professor.addSubject("Web Dev");
+// console.log(`Professor Subjects: ${professor.getSubjects()}`);
+
+
+
+// 10.  Create a Zoo system where you have a Zoo class that manages a collection of Animal objects. Implement methods like addAnimal(), feedAnimals(), and viewAllAnimals(). 
+
+// class Animal {
+//     constructor(name, species) {
+//         this.name = name;
+//         this.species = species;
+//     }
+
+//     eat() {
+//         console.log(`${this.name} the ${this.species} is being fed.`);
+//     }
+
+//     getDetails() {
+//         return `${this.name} - ${this.species}`;
+//     }
+// }
+
+// class Zoo {
+//     constructor() {
+//         this.animals = [];
+//     }
+//     addAnimal(animal){
+//         this.animals.push(animal);
+//         console.log(`${animal.name} the ${animal.species} has been added to the zoo.`);
+//     }
+
+//     feedAnimals() {
+//         console.log("Feeding all animals in the zoo: ");
+//         this.animals.forEach(animal => animal.eat());
+//     }
+
+//     viewAnimals() {
+//         console.log(`Animals currently in the zoo: `);
+//         this.animals.forEach(animal => {
+//             console.log(animal.getDetails());
+//         })
+//     }
+// }
+
+// const zoo = new Zoo();
+
+// const lion = new Animal("Simba", "Lion");
+// const panda = new Animal("Chubby", "Panda");
+// const elephant = new Animal("Ella", "Elephant");
+
+// zoo.addAnimal(lion);
+// zoo.addAnimal(panda);
+// zoo.addAnimal(elephant);
+
+// console.log("-----------------");
+
+// zoo.feedAnimals();
+
+// console.log("-----------------");
+
+// zoo.viewAnimals();
+
+
+
+// 11.  Build a FlightBooking system where Flight objects and Passenger objects interact. Each Passenger can book a Flight.
+
+// class Flight {
+//     constructor(flightNumber, destination, seatsAvailable) {
+//         this.flightNumber = flightNumber;
+//         this.destination = destination;
+//         this.seatsAvailable = seatsAvailable;
+//         this.passengers = [];
+//     }
+
+//     bookSeat(passenger) {
+//         if(this.seatsAvailable > 0){
+//             this.passengers.push(passenger);
+//             this.seatsAvailable--;
+//             console.log(`${passenger.name} has booked seat on Flight ${this.flightNumber} to ${this.destination}.`);
+//         } else {
+//             console.log(`No seats available on Flight ${this.flightNumber}`);
+//         }
+//     }
+
+//     getPassengerList() {
+//         return this.passengers.map(p => p.name);
+//     }
+// }
+
+
+// class Passenger {
+//     constructor(name) {
+//         this.name = name;
+//         this.bookedFlight = null;
+//     }
+
+//     bookFlight(flight){
+//         flight.bookSeat(this);
+//         this.bookedFlight = flight;
+//     }
+
+//     getFlightDetails() {
+//         if (this.bookedFlight) {
+//             return `Passenger: ${this.name}, Flight: ${this.bookedFlight.flightNumber} to ${this.bookedFlight.destination}`;
+//         } else {
+//             return `${this.name} has not booked any flights`;
+//         }
+//     }
+// }
+
+// const flight1 = new Flight("AI101", "Delhi", 2);
+// const flight2 = new Flight("AI202", "Mumbai", 1);
+
+// const passenger1 = new Passenger("Alice");
+// const passenger2 = new Passenger("Bob");
+// const passenger3 = new Passenger("Charlie");
+
+// passenger1.bookFlight(flight1);
+// passenger2.bookFlight(flight1);
+// passenger3.bookFlight(flight1);
+
+// console.log("------------------------");
+
+// console.log(passenger1.getFlightDetails());
+// console.log(passenger2.getFlightDetails());
+// console.log(passenger3.getFlightDetails());
+
+// console.log("------------------------");
+
+// console.log("Passengers on Flight AI101:", flight1.getPassengerList());
+
+
+
+// 12.  Design a Hospital Management system: Doctor, Patient, and Appointment classes. Allow booking and cancelling appointments. 
+
+
+// class Appointment {
+//     constructor(doctor, patient, dateTime) {
+//         this.doctor = doctor;
+//         this.patient = patient;
+//         this.dateTime = dateTime;
+//     }
+
+//     getDetails() {
+//         return `Appointment : Dr. ${this.doctor.name} with Patient ${this.patient.name} on ${this.dateTime}`;
+//     }
+// }
+
+// class Doctor {
+//     constructor(name, specialization) {
+//         this.name = name;
+//         this.specialization = specialization;
+//         this.appointments = [];
+//     }
+
+//     bookAppointment(patient, dateTime) {
+//         const appointment = new Appointment(this, patient, dateTime);
+//         this.appointments.push(appointment);
+//         patient.appointments.push(appointment);
+//         console.log(`Appointment booked for ${patient.name} with Dr. ${this.name} on ${dateTime}`);
+//     }
+
+//     cancelAppointment(patient, dateTime) {
+//         this.appointments = this.appointments.filter(
+//             appt => !(appt.patient === patient && appt.dateTime === dateTime)
+//         );
+//         patient.appointments = patient.appointments.filter(
+//             appt => !(appt.doctor === this && appt.dateTime === dateTime)
+//         );
+//         console.log(`Appointment for ${patient.name} with Dr. ${this.name} on ${dateTime} canceled`)
+//     }
+
+//     listAppointments() {
+//         return this.appointments.map(appt => appt.getDetails());
+//     }
+// }
+
+// class Patient {
+//     constructor (name, age) {
+//         this.name = name;
+//         this.age = age;
+//         this.appointments = [];
+//     }
+
+//     listAppointments(){
+//         return this.appointments.map(appt => appt.getDetails());
+//     }
+// }
+
+// const doctor1 = new Doctor("Smith", "Cardiologist");
+// const doctor2 = new Doctor("Jones", "Dermatologist");
+
+// const patient1 = new Patient("Alice", 30);
+// const patient2 = new Patient("Bob", 40);
+
+// doctor1.bookAppointment(patient1, "2025-05-10 10:00 AM");
+// doctor2.bookAppointment(patient2, "2025-05-11 2:00 PM");
+
+// doctor1.cancelAppointment(patient1, "2025-05-10 10:00 AM");
+
+// console.log("\nDoctor Appointments:");
+// console.log(doctor1.listAppointments());
+// console.log(doctor2.listAppointments());
+
+// console.log("\nPatient Appointments:");
+// console.log(patient1.listAppointments());
+// console.log(patient2.listAppointments());
+
+
+
+// 13.  Create an OnlineStore simulation with Product and Cart classes. Users can add products to the cart, remove products, and checkout. 
+
+
+// class Product{
+//     constructor(id, name, price){
+//         this.id = id;
+//         this.name = name;
+//         this.price = price;
+//     }
+
+//     getDetails() {
+//         return `${this.name} - ${this.price}`;
+//     }
+// }
+
+// class Cart {
+//     constructor() {
+//         this.items = [];
+//     }
+
+//     addProduct(product) {
+//         this.items.push(product);
+//         console.log(`${product.name} added to the cart.`);
+//     }
+
+//     removeProduct(productID) {
+//         const index = this.items.findIndex(p => p.id === productID);
+//         if(index !== -1) {
+//             const removed = this.items.splice(index, 1)[0];
+//             console.log(`${removed.name} removed from the cart.`);
+//         } else {
+//             console.log(`Product with ID ${productID} not found in the cart.`);
+//         }
+//     }
+
+//     viewCart() {
+//         if (this.items.length === 0) {
+//             console.log("Cart is Empty.");
+//         }else {
+//             console.log("Items in the cart: ");
+//             this.items.forEach(item => console.log(item.getDetails()));
+//         }
+//     }
+
+//     checkout() {
+//         if (this.items.length === 0){
+//             console.log(`Your cart is empty. Add some products before checkout.`);
+//             return;
+//         }
+//         let total = this.items.reduce((sum, product) => sum + product.price, 0);
+//         console.log(`Checkout successful. Total amount ${total}`);
+//         this.items = [];
+//     }
+// }
+
+// const product1 = new Product(1, "Laptop", 70000);
+// const product2 = new Product(2, "Mouse", 1200);
+// const product3 = new Product(3, "Headphone", 3500);
+
+// const myCart = new Cart();
+// myCart.addProduct(product1);
+// myCart.addProduct(product2);
+// myCart.addProduct(product3);
+
+// myCart.viewCart();
+
+// myCart.removeProduct(2);
+// myCart.viewCart();
+// myCart.checkout();
+
+
+
+// 14.  Make a ChatApplication system with User and Message classes. Each User can send and receive messages. 
+
+// class Message {
+//     constructor(sender, receiver, content, timestamp = new Date()){
+//         this.sender = sender;
+//         this.receiver = receiver;
+//         this.content = content;
+//         this.timestamp = timestamp;
+//     }
+
+//     getDetails() {
+//         return `[${this.timestamp.toLocaleDateString()}] ${this.sender} to ${this.receiver} : ${this.content}`;
+//     }
+// }
+
+// class User {
+//     constructor(name) {
+//         this.name = name;
+//         this.inbox = [];
+//     }
+
+//     sendMessage(receiver, content) {
+//         const message = new Message(this, receiver, content);
+//         receiver.receiveMessage(message);
+//         console.log(`${this.name} sent a message to ${receiver.name} : ${content}`);
+//     }
+
+//     receiveMessage(message) {
+//         this.inbox.push(message);
+//     }
+
+//     viewInbox() {
+//         console.log(`\nInbox of ${this.name}: `);
+//         if (this.inbox.length === 0) {
+//             console.log("No Message");
+//         }else {
+//             this.inbox.forEach(msg => console.log(msg.getDetails()));
+//         }
+//     }
+// }
+
+// const user1 = new User("Alice");
+// const user2 = new User("Bob");
+// const user3 = new User("Charlie");
+
+// user1.sendMessage(user2, "Hello Bob!");
+// user2.sendMessage(user1, "Hey Alice! how are you ?");
+// user3.sendMessage(user1, "Hi ALice, long time no see.");
+
+// user1.viewInbox();
+// user2.viewInbox();
+// user3.viewInbox();
+
+
+
+// 15.  Implement an abstract Shape class (cannot be directly instantiated) with method area(). Create Square and Triangle that extend it.
+
+
+// class Shape {
+//     constructor() {
+//         if (new.target === Shape) {
+//             throw new Error("Cannot instantiate abstract class shape directly");
+//         }
+//     }
+
+//     area() {
+//         throw new Error("Method 'area()' must be implemented.");
+//     }
+// }
+
+// class Square extends Shape {
+//     constructor(side) {
+//         super();
+//         this.side = side;
+//     }
+
+//     area () {
+//         return this.side * this.side;
+//     }
+// }
+
+// class Triangle extends Shape {
+//     constructor(base, height) {
+//         super();
+//         this.base = base;
+//         this.height = height;
+//     }
+
+//     area() {
+//         return 0.5 * this.base * this.height;
+//     }
+// }
+
+// const square = new Square(5);
+// console.log(`Area of Square: ${square.area()}`);
+
+// const triangle = new Triangle(4, 6);
+// console.log(`Area of Triangle: ${triangle.area()}`);
