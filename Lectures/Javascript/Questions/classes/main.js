@@ -846,3 +846,315 @@
 // mage.castSpell("Avada Kadabra!!!!!");
 
 
+// 4. Employee Management System 
+// • Task: Create an Employee class with properties like name, id, and department. 
+// • Encapsulation: Make the salary property private. 
+// • Methods: Implement methods to setSalary() and getSalary(). 
+// • Inheritance: Create a subclass Manager that adds a teamSize property and a method getTeamSize().
+
+// class Employee{
+//     #salary;
+//     constructor(name, id, department) {
+//         this.name = name;
+//         this.id = id;
+//         this.department = department;
+//     }
+
+//     setSalary(amount) {
+//         if (amount > 0) {
+//             this.#salary = amount;
+//         }else {
+//             console.log("Invalid Salary Amount.");
+//         }
+//     }
+
+//     getSalary() {
+//         return this.#salary;
+//     }
+
+//     display() {
+//         console.log(`Name: ${this.name} | ID: ${this.id} | Dept.: ${this.department}`);
+//     }
+// }
+
+// class Manager extends Employee {
+//     constructor(name, id, department, teamSize) {
+//         super(name, id, department);
+//         this.teamSize = teamSize;
+//     }
+
+//     getTeamSize() {
+//         return this.teamSize;
+//     }
+
+//     displayManagerInfo() {
+//         this.display();
+//         console.log(`Team Size: ${this.getTeamSize()}`);
+//     }
+// }
+
+// const emp1 = new Employee("Abhi", 101, "HR");
+// emp1.setSalary(50000);
+// emp1.display();
+// console.log(`Salary: ${emp1.getSalary()}`);
+
+// console.log();
+
+// const manager1 = new Manager("Bob", 201, "Engineering", 5);
+// manager1.setSalary(90000);
+// manager1.displayManagerInfo();
+// console.log(`Salary: ${manager1.getSalary()}`);
+
+
+
+// 5. Online Course Platform 
+// • Task: Design a Course class with properties title, instructor, and duration. 
+// • Encapsulation: Keep the enrolledStudents list private. 
+// • Methods: Add methods to enrollStudent(studentName) and getEnrolledStudents(). 
+// • Inheritance: Create a subclass PaidCourse that includes a price property and a method applyDiscount(discountPercentage).
+
+// class Course {
+//     #enrolledStudents = [];
+
+//     constructor (title, instructor, duration) {
+//         this.title = title;
+//         this.instructor = instructor;
+//         this.duration = duration;
+//     }
+
+//     enrollStudent(studentName) {
+//         this.#enrolledStudents.push(studentName);
+//         console.log(`${studentName} has been enrolled in ${this.title}.`);
+//     }
+
+//     getEnrolledStudents(){
+//         return [...this.#enrolledStudents];
+//     }
+
+//     displayCourseInfo() {
+//         console.log(`Course: ${this.title} | Instructor: ${this.instructor} | Duration: ${this.duration} hours`);
+//     }
+// }
+
+// class PaidCourse extends Course {
+//     constructor(title, instructor, duration, price) {
+//         super(title, instructor, duration);
+//         this.price = price;
+//     }
+
+//     applyDiscount(discountPercentage) {
+//         if (discountPercentage > 0 && discountPercentage <= 100) {
+//             const discountAmount = (this.price * discountPercentage) / 100;
+//             this.price -= discountAmount;
+//             console.log(`Discount applied! New Price is: ${this.price}`);
+//         }else {
+//             console.log("Invalid discount Percentage.");
+//         }
+//     }
+
+//     displayPaidCourseInfo(){
+//         this.displayCourseInfo();
+//         console.log(`Price: ${this.price}`);
+//     }
+// }
+
+// const jsCourse = new PaidCourse("JavaScript Bootcamp", "Runali Ma'am", 40, 10000);
+// jsCourse.displayPaidCourseInfo();
+// console.log();
+// jsCourse.enrollStudent("Abhi");
+// jsCourse.enrollStudent("Riya");
+// console.log(`Enrolled Students: ${jsCourse.getEnrolledStudents()}`);
+// jsCourse.applyDiscount(20);
+
+
+// 6. Library Catalog System 
+// • Task: Implement a LibraryItem class with properties title and publicationYear. 
+// • Inheritance: Create subclasses Book and Magazine. Book should have an author property, 
+// while Magazine should have an issueNumber. 
+// • Methods: Each subclass should have a method getDetails() that returns all relevant information. 
+
+// class LibraryItem {
+//     constructor(title, publicationYear) {
+//         this.title = title;
+//         this.publicationYear = publicationYear;
+//     }
+
+//     getDetails() {
+//         return `Title: ${this.title} | Year: ${this.publicationYear}`;
+//     }
+// }
+
+// class Book extends LibraryItem{
+//     constructor(title, publicationYear, author) {
+//         super(title, publicationYear);
+//         this.author = author;
+//     }
+
+//     getDetails() {
+//         return `Book - Title: ${this.title} | Author: ${this.author} | Year: ${this.publicationYear}`;
+//     }
+// }
+
+// class Magazine extends LibraryItem { 
+//     constructor(title, publicationYear, issueNumber) {
+//         super(title, publicationYear);
+//         this.issueNumber = issueNumber;
+//     }
+//     getDetails() {
+//         return `Magazine - Title: ${this.title} | Issue No.: ${this.issueNumber} | Year: ${this.publicationYear}`;
+//     }
+// }
+
+// const book1 = new Book("The Silent Patient", 2019, "Alex Michaelides");
+// const magazine1 = new Magazine("National Geographic", 2013, 198);
+
+// console.log(book1.getDetails());
+// console.log(magazine1.getDetails());
+
+
+
+
+// 7. E-Commerce Shopping Cart 
+// • Task: Create a Product class with properties name, price, and quantity. 
+// • Encapsulation: Make the quantity property private. 
+// • Methods: Implement methods to addStock(amount) and purchase(amount). 
+// • Inheritance: Develop a subclass DigitalProduct that overrides the purchase() method to handle license keys instead of stock.
+
+
+// class Product {
+//     #quantity;
+
+//     constructor(name, price, quantity) {
+//         this.name = name;
+//         this.price = price;
+//         this.#quantity = quantity;
+//     }
+
+//     addStock(amount) {
+//         if (amount > 0) {
+//             this.#quantity += amount;
+//             console.log(`${amount} items added. New Stock: ${this.#quantity}`);
+//         }
+//     }
+
+//     purchase(amount) {
+//         if (amount <= this.#quantity){
+//             this.#quantity -= amount;
+//             console.log(`Purchased ${amount} ${this.name}(s). Remaining Stock: ${this.#quantity}`);
+//         }else {
+//             console.log(`Not enough stock for ${this.name}. Only ${this.#quantity} left`);
+//         }
+//     }
+
+//     getStock() {
+//         return this.#quantity;
+//     }
+// }
+
+// class DigitalProduct extends Product{
+//     constructor(name, price, licenseKey) {
+//         super(name, price, Infinity);
+//         this.licenseKey = licenseKey;
+//     }
+
+//     purchase(amount) {
+//         console.log(`Purchased ${amount} copy/copies of ${this.name}. License key: ${this.licenseKey}`);
+//     }
+// }
+
+// const tshirt = new Product("T-Shirt", 499, 10);
+// tshirt.purchase(2);
+// tshirt.addStock(5);
+
+// const software = new DigitalProduct("Antivirus", 1999, "ABC-123-ZXC-456");
+// software.purchase(1);
+
+
+
+// 8. Banking Application 
+// • Task: Design a BankAccount class with properties accountNumber and accountHolder. 
+// • Encapsulation: Keep the balance property private. 
+// • Methods: Include methods deposit(amount), withdraw(amount), and getBalance(). 
+// • Inheritance: Create subclasses SavingsAccount and CheckingAccount, each with specific rules for withdrawals and deposits. 
+
+
+// class BankAccount {
+//     #balance;
+
+//     constructor(accountNumber, accountHolder, initialBalance = 0){
+//         this.accountNumber = accountNumber;
+//         this.accountHolder = accountHolder;
+//         this.#balance = initialBalance;
+//     }
+
+//     deposite(amount) {
+//         if (amount > 0) {
+//             this.#balance += amount;
+//             console.log(`Deposited ${amount}. New Balance: ${this.#balance}`);
+//         }
+//     }
+
+//     withdraw(amount) {
+//         if (amount <= this.#balance) {
+//             this.#balance -= amount;
+//             console.log(`Withdrew ${amount}. New Balance: ${this.#balance}`);
+//         } else {
+//             console.log("Insufficient Balance");
+//         }
+//     }
+
+//     getBalance() {
+//         return this.#balance;
+//     }
+// }
+
+// class SavingsAccount extends BankAccount {
+//     constructor(accountNumber, accountHolder, initialBalance = 0, interestRate = 0.03) {
+//         super(accountNumber, accountHolder, initialBalance);
+//         this.interestRate = interestRate;
+//     }
+
+//     addInterest() {
+//         const interest = this.getBalance() * this.interestRate;
+//         this.deposite(interest);
+//         console.log(`Interest of ${interest.toFixed(2)} added`);
+//     }
+
+//     withdraw(amount) {
+//         if (amount > 5000) {
+//             console.log(`Savings account withdrawal limit is 5000/-`);
+//         }else {
+//             super.withdraw(amount);
+//         }
+//     }
+// }
+
+// class CheckingAccount extends BankAccount{
+//     constructor(accountNumber, accountHolder, initialBalance = 0, overdraftLimit = 1000) {
+//         super(accountNumber, accountHolder, initialBalance);
+//         this.overdraftLimit = overdraftLimit;
+//     }
+
+//     withdraw(amount) {
+//         if (amount <= this.getBalance() + this.overdraftLimit) {
+//             const newBalance = this.getBalance() - amount;
+//             console.log(`Withdrew ${amount}. Balance may be negative`);
+//             super.deposite(-amount);
+//         }else {
+//             console.log("Overdraft limit exceeded");
+//         }
+//     }
+// }
+
+// const savings = new SavingsAccount("SB123", "Abhi Thul", 10000);
+// savings.withdraw(6000);
+// savings.withdraw(3000);
+// savings.addInterest();
+// console.log(`Final Balance: ${savings.getBalance()}`);
+
+// console.log("-----------------");
+
+// const checking = new CheckingAccount("CH456", "Abhi Thul", 2000);
+// checking.withdraw(2500);
+// checking.deposite(1000);
+// console.log("Final Balance:", checking.getBalance());
