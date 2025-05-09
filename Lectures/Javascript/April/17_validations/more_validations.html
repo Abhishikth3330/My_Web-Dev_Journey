@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 0px 10px gray;
+            border-radius: 8px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form id="registrationForm" onsubmit="return validateForm()">
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <div class="error" id="nameError"></div>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <div class="error" id="emailError"></div>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <div class="error" id="passwordError"></div>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword">
+            <div class="error" id="confirmPasswordError"></div>
+
+            <label for="mobile">Mobile:</label>
+            <input type="number" id="mobile" name="mobile">
+            <div class="error" id="mobileError"></div>
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state">
+            <div class="error" id="stateError"></div>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city">
+            <div class="error" id="cityError"></div>
+
+            <label for="pincode">Pincode:</label>
+            <input type="number" id="pincode" name="pincode">
+            <div class="error" id="pincodeError"></div>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault(); // Stop form from submitting by default
+            // Input values
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+            let mobile = document.getElementById("mobile").value.trim();
+            let state = document.getElementById("state").value.trim();
+            let city = document.getElementById("city").value.trim();
+            let pincode = document.getElementById("pincode").value.trim();
+    
+            // Patterns
+            let namePattern = /^[A-Za-z\s]+$/;
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            let mobilePattern = /^[0-9]{10}$/;
+            let pincodePattern = /^[0-9]{6}$/;
+    
+            // Error elements
+            let nameError = document.getElementById("nameError");
+            let emailError = document.getElementById("emailError");
+            let passwordError = document.getElementById("passwordError");
+            let confirmPasswordError = document.getElementById("confirmPasswordError");
+            let mobileError = document.getElementById("mobileError");
+            let stateError = document.getElementById("stateError");
+            let cityError = document.getElementById("cityError");
+            let pincodeError = document.getElementById("pincodeError");
+    
+            // Clear previous errors
+            nameError.textContent = "";
+            emailError.textContent = "";
+            passwordError.textContent = "";
+            confirmPasswordError.textContent = "";
+            mobileError.textContent = "";
+            stateError.textContent = "";
+            cityError.textContent = "";
+            pincodeError.textContent = "";
+            let isValid = true;
+            // Validate inputs
+            if (!namePattern.test(name)) {
+                nameError.textContent = "Enter a valid name.";
+                isValid = false;
+            }
+            if (!emailPattern.test(email)) {
+                emailError.textContent = "Enter a valid email.";
+                isValid = false;
+            }
+            if (password.length < 6) {
+                passwordError.textContent = "Password must be at least 6 characters.";
+                isValid = false;
+            }
+            if (confirmPassword !== password) {
+                confirmPasswordError.textContent = "Passwords do not match.";
+                isValid = false;
+            }
+            if (!mobilePattern.test(mobile)) {
+                mobileError.textContent = "Enter a valid 10-digit mobile number.";
+                isValid = false;
+            }
+            if (!namePattern.test(state)) {
+                stateError.textContent = "Enter a valid state name.";
+                isValid = false;
+            }
+            if (!namePattern.test(city)) {
+                cityError.textContent = "Enter a valid city name.";
+                isValid = false;
+            }
+            if (!pincodePattern.test(pincode)) {
+                pincodeError.textContent = "Enter a valid 6-digit pincode.";
+                isValid = false;
+            }
+            // If valid, show success message and redirect
+            if (isValid) {
+                alert("Form submitted successfully!");
+                window.location.href = "welcome.html"; // Only redirect on success
+            }
+        }
+        // Attach event listener to form
+        window.onload = function () {
+            document.getElementById("registrationForm").addEventListener("submit", validateForm);
+        };
+    </script>
+    
+</body>
+</html>
