@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhishikth's Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #ffffff;
+      color: #333;
+    }
+    .secondary {
+      color: #005f73;
+    }
+    .bg-secondary {
+      background-color: #005f73;
+    }
+    .nav-link {
+      color: #005f73;
+      font-weight: 500;
+    }
+    .nav-link:hover {
+      color: #0a9396;
+    }
+    #hero {
+      padding: 80px 0;
+    }
+    .hero-img {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+    .section-title {
+      color: #005f73;
+      margin-bottom: 40px;
+    }
+    .card-title {
+      color: #005f73;
+    }
+    .socials a {
+      margin-right: 15px;
+      color: #005f73;
+      text-decoration: none;
+    }
+    .socials a:hover {
+      color: #0a9396;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header / Navbar -->
+<nav class="navbar navbar-expand-lg bg-light sticky-top">
+  <div class="container">
+    <a class="navbar-brand secondary" href="#">Abhishikth Thul</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero" class="container d-flex align-items-center justify-content-between flex-wrap">
+  <div class="col-md-6">
+    <h1 class="display-4">Hi, I'm <span class="secondary">Abhishikth Thul</span></h1>
+    <p class="lead">Aspiring Software Engineer | Machine Learning Enthusiast | Web Developer</p>
+    <div class="socials mt-4">
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">Twitter</a>
+    </div>
+  </div>
+  <div class="col-md-5">
+    <img src="image.jpg" alt="Abhishikth's Photo" class="hero-img">
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="container py-5">
+  <h2 class="section-title">About Me</h2>
+  <p>
+    I am a recent graduate in Artificial Intelligence from GHRCE, Nagpur, passionate about building innovative software solutions and leveraging AI to solve real-world problems.
+    I have experience in web development, backend systems, databases, and machine learning. I enjoy learning new technologies and thrive in collaborative environments.
+  </p>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="container py-5">
+  <h2 class="section-title">Skills</h2>
+  <div class="row">
+    <div class="col-md-3">
+      <h5>Frontend</h5>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>Bootstrap</li>
+        <li>ReactJS</li>
+      </ul>
+    </div>
+    <div class="col-md-3">
+      <h5>Backend</h5>
+      <ul>
+        <li>ASP.NET</li>
+        <li>C#</li>
+        <li>Node.js (basic)</li>
+      </ul>
+    </div>
+    <div class="col-md-3">
+      <h5>Database</h5>
+      <ul>
+        <li>MS SQL Server</li>
+        <li>MySQL</li>
+      </ul>
+    </div>
+    <div class="col-md-3">
+      <h5>Data Science & ML</h5>
+      <ul>
+        <li>Python</li>
+        <li>Machine Learning Algorithms</li>
+        <li>Pandas, NumPy</li>
+        <li>Scikit-learn</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="container py-5">
+  <h2 class="section-title">Projects</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="leet-100.png" class="card-img-top" alt="Project 1">
+        <div class="card-body">
+          <h5 class="card-title">Smart Parking System</h5>
+          <ul>
+            <li>Developed during internship at Park Me Safe Pvt Ltd.</li>
+            <li>Web-based solution to manage parking slots in real-time.</li>
+            <li>Built using ASP.NET, C#, SQL Server.</li>
+            <li>Integrated user authentication and admin dashboard.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <img src="leet-100.png" class="card-img-top" alt="Project 2">
+        <div class="card-body">
+          <h5 class="card-title">AI Resume Scanner</h5>
+          <ul>
+            <li>ML-based application to rank resumes based on job descriptions.</li>
+            <li>Utilized NLP for keyword extraction and relevance scoring.</li>
+            <li>Python, Pandas, Scikit-learn.</li>
+            <li>Improved recruitment efficiency by filtering top candidates.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <img src="leet-100.png" class="card-img-top" alt="Project 3">
+        <div class="card-body">
+          <h5 class="card-title">Portfolio Website</h5>
+          <ul>
+            <li>Responsive personal portfolio to showcase skills and projects.</li>
+            <li>Built using HTML, Bootstrap, and ReactJS.</li>
+            <li>Includes project cards, skills, and contact section.</li>
+            <li>Easy to update and maintain.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
