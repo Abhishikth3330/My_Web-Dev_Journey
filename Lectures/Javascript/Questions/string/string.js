@@ -97,3 +97,32 @@
 // console.log(checkStartEnd(str, "JavaScript"));
 // console.log(checkStartEnd(str, "awesome"));
 // console.log(checkStartEnd(str, "is"));
+
+
+
+// swap with a temp variable
+function swapp(a, b){
+    console.log(a, b);
+    
+    temp = a;
+    a = b;
+    b = temp;
+
+    console.log(a, b);
+    
+    // return [a, b];
+}
+// swapp(10, 20);
+
+
+// swap without a temp variable
+function swapp2(a, b){
+    console.log(a, b);
+
+    a = a + b;
+    b = a - b;
+    a = a - b;
+
+    console.log(a, b);
+}
+swapp2(10, 20);
