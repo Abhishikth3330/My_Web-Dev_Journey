@@ -18,10 +18,22 @@
             </button>
             <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("About", "About", "Home", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Register", "Register", "User", null, new { @class = "nav-link" })</li>
+
+                    @if (Session["UserEmail"] == null)
+                    {
+                        <li class="nav-item">@Html.ActionLink("Login", "Login", "User", null, new { @class = "nav-link" })</li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">@Html.ActionLink("Dashboard", "Dashboard", "User", null, new { @class = "nav-link" })</li>
+                        <li class="nav-item">@Html.ActionLink("Logout (" + Session["UserEmail"] + ")", "Logout", "User", null, new { @class = "nav-link text-danger" })</li>
+                    }
                 </ul>
+
             </div>
         </div>
     </nav>
