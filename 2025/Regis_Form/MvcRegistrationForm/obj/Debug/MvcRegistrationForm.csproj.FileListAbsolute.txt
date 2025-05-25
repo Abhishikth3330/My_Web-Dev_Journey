@@ -77,3 +77,7 @@ F:\IT_Networkz\2025\Regis_Form\MvcRegistrationForm\bin\Microsoft.CodeDom.Provide
 F:\IT_Networkz\2025\Regis_Form\MvcRegistrationForm\obj\Debug\MvcRegis.930A26F1.Up2Date
 F:\IT_Networkz\2025\Regis_Form\MvcRegistrationForm\obj\Debug\MvcRegistrationForm.dll
 F:\IT_Networkz\2025\Regis_Form\MvcRegistrationForm\obj\Debug\MvcRegistrationForm.pdb
+F:\IT_Networkz\2025\Regis_Form\MvcRegistrationForm\bin\EntityFramework.dll
+F:\IT_Networkz\2025\Regis_Form\MvcRegistrationForm\bin\EntityFramework.SqlServer.dll
+F:\IT_Networkz\2025\Regis_Form\MvcRegistrationForm\bin\EntityFramework.xml
+F:\IT_Networkz\2025\Regis_Form\MvcRegistrationForm\bin\EntityFramework.SqlServer.xml

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Web.Mvc;
 using MvcRegistrationForm.Models;
 
@@ -57,38 +58,23 @@ namespace MvcRegistrationForm.Controllers
         }
 
 
-
-
-        // this is a place holder solution for preventing sql injection
-
-        // POST: User/Login
+        // this is Enitity Framework solution
         [HttpPost]
         public ActionResult Login(LoginViewModel model)
         {
             if (ModelState.IsValid)
             {
-                string connStr = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-                using (SqlConnection conn = new SqlConnection(connStr))
+                using (var db = new UserDbContext())
                 {
-                    string query = "SELECT COUNT(*) FROM Users WHERE Email = @Email AND Password = @Password";
+                    var user = db.Users.FirstOrDefault(u => u.Email == model.Email && u.Password == model.Password);
 
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@Email", model.Email);
-                    cmd.Parameters.AddWithValue("@Password", model.Password);
-
-                    conn.Open();
-                    int count = (int)cmd.ExecuteScalar();
-                    conn.Close();
-
-                    if (count == 1)
+                    if (user != null)
                     {
-                        Session["UserEmail"] = model.Email;
+                        Session["UserEmail"] = user.Email;
                         return RedirectToAction("Dashboard");
                     }
-                    else
-                    {
-                        ViewBag.Error = "Invalid email or password.";
-                    }
+
+                    ViewBag.Error = "Invalid email or password.";
                 }
             }
 
@@ -99,8 +85,45 @@ namespace MvcRegistrationForm.Controllers
 
 
 
-
+        // this is a place holder solution for preventing sql injection
         // POST: User/Login
+        //[HttpPost]
+        //public ActionResult Login(LoginViewModel model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        string connStr = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+        //        using (SqlConnection conn = new SqlConnection(connStr))
+        //        {
+        //            string query = "SELECT COUNT(*) FROM Users WHERE Email = @Email AND Password = @Password";
+
+        //            SqlCommand cmd = new SqlCommand(query, conn);
+        //            cmd.Parameters.AddWithValue("@Email", model.Email);
+        //            cmd.Parameters.AddWithValue("@Password", model.Password);
+
+        //            conn.Open();
+        //            int count = (int)cmd.ExecuteScalar();
+        //            conn.Close();
+
+        //            if (count == 1)
+        //            {
+        //                Session["UserEmail"] = model.Email;
+        //                return RedirectToAction("Dashboard");
+        //            }
+        //            else
+        //            {
+        //                ViewBag.Error = "Invalid email or password.";
+        //            }
+        //        }
+        //    }
+
+        //    return View(model);
+        //}
+
+
+
+
+        // POST: User/Login (Vulnerable)
 
         // this is the query which IS NOT SAFE
         // can be affected by SQL Injection Practices
@@ -156,6 +179,9 @@ namespace MvcRegistrationForm.Controllers
 
 
         // GET: User/Dashboard
+
+
+
         public ActionResult Dashboard()
         {
             if (Session["UserEmail"] == null)

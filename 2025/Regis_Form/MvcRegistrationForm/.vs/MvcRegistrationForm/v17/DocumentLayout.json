@@ -3,31 +3,31 @@
   "WorkspaceRootPath": "F:\\IT_Networkz\\2025\\Regis_Form\\MvcRegistrationForm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4C89554B-DD2C-480A-B02A-B320E7C686EC}|MvcRegistrationForm.csproj|F:\\IT_Networkz\\2025\\Regis_Form\\MvcRegistrationForm\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4C89554B-DD2C-480A-B02A-B320E7C686EC}|MvcRegistrationForm.csproj|f:\\it_networkz\\2025\\regis_form\\mvcregistrationform\\models\\userdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C89554B-DD2C-480A-B02A-B320E7C686EC}|MvcRegistrationForm.csproj|solutionrelative:models\\userdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C89554B-DD2C-480A-B02A-B320E7C686EC}|MvcRegistrationForm.csproj|f:\\it_networkz\\2025\\regis_form\\mvcregistrationform\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4C89554B-DD2C-480A-B02A-B320E7C686EC}|MvcRegistrationForm.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C89554B-DD2C-480A-B02A-B320E7C686EC}|MvcRegistrationForm.csproj|F:\\IT_Networkz\\2025\\Regis_Form\\MvcRegistrationForm\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C89554B-DD2C-480A-B02A-B320E7C686EC}|MvcRegistrationForm.csproj|solutionrelative:models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4C89554B-DD2C-480A-B02A-B320E7C686EC}|MvcRegistrationForm.csproj|F:\\IT_Networkz\\2025\\Regis_Form\\MvcRegistrationForm\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4C89554B-DD2C-480A-B02A-B320E7C686EC}|MvcRegistrationForm.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4C89554B-DD2C-480A-B02A-B320E7C686EC}|MvcRegistrationForm.csproj|f:\\it_networkz\\2025\\regis_form\\mvcregistrationform\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C89554B-DD2C-480A-B02A-B320E7C686EC}|MvcRegistrationForm.csproj|solutionrelative:models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4C89554B-DD2C-480A-B02A-B320E7C686EC}|MvcRegistrationForm.csproj|F:\\IT_Networkz\\2025\\Regis_Form\\MvcRegistrationForm\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4C89554B-DD2C-480A-B02A-B320E7C686EC}|MvcRegistrationForm.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C89554B-DD2C-480A-B02A-B320E7C686EC}|MvcRegistrationForm.csproj|F:\\IT_Networkz\\2025\\Regis_Form\\MvcRegistrationForm\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4C89554B-DD2C-480A-B02A-B320E7C686EC}|MvcRegistrationForm.csproj|solutionrelative:views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4C89554B-DD2C-480A-B02A-B320E7C686EC}|MvcRegistrationForm.csproj|F:\\IT_Networkz\\2025\\Regis_Form\\MvcRegistrationForm\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4C89554B-DD2C-480A-B02A-B320E7C686EC}|MvcRegistrationForm.csproj|solutionrelative:views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4C89554B-DD2C-480A-B02A-B320E7C686EC}|MvcRegistrationForm.csproj|f:\\it_networkz\\2025\\regis_form\\mvcregistrationform\\views\\user\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{4C89554B-DD2C-480A-B02A-B320E7C686EC}|MvcRegistrationForm.csproj|F:\\IT_Networkz\\2025\\Regis_Form\\MvcRegistrationForm\\views\\user\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4C89554B-DD2C-480A-B02A-B320E7C686EC}|MvcRegistrationForm.csproj|solutionrelative:views\\user\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -46,8 +46,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserDbContext.cs",
+              "DocumentMoniker": "F:\\IT_Networkz\\2025\\Regis_Form\\MvcRegistrationForm\\Models\\UserDbContext.cs",
+              "RelativeDocumentMoniker": "Models\\UserDbContext.cs",
+              "ToolTip": "F:\\IT_Networkz\\2025\\Regis_Form\\MvcRegistrationForm\\Models\\UserDbContext.cs",
+              "RelativeToolTip": "Models\\UserDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T15:01:31.822Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -56,7 +69,7 @@
               "RelativeDocumentMoniker": "Models\\LoginViewModel.cs",
               "ToolTip": "F:\\IT_Networkz\\2025\\Regis_Form\\MvcRegistrationForm\\Models\\LoginViewModel.cs",
               "RelativeToolTip": "Models\\LoginViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-25T06:32:25.355Z",
               "EditorCaption": ""
@@ -64,6 +77,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "User.cs",
+              "DocumentMoniker": "F:\\IT_Networkz\\2025\\Regis_Form\\MvcRegistrationForm\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "F:\\IT_Networkz\\2025\\Regis_Form\\MvcRegistrationForm\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T07:21:38.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "F:\\IT_Networkz\\2025\\Regis_Form\\MvcRegistrationForm\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -71,8 +97,7 @@
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAwAAAAAAAAAAAAMwDEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-24T16:09:44.209Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T16:09:44.209Z"
             },
             {
               "$type": "Document",
@@ -84,21 +109,7 @@
               "RelativeToolTip": "Views\\User\\Dashboard.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-24T16:08:41.945Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "F:\\IT_Networkz\\2025\\Regis_Form\\MvcRegistrationForm\\Views\\User\\Login.cshtml",
-              "RelativeDocumentMoniker": "Views\\User\\Login.cshtml",
-              "ToolTip": "F:\\IT_Networkz\\2025\\Regis_Form\\MvcRegistrationForm\\Views\\User\\Login.cshtml",
-              "RelativeToolTip": "Views\\User\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-24T16:07:00.252Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T16:08:41.945Z"
             },
             {
               "$type": "Document",
@@ -116,25 +127,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "User.cs",
-              "DocumentMoniker": "F:\\IT_Networkz\\2025\\Regis_Form\\MvcRegistrationForm\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "F:\\IT_Networkz\\2025\\Regis_Form\\MvcRegistrationForm\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T07:21:38.554Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "UserController.cs",
               "DocumentMoniker": "F:\\IT_Networkz\\2025\\Regis_Form\\MvcRegistrationForm\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
               "ToolTip": "F:\\IT_Networkz\\2025\\Regis_Form\\MvcRegistrationForm\\Controllers\\UserController.cs",
               "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAIA/wEIAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-22T07:30:20.128Z",
               "EditorCaption": ""
@@ -149,8 +147,7 @@
               "RelativeToolTip": "Views\\User\\Register.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-22T07:36:39.012Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-22T07:36:39.012Z"
             },
             {
               "$type": "Document",
@@ -162,8 +159,7 @@
               "RelativeToolTip": "Views\\User\\Success.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-22T07:46:47.806Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-22T07:46:47.806Z"
             }
           ]
         }
