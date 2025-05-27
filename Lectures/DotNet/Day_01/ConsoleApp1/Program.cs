@@ -63,6 +63,62 @@ namespace ConsoleApp1
 
 
 
+            // Task
+            //char letter = 'G';
+            //int a = 89;
+            //short b = 56;
+            //long c = 4564L;
+            //float d = 3.733064F;
+            //double e = 8.358674532D;
+            //decimal f = 389.5M;
+
+            //Console.WriteLine("Char: " + letter);
+            //Console.WriteLine("Integer: " + a);
+            //Console.WriteLine("Short: " + b);
+            //Console.WriteLine("Long: " + c);
+            //Console.WriteLine("Float: " + d);
+            //Console.WriteLine("Double: " + e);
+            //Console.WriteLine("Decimal: " + f);
+
+
+            // Type Casting:
+            // Implicit: Smallest datatype to largest
+            // Explicit: Largest datatype to smallest
+            //double my_double = 9.45;
+            //Console.WriteLine(my_double);
+            //int my_int = (int) my_double;
+            //Console.WriteLine(my_int);
+
+
+            // Task
+            //int myInt = 10;
+            //double myDouble = 5.25;
+            //bool myBool = true;
+
+            //Console.WriteLine(Convert.ToString(myInt)); // convert int to string
+            //Console.WriteLine(Convert.ToDouble(myInt)); // convert int to double
+            //Console.WriteLine(Convert.ToInt32((int)myDouble)); //  convert double to int
+            //Console.WriteLine(Convert.ToString(myBool)); // convert boolean to string
+
+
+            // Task
+            //string a = "99.99";
+            //Console.WriteLine(a);
+            //Console.WriteLine(Convert.ToDouble(a));
+
+            //double b = 88.9;
+            //Console.WriteLine(b);
+            //Console.WriteLine(Convert.ToString(b));
+
+
+            //Console.Write("Enter your name: ");
+            //string name = Console.ReadLine();
+            //Console.Write("Name: " + name);
+
+            //Console.Write("Enter your age: ");
+            //int age = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Age: " + age);
+
 
         }
     }
