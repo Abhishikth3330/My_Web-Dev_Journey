@@ -120,6 +120,111 @@ namespace ConsoleApp1
             //Console.WriteLine("Age: " + age);
 
 
+
+
+
+            // Day - 03 : Operators
+
+            // Arithmatic operator => Addition, subtraction, multiplication, division, increment, decrement
+            //int x = 100 + 50;
+            //int y = x + 250;
+            //int z = y + y;
+            //Console.WriteLine(x);
+            //Console.WriteLine(y);
+            //Console.WriteLine(z);
+
+            // increment & Decrement
+            //int x = 5;
+            //x--;
+            //x++;
+            //Console.WriteLine(x);
+
+
+            //int x = 10;
+            //x += 5;     // addition
+            //x -= 5;     // subtraction
+            //x >>= 5;    // x is greater than or equal to 5 symbol
+            //x &= 5;     // checks x=10 AND x = 5
+            //x *= 5;     // multiplication
+            //Console.WriteLine(x);
+
+
+
+            //int x = 5;
+            //int y = 3;
+            //Console.WriteLine(x > y);   // True
+            //Console.WriteLine(x < y);   // False
+            //Console.WriteLine(y == x);  // False
+            //Console.WriteLine(x != y);  // True
+
+
+            //int x = 5;
+            //Console.WriteLine(x > 3 && x < 10);
+            //Console.WriteLine(x < 3 && x > 10);
+            //Console.WriteLine(x > 3 || x > 10);
+            //Console.WriteLine(x < 3 || x < 10);
+
+
+            //int x = 5;
+            //Console.WriteLine(!(x < 3 || x > 10));
+
+
+            // Example - 01
+            //int a = 10, b = 5;
+            //Console.WriteLine("Sum: " + (a + b));
+            //Console.WriteLine("Difference: " + (a - b));
+            //Console.WriteLine("Product: " + (a * b));
+            //Console.WriteLine("Quotient: " + (a / b));
+            //Console.WriteLine("Remainder: " + (a % b));
+
+            //Console.WriteLine();
+
+            //Console.WriteLine("A Before: " + a);
+            //a += 5;
+            //Console.WriteLine("A Before: " + a);
+
+            //Console.WriteLine();
+
+            //Console.WriteLine("B Before: " + b);
+            //b *= 2;
+            //Console.WriteLine("B Before: " + b);
+
+
+            // Example - 02
+            //int a = 12;
+            //int b = 5;
+            //Console.WriteLine("Addition (a+b): " + (a + b));
+            //Console.WriteLine("Subtraction (a-b): " + (a - b));
+            //Console.WriteLine("Multiplication (a*b): " + (a * b));
+            //Console.WriteLine("Division (a/b): " + (a / b));
+            //Console.WriteLine("Modulus (a%b): " + (a % b));
+
+
+
+            // Example - 03
+            //Console.Write("Enter a number: ");
+            //// num = 8
+            //int num = Convert.ToInt32(Console.ReadLine());
+
+            //Console.WriteLine("Original x => " + num);
+            //Console.WriteLine("After x += 5 => " + (num += 5));
+            //Console.WriteLine("After x -= 2 => " + (num -= 2));
+            //Console.WriteLine("After x *= 3 =>" + (num *= 3));
+            //Console.WriteLine("After x /= 2 => " + (num /= 2));
+            //Console.WriteLine("After x %= 4 => " + (num %= 4));
+
+
+            //int x = 20;
+            //int y = 10;
+            //Console.WriteLine(x > y);
+
+
+
+            // ternary operator
+            //int x = 20, y = 10;
+            //var result = x > y ? "x is greater than y" : "x is less than or equal to y";
+            //Console.WriteLine(result);
+
         }
     }
 }
