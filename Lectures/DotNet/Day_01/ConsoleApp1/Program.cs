@@ -225,6 +225,206 @@ namespace ConsoleApp1
             //var result = x > y ? "x is greater than y" : "x is less than or equal to y";
             //Console.WriteLine(result);
 
+
+
+
+
+
+
+            // Day - 04
+
+            // Math Function
+
+            //Console.WriteLine(Math.Max(5, 10));
+            //Console.WriteLine(Math.Min(5, 10));
+
+            //Console.WriteLine(Math.Sqrt(64)); // Square Root
+
+
+            //Console.WriteLine(Math.Abs(-10)); // absolute value
+
+            //Console.WriteLine(Math.Round(5.55)); // round the value 
+
+
+
+            // Strings in C#
+
+            //string str1 = "Hello";
+            //string str2 = "I am C#";
+
+            //Console.WriteLine(str1);
+            //Console.WriteLine(str2);
+
+
+            // length of a string
+
+            //string txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            //Console.WriteLine("Total Alphabets : " + txt.Length);
+
+            //Console.WriteLine(txt.ToLower());     //Convert string to lowercase
+            //Console.WriteLine(txt.ToUpper());     //Convert string to uppercase
+
+
+            //string str1 = "Hello";
+            //string str2 = "World";
+            //string name1 = str1 + str2;
+            //string name2 = string.Concat(str1, str2);
+            //Console.WriteLine(name2);
+
+
+            // interpolation - using variables as a placeholder
+
+            //string str1 = "Hello";
+            //string str2 = "World";
+            //string name = $"My name is: {str2}, {str1}";
+            //Console.WriteLine(name);
+
+
+            // accessing a character from a string
+
+            //string str1 = "Hello";
+            //Console.WriteLine(str1[0]);
+            //Console.WriteLine(str1[1]);
+            //Console.WriteLine(str1[2]);
+            //Console.WriteLine(str1[3]);
+            //Console.WriteLine(str1[4]);
+
+            //Console.WriteLine(str1.IndexOf('e'));
+            //Console.WriteLine(str1.IndexOf('o'));
+
+
+            // \'\' OR \"\" this will give you string in '' or "" in string output
+            //string txt = " We are the so called \"vikings\" from the north.";
+            //Console.WriteLine(txt);
+
+
+            // \' will get you an apostophy s
+            //string txt = "It\'s alright.";
+            //Console.WriteLine(txt);
+
+
+            // tab space
+            //string txt = "Hello\tWorld!";
+            //Console.WriteLine(txt);
+
+            // next line
+            //string txt = "Hello\nWorld!";
+            //Console.WriteLine(txt);
+
+            // backspace
+            //string txt = "Hell\bo World!";
+            //Console.WriteLine(txt);
+
+
+            // IF - ELSE BLOCK
+
+            // example - 1
+            //int x = 20;
+            //int y = 10;
+            //if (x > y)
+            //{
+            //    Console.WriteLine("X is greater than Y");
+            //}
+
+
+            // Example - 2
+            //int time = 20;
+            //if (time < 18)
+            //{
+            //    Console.WriteLine("Good Day");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Good Evening");
+            //}
+
+
+
+            // Example - 3
+            //int time = 20;
+            //if (time < 11)
+            //{
+            //    Console.WriteLine("Good Morning");
+            //}
+            //else if (time < 19){
+            //    Console.WriteLine("Good Day");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Good Evening");
+            //}
+
+
+            // Example - 4
+            //int time = 20;
+            //string result = (time < 18) ? "Good Day." : "Good Evening";
+            //Console.WriteLine(result);
+
+
+            // find the greatest of 3 numbers
+
+            //int num1 = 10;
+            //int num2 = 20;
+            //int num3 = 30;
+
+
+            //if (num1 >= num2 && num1 >= num3)
+            //{
+            //    Console.WriteLine($"{num1} is greatest number.");
+            //}
+            //else if (num2 >= num1 && num2 >= num3)
+            //{
+            //    Console.WriteLine($"{num2} is greatest number.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"{num3} is greatest number.");
+            //}
+
+
+            // find the greatest of 4 numbers
+            //int num1 = 10;
+            //int num2 = 20;
+            //int num3 = 30;
+            //int num4 = 40;
+
+            //if (num1 >= num2 && num1 >= num3 && num1 >= num4)
+            //{
+            //    Console.WriteLine($"{num1} is the greatest number.");
+            //}
+            //else if (num2 >= num1 && num2 >= num3 && num2 >= num4)
+            //{
+            //    Console.WriteLine($"{num2} is the greatest number.");
+            //}
+            //else if (num3 >= num1 && num3 >= num2 && num3 >= num4)
+            //{
+            //    Console.WriteLine($"{num3} is the greatest number.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"{num4} is the greatest number.");
+            //}
+
+
+            // Grading marks
+            //int marks = 88;
+
+            //if (marks >= 90)
+            //{
+            //    Console.WriteLine("Grade A");
+            //}
+            //else if (marks >= 75 && marks <= 89)
+            //{
+            //    Console.WriteLine("Grade B");
+            //}
+            //else if (marks >= 50 && marks <= 74)
+            //{
+            //    Console.WriteLine("Grade C");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Grade D");
+            //}
         }
     }
 }
