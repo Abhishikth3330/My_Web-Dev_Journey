@@ -425,6 +425,133 @@ namespace ConsoleApp1
             //{
             //    Console.WriteLine("Grade D");
             //}
+
+
+
+
+
+
+
+
+            // 30/05/2025
+
+            // switch statements
+
+
+            // Example - 01
+            //int day = 4;
+            //switch(day)
+            //{
+            //    case 1:
+            //        Console.WriteLine("Monday");
+            //        break;
+            //    case 2:
+            //        Console.WriteLine("Tuesday");
+            //        break;
+            //    case 3:
+            //        Console.WriteLine("Wednesday");
+            //        break;
+            //    case 4:
+            //        Console.WriteLine("Thursday");
+            //        break;
+            //    case 5:
+            //        Console.WriteLine("Friday");
+            //        break;
+            //    case 6:
+            //        Console.WriteLine("Saturday");
+            //        break;
+            //    case 7:
+            //        Console.WriteLine("Sunday");
+            //        break;
+            //}
+
+
+            // Example - 02 ==> if case doesn't match then default will get executed
+            //int day = 4;
+            //switch (day)
+            //{
+            //    case 6:
+            //        Console.WriteLine("Saturday");
+            //        break;
+            //    case 7:
+            //        Console.WriteLine("Sunday");
+            //        break;
+            //    default:
+            //        Console.WriteLine("Looking forward to the next week");
+            //        break;
+            //}
+
+
+
+            // WHILE LOOP
+            //int i = 0;
+            //while (i < 5)
+            //{
+            //    Console.WriteLine(i);
+            //    i++;
+            //}
+
+
+            // DO WHILE LOOP
+            //int i = 0;
+            //do
+            //{
+            //    Console.WriteLine(i);
+            //    i++;
+            //}
+            //while (i < 5);
+
+
+            // print even numbers between 1 to 10
+            //int i = 1;
+            //while (i <= 10)
+            //{
+            //    if (i % 2 == 0)
+            //    {
+            //        Console.WriteLine(i);
+            //    }
+            //    i++;
+            //}
+
+
+            // print odd numbers between 1 to 10
+            //int i = 1;
+            //while (i <= 10)
+            //{
+            //    if (i % 2 != 0)
+            //    {
+            //        Console.WriteLine(i);
+            //    }
+            //    i++;
+            //}
+
+
+
+            // FOR LOOP
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    //Console.WriteLine(i);
+            //    Console.WriteLine("Hello");
+            //}
+
+
+            // Table of 2
+            //for (int i = 1; i <= 10; i++)
+            //{
+            //    Console.WriteLine(i * 2);
+            //}
+
+
+            // factorial of a number
+            //int fact = 1;
+            //int num = 5;
+            //for (int i = 1; i <= num; i++)
+            //{
+            //    //fact = fact * i;
+            //    fact *= i;
+            //}
+            //Console.WriteLine(fact);
+
         }
     }
 }
