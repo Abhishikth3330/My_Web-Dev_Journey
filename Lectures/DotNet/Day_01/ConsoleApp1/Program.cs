@@ -552,6 +552,80 @@ namespace ConsoleApp1
             //}
             //Console.WriteLine(fact);
 
+
+
+
+            // Armstrong Number
+            //int number = 153;
+            //int original = number;
+            //int sum = 0;
+            //while (number > 0)
+            //{
+            //    int digit = number % 10;
+            //    sum += digit * digit * digit;
+            //    number /= 10;
+            //}
+            //if (sum == original)
+            //{
+            //    Console.WriteLine($"{original} is an Armstrong number.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"{original} is not an Armstrong number.");
+            //}
+
+
+
+            // Leap Year
+
+            //int year = 2024;
+            //if ((year % 4 == 0 && year% 100 != 0) )
+            //{
+            //    Console.WriteLine($"{year} is a leap year.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"{year} is not a leap year.");
+            //}
+
+
+
+
+            // Reverse the given number using while loop (8421 to 1248)
+
+            //int number = 8421;
+            //int reverse = 0;
+            //while (number > 0)
+            //{
+            //    int digit = number % 10;
+            //    reverse = reverse * 10 + digit;
+            //    number = number / 10;
+            //}
+            //Console.WriteLine($"Reversed number is: {reverse}");
+
+
+
+            // Check if a number is palindrom such as 2442
+
+            //int number = 2442;
+            //int original = number;
+            //int reverse = 0;
+            //while (number > 0)
+            //{
+            //    int digit = number % 10;
+            //    reverse = reverse * 10 + digit;
+            //    number = number / 10;
+            //}
+            //if (original == reverse)
+            //{
+            //    Console.WriteLine($"{original} is a palindrome.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"{original} is not a palindrome.");
+            //}
+
+
         }
     }
 }
