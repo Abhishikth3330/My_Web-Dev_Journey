@@ -95,3 +95,112 @@ select * from employee_operator where NOT name='JKL';
 
 
 
+-- 31/05/2025
+
+-- ORDER BY
+
+select * from employee_operator ORDER BY salary;
+
+select * from employee_operator ORDER BY salary asc;
+
+select * from employee_operator ORDER BY salary DESC;
+
+
+
+select * from employee_operator ORDER BY name, salary ASC;
+
+select * from employee_operator ORDER BY name ASC, salary DESC;
+
+
+
+SELECT * FROM EMPLOYEE_OPERATOR where city = 'Nagpur' AND name like 'D%';
+
+
+SELECT * FROM EMPLOYEE_OPERATOR where city = 'Nagpur' OR name like 'D%';
+
+
+SELECT * FROM EMPLOYEE_OPERATOR where NOT city = 'Nagpur';
+
+
+
+
+
+select * from employee_operator where salary IS NULL;
+
+select * from employee_operator where salary IS NOT NULL;
+
+
+
+UPDATE EMPLOYEE_OPERATOR SET SALARY = 17500.21 where id = 7;
+
+
+
+update employee_operator set name = 'MNO' where id = 7;
+
+
+update employee_operator SET CITY = 'MUMBAI';
+
+
+-- DELETE ALL VALUES OR GIVEN RECORDS OF THE TABLE
+DELETE FROM EMPLOYEE_OPERATOR WHERE ID = 7;
+
+
+-- DELETE ENTIRE TABLE WITH SCHEMA
+DROP TABLE EMPLOYEE_OPERATOR;
+
+
+
+
+-- AGGREGATE FUNCTION
+-- MIN, MAX, SUM, COUNT, AVG
+
+
+SELECT MIN(SALARY) FROM EMPLOYEE_OPERATOR;
+
+SELECT MAX(SALARY) FROM EMPLOYEE_OPERATOR;
+
+
+SELECT COUNT(SALARY) FROM EMPLOYEE_OPERATOR;
+
+
+SELECT COUNT(SALARY) FROM EMPLOYEE_OPERATOR WHERE SALARY > 20000;
+
+
+SELECT COUNT(NAME) FROM EMPLOYEE_OPERATOR;
+
+
+SELECT COUNT(DISTINCT NAME) FROM EMPLOYEE_OPERATOR;
+
+
+SELECT SUM(SALARY) FROM EMPLOYEE_OPERATOR;
+
+
+SELECT SUM(SALARY) FROM EMPLOYEE_OPERATOR WHERE SALARY > 10000;
+
+
+SELECT AVG(SALARY) FROM EMPLOYEE_OPERATOR;
+
+
+SELECT * FROM EMPLOYEE_OPERATOR WHERE CITY IN ('Nagpur', 'Raipur');
+
+
+select * from employee_operator where city NOT IN ('Nagpur');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
