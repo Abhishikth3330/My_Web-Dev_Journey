@@ -579,7 +579,7 @@ namespace ConsoleApp1
             // Leap Year
 
             //int year = 2024;
-            //if ((year % 4 == 0 && year% 100 != 0) )
+            //if ((year % 4 == 0 && year % 100 != 0))
             //{
             //    Console.WriteLine($"{year} is a leap year.");
             //}
@@ -624,6 +624,123 @@ namespace ConsoleApp1
             //{
             //    Console.WriteLine($"{original} is not a palindrome.");
             //}
+
+
+
+
+
+
+
+
+
+            // 31/05/2025
+
+
+            // SQUARE PATTERN
+            //for (int i = 0; i < 3;  i++)
+            //{
+            //    for (int j = 0; j < 3; j++)
+            //    {
+            //        Console.Write('*');
+            //    }
+            //    Console.WriteLine();
+            //}
+
+
+            // SQUARE NUMBER PATTERN
+            //for (int i = 0; i < 5;  i++)
+            //{
+            //    for(int j = 0; j < 5; j++)
+            //    {
+            //        Console.Write(i);
+            //    }
+            //    Console.WriteLine();
+            //}
+
+
+            // alphabets square pattern
+            //int c = 0;
+            //for (char i = 'a'; i <= 'z';  i++)
+            //{
+            //    Console.Write(" " + i);
+            //    c++;
+            //    if (c % 4 == 0)
+            //    {
+            //        Console.WriteLine();
+            //    }
+            //}
+
+
+            //int c = 0;
+            //for (char i = 'z'; i >= 'a';  i--)
+            //{
+            //    Console.Write(" " + i);
+            //    c++;
+            //    if (c % 4 == 0)
+            //    {
+            //        Console.WriteLine();
+            //    }
+            //}
+
+
+            // right traingle pattern
+            //for (int i = 1; i <= 5; i++)
+            //{
+            //    for (int j = 1; j <= i; j++)
+            //    {
+            //        Console.Write('*');
+            //    }
+            //    Console.WriteLine();
+            //}
+
+
+
+
+            // BREAK - CONTINUE STATEMENT
+
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    if (i == 4)
+            //    {
+            //        break;
+            //    }
+            //    Console.WriteLine(i);
+            //}
+
+
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    if (i == 4)
+            //    {
+            //        continue;
+            //    }
+            //    Console.WriteLine(i);
+            //}
+
+
+            //int i = 0;
+            //while (i < 10)
+            //{
+            //    Console.WriteLine(i);
+            //    i++;
+            //    if (i == 4)
+            //    {
+            //        break;
+            //    }
+            //}
+            
+            
+            //int i = 0;
+            //while (i < 10)
+            //{
+            //    Console.WriteLine(i);
+            //    i++;
+            //    if (i == 4)
+            //    {
+            //        continue;
+            //    }
+            //}
+
 
 
         }
