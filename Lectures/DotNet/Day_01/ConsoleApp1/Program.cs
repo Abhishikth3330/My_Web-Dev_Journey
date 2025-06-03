@@ -744,20 +744,89 @@ namespace ConsoleApp1
 
 
             // pattern - 1
-            for (int i = 1; i <= 3; i++)
-            {
-                for (int j = 1; j <= 3; j++)
-                {
-                    if (j == 2)
-                    {
-                        continue;
-                    }
-                    Console.WriteLine($"i = {i} j = {j}");
-                }
-            }
+            //for (int i = 1; i <= 3; i++)
+            //{
+            //    for (int j = 1; j <= 3; j++)
+            //    {
+            //        if (j == 2)
+            //        {
+            //            continue;
+            //        }
+            //        Console.WriteLine($"i = {i} j = {j}");
+            //    }
+            //}
 
 
 
+
+
+
+
+            // Task - 3/6/2025
+
+            // Enter a number and print the Fibonacci series upto that number using a while loop in C# language
+
+            //Console.Write("Enter a  number : ");
+            //int num = int.Parse(Console.ReadLine());
+
+            //int first = 0, second = 1;
+            //Console.WriteLine($"Fibonacci series upto {num}");
+
+            //while (first < num)
+            //{
+            //    Console.Write(first + " ");
+            //    int next = first + second;
+            //    first = second;
+            //    second = next;
+            //}
+            //Console.WriteLine();
+
+
+
+
+            // Enter the length of the string: 6
+            // Enter the string: HeyGFG
+            // count of vowel = 1
+            // count of consonant = 5
+            // print this using for loop
+
+
+            //Console.Write("Enter the length of the string: ");
+            //int length = int.Parse(Console.ReadLine());
+
+            //Console.Write("Enter the string: ");
+            //string input = Console.ReadLine();
+
+
+            //if (input.Length != length)
+            //{
+            //    Console.WriteLine("Entered string length doesn't match the given length.");
+            //    return;
+            //}
+
+
+            //int vowelCount = 0;
+            //int consonantCount = 0;
+
+            //for (int i = 0; i < input.Length; i++)
+            //{
+            //    char ch = char.ToLower(input[i]);
+
+            //    if (char.IsLetter(ch))
+            //    {
+            //        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+            //        {
+            //            vowelCount++;
+            //        }
+            //        else
+            //        {
+            //            consonantCount++;
+            //        }
+            //    }
+            //}
+
+            //Console.WriteLine($"Count of vowels = {vowelCount}");
+            //Console.WriteLine($"Count of consonants = {consonantCount}");
         }
     }
 }
