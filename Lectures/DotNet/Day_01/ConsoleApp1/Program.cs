@@ -827,6 +827,31 @@ namespace ConsoleApp1
 
             //Console.WriteLine($"Count of vowels = {vowelCount}");
             //Console.WriteLine($"Count of consonants = {consonantCount}");
+
+
+
+
+
+
+
+            // 04/06/2025
+
+
+            // strings
+
+            //string[] fruits = {"apple", "banana", "mango"};
+            //Console.WriteLine(fruits[0]);
+
+            //fruits[2] = "Kiwi";
+            //Console.WriteLine(fruits[2]);
+
+            //Console.WriteLine(fruits.Length);
+
+
+
+
+
+        
         }
     }
 }
