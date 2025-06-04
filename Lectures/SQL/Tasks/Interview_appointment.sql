@@ -323,6 +323,12 @@ INSERT INTO product_table (p_id, p_name, p_price) VALUES
 (5, 'Monitor', 15000);
 
 
+INSERT INTO product_table (p_id, p_name, p_price) VALUES
+(6, 'Microphone', 5000),
+(7, 'Earphone', 3000),
+(8, 'PS', 20000);
+
+
 
 INSERT INTO order_table (o_id, p_id, o_name, o_quantity, o_date) VALUES
 (1, 1, 'Order for Laptop', 2, '2025-06-01'),
@@ -333,5 +339,24 @@ INSERT INTO order_table (o_id, p_id, o_name, o_quantity, o_date) VALUES
 
 
 select p.p_id, p.p_name, o.o_id, o.o_name, p.p_price, o.o_quantity, o.o_date from order_table o join product_table p on o.p_id = p.p_id;
+
+
+select * from order_table o right join product_table p on o.p_id = p.p_id;
+
+select * from product_table p left join order_table o on o.p_id = p.p_id;
+
+select s.id, s.name, sm.subject, sm.marks from student s inner join student_marks sm on s.id = sm.id;
+
+
+
+
+
+
+
+
+
+
+
+
 
 
