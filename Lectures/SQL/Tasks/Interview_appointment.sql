@@ -352,6 +352,154 @@ select s.id, s.name, sm.subject, sm.marks from student s inner join student_mark
 
 
 
+-- Example - 4
+CREATE DATABASE EmployeeDB2;
+USE EmployeeDB2;
+
+-- 1. Create the employees table
+CREATE TABLE employees (
+    emp_id INT PRIMARY KEY,
+    name VARCHAR(100),
+    department VARCHAR(50),
+    salary FLOAT,
+    city VARCHAR(100),
+    join_date DATE,
+    email VARCHAR(100),
+    commission FLOAT
+);
+
+-- 2. Insert 5 records into the employees table with some NULL values in commission
+INSERT INTO employees (emp_id, name, department, salary, city, join_date, email, commission) VALUES
+(1, 'Amit', 'HR', 32000, 'Mumbai', '2023-03-01', 'amit@example.com', NULL),
+(2, 'Neha', 'IT', 48000, 'Delhi', '2022-11-15', 'neha@example.com', 3000),
+(3, 'Raj', 'Finance', 29000, 'Mumbai', '2024-02-10', 'raj@example.com', NULL),
+(4, 'Anjali', 'Sales', 51000, 'Bangalore', '2021-07-01', 'anjali@example.com', 5000),
+(5, 'Karan', 'IT', 41000, 'Mumbai', '2023-12-01', NULL, NULL);
+
+-- 3. Select all data from the employees table
+SELECT * FROM employees;
+
+-- 4. Display only the name and salary of all employees
+select name, salary from employees;
+
+-- 5. show employes who belong to the 'HR' department
+select * from employees where department = 'HR';
+
+-- 6. show employees with salary > 30000 and city = 'Mumbai'
+select * from employees where salary > 30000 and city = 'Mumbai';
+
+-- 7. show employees from 'IT' or 'Finance' departments
+select * from employees where department in ('IT', 'Finance');
+
+-- 8. list employees who are not from the 'Sales' department
+select * from employees where department <> 'Sales';
+
+-- 9. display employees ordered by salary (ascending)
+select * from employees order by salary asc;
+
+-- 10. display employees ordered by name in descending order
+select * from employees order by name desc;
+
+-- 11. Select all employees who do not have a commission (i.e., commission is NULL)
+SELECT * FROM employees WHERE commission IS NULL;
+
+-- 12. select all employees who have comission (NOT NULL)
+select * from employees where commission is not null;
+
+
+-- 13. update the salary of the employee with emp_id = 3 to 45000
+update employees set salary = 45000 where emp_id = 3;
+
+
+-- 14. delete the employee whose name is 'Amit'
+delete from employees where name = 'Amit';
+
+
+-- 15. display only te top 3 highest paid employees;
+select * from employees order by salary desc limit 3;
+
+-- 16. show the first 2 employees joined (based on join_date)
+select * from employees order by join_date asc limit 2;
+
+-- 17. find the minimum and maximum salary
+select min(salary) as min_salary, max(salary) as max_salary from employees;
+
+-- 18. count the total number of employees
+select count(*) as total_employees from employees;
+
+-- 19. find the average salary of all employees
+
+-- 20.  calculate the sum of all commissions
+select sum(commission) as total_commission from employees;
+
+-- 21. show employees whose name starts with 'A'
+select * from employees where name like 'A%';
+
+-- 22. show employees whose name ends with 'a'
+select * from employees where name like '%a';
+
+-- 23. show employees whose name contains 'an'
+select * from employees where name like '%an%';
+
+-- 24. Show employees who work in 'HR', 'IT', or 'Finance' using IN operator
+SELECT * FROM employees WHERE department IN ('HR', 'IT', 'Finance');
+
+-- 25. show employees whose salary is between 30000 and 50000
+select * from employees where salary between 30000 and 50000;
+
+-- 26. Show employees who joined between '2023-01-01' and '2024-01-01'
+SELECT * FROM employees WHERE join_date BETWEEN '2023-01-01' AND '2024-01-01';
+
+ -- 27. show the highest salary per department
+ select department, max(salary) as highest_salary from employees group by department;
+ 
+ -- 28. count number of employees per city
+ select city, count(*) as employee_count from employees group by city;
+ 
+ -- 29. show total commission per department
+ select department, sum(commission) as total_commission from employees group by department;
+ 
+ -- 30. list employees without an email id
+ select * from employees where email is null;
+ 
+-- 31. Display employees who joined in the last 6 months
+SELECT * FROM employees WHERE join_date >= DATE_SUB(CURDATE(), INTERVAL 6 MONTH);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
