@@ -92,6 +92,65 @@ namespace ConsoleApp1
 
 
 
+
+
+
+            // 05-06-2025
+
+            // Example - 01
+            // Print the reversed array
+            // Reversed Array:
+            //5
+            //4
+            //3
+            //2
+            //1
+
+            //int[] arr = { 1, 2, 3, 4, 5};
+            //Console.WriteLine("Reversed Array : ");
+
+            //for (int i = arr.Length - 1; i >= 0; i--)
+            //{
+            //    Console.WriteLine(arr[i]);
+            //}
+
+
+
+            // Example - 02
+            // Even numbers : 5
+            // Odd numbers : 5
+            // print this number using array
+
+            //int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //int evenCount = 0;
+            //int oddCount = 0;
+
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    if (arr[i] % 2 == 0)
+            //    {
+            //        evenCount++;
+            //    }else
+            //    {
+            //        oddCount++;
+            //    }
+            //}
+            //Console.WriteLine($"Even numbers : {evenCount}");
+            //Console.WriteLine($"Odd numbers : {oddCount}");
+
+
+
+            // Example - 03
+
+            // duplicate elements in an array
+            // 4
+            // 7
+            // 2
+            // define one array with duplicate numbers and in output it can not show duplicate values
+
+
+
+
         }
     }
 }
