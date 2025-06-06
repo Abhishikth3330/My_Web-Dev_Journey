@@ -1,0 +1,7 @@
+F:\IT_Networkz\Lectures\DotNet\06_06_2025\ConsoleAppClasses\bin\Debug\ConsoleAppClasses.exe.config
+F:\IT_Networkz\Lectures\DotNet\06_06_2025\ConsoleAppClasses\bin\Debug\ConsoleAppClasses.exe
+F:\IT_Networkz\Lectures\DotNet\06_06_2025\ConsoleAppClasses\bin\Debug\ConsoleAppClasses.pdb
+F:\IT_Networkz\Lectures\DotNet\06_06_2025\ConsoleAppClasses\obj\Debug\ConsoleAppClasses.csproj.AssemblyReference.cache
+F:\IT_Networkz\Lectures\DotNet\06_06_2025\ConsoleAppClasses\obj\Debug\ConsoleAppClasses.csproj.CoreCompileInputs.cache
+F:\IT_Networkz\Lectures\DotNet\06_06_2025\ConsoleAppClasses\obj\Debug\ConsoleAppClasses.exe
+F:\IT_Networkz\Lectures\DotNet\06_06_2025\ConsoleAppClasses\obj\Debug\ConsoleAppClasses.pdb

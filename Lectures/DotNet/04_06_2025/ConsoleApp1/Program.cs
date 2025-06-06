@@ -51,6 +51,8 @@ namespace ConsoleApp1
 
 
 
+
+
         static void Main(string[] args)
         {
             //myMethod();
@@ -147,6 +149,24 @@ namespace ConsoleApp1
             // 7
             // 2
             // define one array with duplicate numbers and in output it can not show duplicate values
+
+            //int[] arr = { 4, 7, 2, 4, 2, 9, 7 };
+            //Console.WriteLine("Duplicate elements in the array : ");
+
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    for (int j = i + 1; j < arr.Length; j++)
+            //    {
+            //        if (arr[i] == arr[j])
+            //        {
+            //            Console.WriteLine(arr[i]);
+            //            break;
+            //        }
+            //    }
+            //}
+
+
+
 
 
 
