@@ -338,6 +338,10 @@ INSERT INTO order_table (o_id, p_id, o_name, o_quantity, o_date) VALUES
 (5, 5, 'Order for Monitor', 2, '2025-06-03');
 
 
+
+
+
+
 select p.p_id, p.p_name, o.o_id, o.o_name, p.p_price, o.o_quantity, o.o_date from order_table o join product_table p on o.p_id = p.p_id;
 
 
@@ -346,6 +350,35 @@ select * from order_table o right join product_table p on o.p_id = p.p_id;
 select * from product_table p left join order_table o on o.p_id = p.p_id;
 
 select s.id, s.name, sm.subject, sm.marks from student s inner join student_marks sm on s.id = sm.id;
+
+select s.id, s.name, sm.subject, sm.marks from student s inner join student_marks sm on s.id = sm.id;
+
+
+use tasks;
+select * from student;
+
+
+
+select * from student_marks;
+
+select * from student_marks t1 join student_marks t2 on t1.id = t2.id;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
