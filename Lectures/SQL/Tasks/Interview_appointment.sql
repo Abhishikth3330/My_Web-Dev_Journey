@@ -342,6 +342,9 @@ INSERT INTO order_table (o_id, p_id, o_name, o_quantity, o_date) VALUES
 
 
 
+
+
+
 select p.p_id, p.p_name, o.o_id, o.o_name, p.p_price, o.o_quantity, o.o_date from order_table o join product_table p on o.p_id = p.p_id;
 
 
