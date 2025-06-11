@@ -110,3 +110,128 @@ call upadte_stdstatus4('12th');
 
 
 
+create table employees(id int primary key, name varchar(100), department varchar(100), salary int);
+
+ALTER TABLE employees
+MODIFY salary DECIMAL(10, 2);
+
+
+INSERT INTO employees (id, name, department, salary) VALUES
+(1, 'ABC', 'HR', 50000.00),
+(2, 'DEF', 'Finance', 60000.50),
+(3, 'GHI', 'IT', 75000.75),
+(4, 'JKL', 'Marketing', 55000.25),
+(5, 'MNO', 'Sales', 62000.00),
+(6, 'PQR', 'IT', 71000.40),
+(7, 'STU', 'Finance', 58000.60),
+(8, 'VWX', 'HR', 53000.10),
+(9, 'YZA', 'Marketing', 49500.95),
+(10, 'BCD', 'Sales', 60500.80);
+
+
+select * from employees;
+
+
+
+delimiter $$
+create procedure getemployee(out empcount int)
+begin
+	select count(*) into empcount from employees;
+end $$
+delimiter ;
+
+
+call getemployee(@total);
+
+select @total as total_employees;
+
+
+
+-- example - 1
+-- we can find the department name and then 
+-- find the employee count of that department
+
+
+delimiter $$
+create procedure get_emp_count_dept(
+	IN dept_name varchar(100),
+    OUT emp_count int
+)
+BEGIN
+	SELECT count(*) into emp_count
+    from employees
+    where department = dept_name;
+END $$
+delimiter ;
+
+call get_emp_count_dept('IT', @count);
+select @count;
+
+
+
+
+
+-- EXAMPLE - 3
+
+-- DELIMITER $$
+
+-- CREATE PROCEDURE UpdateSalaryWithBonus(
+--     IN empId INT,
+--     INOUT bonusPercent DECIMAL(5,2)
+-- )
+-- BEGIN
+--     DECLARE currentSalary DECIMAL(10,2);
+--     DECLARE newSalary DECIMAL(10,2);
+
+--     -- Get current salary
+--     SELECT salary INTO currentSalary FROM employee1 WHERE id = empId;
+
+--     -- Calculate new salary with bonus
+--     SET newSalary = currentSalary + (currentSalary * bonusPercent / 100);
+
+--     -- Update the salary in the table
+--     UPDATE employee1 SET salary = newSalary WHERE id = e
+-- SET @bonus = 10.00; -- starting bonus
+-- CALL UpdateSalaryWithBonus(2, @bonus);
+-- SELECT @bonus AS Updated_Bonus_Percent;
+-- SELECT * FROM employee1 WHERE id = 2;
+
+
+
+
+
+
+
+DELIMITER $$
+
+CREATE PROCEDURE UpdateSalaryWithBonus(
+    IN empId INT,
+    INOUT bonusPercent DECIMAL(5,2)
+)
+BEGIN
+    DECLARE currentSalary DECIMAL(10,2);
+    DECLARE newSalary DECIMAL(10,2);
+
+    -- Get current salary
+    SELECT salary INTO currentSalary FROM employees WHERE id = empId;
+
+    -- Calculate new salary with bonus
+    SET newSalary = currentSalary + (currentSalary * bonusPercent / 100);
+
+    -- Update the salary in the table
+    UPDATE employees SET salary = newSalary WHERE id = empId;
+END $$
+
+DELIMITER ;
+
+
+
+SET @bonus = 10.00;
+CALL UpdateSalaryWithBonus(2, @bonus);
+
+
+SELECT @bonus AS Updated_Bonus_Percent;
+
+
+SELECT * FROM employees WHERE id = 2;
+
