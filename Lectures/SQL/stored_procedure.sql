@@ -235,3 +235,77 @@ SELECT @bonus AS Updated_Bonus_Percent;
 
 SELECT * FROM employees WHERE id = 2;
 
+
+-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+-- 27_06_2025
+
+create database newjunedb;
+
+use newjunedb;
+
+create table EMPLOYEE (
+	ID INT PRIMARY KEY auto_increment,
+    Name VARCHAR(255) NOT NULL,
+	Salary DECIMAL(10, 2) NOT NULL
+);
+
+
+CREATE TABLE audit_log(
+	log_id INT PRIMARY KEY auto_increment,
+    employee_id INT NOT NULL,
+    old_salary decimal(10, 2),
+    new_salary decimal(10, 2),
+    change_date datetime not null,
+    foreign key(employee_id) references EMPLOYEE(ID)
+);
+
+DELIMITER $$
+CREATE TRIGGER log_salary_changes
+AFTER UPDATE ON EMPLOYEE
+FOR EACH ROW
+BEGIN
+INSERT INTO audit_log(employee_id, old_salary, new_salary, change_date)
+VALUES(old.id, old.salary, new.salary, now());
+END $$
+
+delimiter ;
+
+show triggers;
+
+
+select * from EMPLOYEE;
+
+
+INSERT INTO EMPLOYEE (Name, Salary) VALUES 
+('Amit Sharma', 50000.00),
+('Neha Singh', 60000.00),
+('Rahul Mehta', 55000.00),
+('Priya Das', 65000.00),
+('Karan Patel', 52000.00),
+('Simran Kaur', 58000.00),
+('Ankit Joshi', 62000.00),
+('Riya Roy', 54000.00),
+('Varun Jain', 70000.00),
+('Sneha Iyer', 75000.00);
+
+
+select * from audit_log;
+
+
+INSERT INTO audit_log (employee_id, old_salary, new_salary, change_date) VALUES
+(1, 47000.00, 50000.00, NOW()),
+(2, 57000.00, 60000.00, NOW());
+
+
+
+
+
+
+
+
+
+
+
+
