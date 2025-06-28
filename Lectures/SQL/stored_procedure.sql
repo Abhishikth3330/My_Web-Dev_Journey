@@ -301,9 +301,16 @@ INSERT INTO audit_log (employee_id, old_salary, new_salary, change_date) VALUES
 
 
 
+use newjunedb;
 
 
+show tables;
 
+select * from employee;
+
+alter table employee change Name employee_name varchar(100);
+
+alter table employee change employee_name Employee_name varchar(100);
 
 
 
