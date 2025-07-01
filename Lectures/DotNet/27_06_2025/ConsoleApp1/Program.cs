@@ -135,27 +135,130 @@ namespace ConsoleApp1
     // POLYMORPHISM
 
     // base class
-    class Animal
+    //class Animal
+    //{
+    //    public void animalSound()
+    //    {
+    //        Console.WriteLine("the animal sound");
+    //    }
+    //}
+
+    //class Cat : Animal
+    //{
+    //    public void animalSound()
+    //    {
+    //        Console.WriteLine("the cat say meow meow");
+    //    }
+    //}
+
+    //class Dog : Animal
+    //{
+    //    public void animalSound()
+    //    {
+    //        Console.WriteLine("the dog says woof woof");
+    //    }
+    //}
+
+
+    //class Program
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        Animal myAnim = new Animal();
+    //        Animal mycat = new Cat();
+    //        Animal mydog = new Dog();
+
+    //        myAnim.animalSound();
+    //        mycat.animalSound();
+    //        mydog.animalSound();
+
+    //    }
+    //}
+
+
+
+
+
+
+
+
+
+
+    // ABSTRACTION
+
+    // abstract class
+    //abstract class Animal
+    //{
+    //    // abstract method
+    //    public abstract void animalsound();
+    //    public void sleep()
+    //    {
+    //        Console.WriteLine("Eepy animal...");
+    //    }
+    //}
+
+    //class Cat : Animal
+    //{
+    //    public override void animalsound()
+    //    {
+    //        Console.WriteLine("Eepy Meow Meow...");
+    //    }
+    //}
+
+    //class Program
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        Cat cat1 = new Cat();
+    //        cat1.animalsound();
+    //        cat1.sleep();
+    //    }
+    //}
+
+
+
+
+
+    // INTERFACE
+    // interface are more like abstract but all in 
+    // can define abstract method and propeties both
+
+    interface Animal
     {
-        public void animalSound()
+        void animalsound();
+        //void anmimalcolor();
+    }
+    
+    interface Animal1
+    {
+        //void animalsound();
+        void anmimalcolor();
+    }
+
+
+    class Pig : Animal, Animal1
+    {
+        public void animalsound()
         {
-            Console.WriteLine("the animal sound");
+            Console.WriteLine("the pig sound");
+        }
+        public void anmimalcolor()
+        {
+            Console.WriteLine("gray pig");
         }
     }
+
 
     class Cat : Animal
     {
-        public void animalSound()
+        public void animalsound()
         {
-            Console.WriteLine("the cat say meow meow");
+            Console.WriteLine("the meow sound");
         }
-    }
 
-    class Dog : Animal
-    {
-        public void animalSound()
+        public void anmimalcolor()
         {
-            Console.WriteLine("the dog says woof woof");
+            Console.WriteLine("orange cat");
         }
     }
 
@@ -164,20 +267,17 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Animal myAnim = new Animal();
-            Animal mycat = new Cat();
-            Animal mydog = new Dog();
+            Pig pig1 = new Pig();
+            pig1.animalsound();
+            pig1.anmimalcolor();
 
-            myAnim.animalSound();
-            mycat.animalSound();
-            mydog.animalSound();
+            Console.WriteLine();
 
+            Cat cat1 = new Cat();
+            cat1.animalsound();
+            cat1.anmimalcolor();
         }
     }
-
-
-
-
 
 
 
