@@ -1,0 +1,7 @@
+F:\IT_Networkz\Lectures\DotNet\July\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+F:\IT_Networkz\Lectures\DotNet\July\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+F:\IT_Networkz\Lectures\DotNet\July\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+F:\IT_Networkz\Lectures\DotNet\July\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+F:\IT_Networkz\Lectures\DotNet\July\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+F:\IT_Networkz\Lectures\DotNet\July\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+F:\IT_Networkz\Lectures\DotNet\July\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
