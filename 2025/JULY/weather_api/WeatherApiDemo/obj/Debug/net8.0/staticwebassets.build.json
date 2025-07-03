@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "iYsKTOuLfc7s5Q4DuDyAtAPtttfWYbJ9uFfdx6Tmnq8=",
+  "Source": "WeatherApiDemo",
+  "BasePath": "_content/WeatherApiDemo",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
