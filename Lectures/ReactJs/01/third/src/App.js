@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <>
-      <h1>Ferrari</h1>
+      {/* <h1>Ferrari</h1>
       <h2>Lamborghini</h2>
       <h3>Bugatti</h3>
       <h4>McLaren</h4>
@@ -41,7 +41,7 @@ function App() {
         <li>Chandrapur</li>
         <li>Delhi</li>
         <li>Mumbai</li>
-      </ul>
+      </ul> */}
 
       <hr color='black'></hr>
 
@@ -94,6 +94,22 @@ function App() {
           </tr>
         </tbody>
       </table>
+
+      <hr color='black'></hr>
+
+      <form>
+        <div>
+          <span>
+            <img src={logo} alt='LOGO' height= "100px"></img>
+          </span>
+          <span>Student Registration Form</span>
+        </div>
+
+        <div>
+          <h2><b>Student Information</b></h2>
+        </div>
+
+      </form>
 
 
     </>
