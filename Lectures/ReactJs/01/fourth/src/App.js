@@ -7,6 +7,9 @@ import About from './Components/About';
 import Contact from './Components/Contact';
 import Services from './Components/Services';
 import Form from './Components/Form';
+import Random from './Components/Random';
+import Map from './Components/Map';
+import Users from './Components/Users';
 
 
 function App() {
@@ -19,7 +22,13 @@ function App() {
     <Contact/>
     <Services/> */}
 
-      <Form/>
+      {/* <Form/> */}
+
+      {/* <Random/> */}
+
+      {/* <Map/> */}
+
+      <Users/>
 
     </>
   );

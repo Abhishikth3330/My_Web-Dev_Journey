@@ -14,6 +14,8 @@ function Form() {
 
             <hr></hr>
 
+            {/* <img src={"logo192.png"}></img> */}
+
             <div class="container">
                 <table class="table table-striped align-middle">
                     <thead>
@@ -51,6 +53,41 @@ function Form() {
                     </tbody>
                 </table>
             </div>
+
+
+            <hr></hr>
+
+
+            <table class="container table" border="1">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">City</th>     
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">2</th>
+                        <td>mahi</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>hello</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
 
 
         </>
