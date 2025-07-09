@@ -10,9 +10,26 @@ import Form from './Components/Form';
 import Random from './Components/Random';
 import Map from './Components/Map';
 import Users from './Components/Users';
+import Fruits from './Components/Fruits';
+import Sap from './Components/Sap';
+import UseStateHook from './Components/UseStateHook';
+import EventHandling from './Components/EventHandling';
+import HandlingInput from './Components/HandlingInput';
+import FormSubmit from './Components/FormSubmit';
+import { useState } from 'react';
+import ChildButton from './Components/ChildButton';
 
 
 function App() {
+
+
+  const [message, setMessage] = useState("Hello from Parent !");
+
+  const updateMessage = () => {
+    setMessage("Message Updated by Child");
+  }
+
+
   return (
     <>
     {/* <Calculator/>
@@ -28,7 +45,30 @@ function App() {
 
       {/* <Map/> */}
 
-      <Users/>
+      {/* <Users/> */}
+      
+      {/* <Fruits name="Apple" />
+      <Fruits name="Orange" /> */}
+
+      {/* <Fruits name="Orange" city="Nagpur" /> */}
+
+      {/* <Sap name="Abhi" /> */}
+
+      {/* <UseStateHook /> */}
+
+      {/* <EventHandling/> */}
+
+      {/* <HandlingInput/> */}
+
+      {/* <FormSubmit/> */}
+
+
+      <h2>{message}</h2>
+
+      {/* <ChildButton onclick = {updateMessage}></ChildButton>   */}
+
+        <ChildButton onClick={updateMessage} />
+
 
     </>
   );
