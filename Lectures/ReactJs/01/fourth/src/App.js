@@ -18,6 +18,10 @@ import HandlingInput from './Components/HandlingInput';
 import FormSubmit from './Components/FormSubmit';
 import { useState } from 'react';
 import ChildButton from './Components/ChildButton';
+import LoginControl from './Components/LoginControl';
+import LoginControlIfElse from './Components/LoginControlIfElse';
+import StudentNames from './Components/StudentNames';
+import ProductList from './Components/ProductList';
 
 
 function App() {
@@ -63,11 +67,21 @@ function App() {
       {/* <FormSubmit/> */}
 
 
-      <h2>{message}</h2>
+      {/* <h2>{message}</h2> */}
 
       {/* <ChildButton onclick = {updateMessage}></ChildButton>   */}
 
-        <ChildButton onClick={updateMessage} />
+      {/* <ChildButton onClick={updateMessage} /> */}
+
+
+        {/* <LoginControl/> */}
+
+        {/* <LoginControlIfElse/> */}
+
+
+        {/* <StudentNames/> */}
+
+        <ProductList/>
 
 
     </>
